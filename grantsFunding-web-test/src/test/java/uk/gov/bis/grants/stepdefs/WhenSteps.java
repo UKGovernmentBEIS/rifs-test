@@ -54,6 +54,13 @@ public class WhenSteps {
 	   appStartPge.startApplication();
 	}
 
+	@When("^I click on apply button$")
+	public void i_click_on_apply_button() throws Throwable {
+		appStartPge.clickApply();
+	    
+	}
+	
+	
 	@When("^I fill in application form$")
 	public void i_fill_in_application_form() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions

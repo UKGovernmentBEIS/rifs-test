@@ -33,6 +33,8 @@ public class startPage extends BasePage {
 	
 	 By startButton = By.cssSelector(".button.button-start-now");
 	 
+	By applyButton = By.xpath(".//*[@id='content']/div[3]/div[2]/a");
+	 
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a")
 //	    WebElement startButton;
@@ -46,6 +48,13 @@ public class startPage extends BasePage {
 		click(startButton);
 	}
 	
+	public void clickApply() throws InterruptedException
+	{
+		click(applyButton);
+		Thread.sleep(3000);
+		//WaitForElementPresent("")
+				
+	}
 	
 
 

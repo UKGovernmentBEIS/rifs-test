@@ -8,11 +8,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.PageFactory;
 
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import uk.gov.bis.grants.pagemodel.BasePage;
 import uk.gov.bis.grants.pagemodel.LandingPage;
 import uk.gov.bis.grants.pagemodel.createOpportunityPage;
@@ -51,6 +53,30 @@ public class GivenSteps {
 		Thread.sleep(2000);
 	    
 	}
+	
+	
+	@Given("^I am Opportunity details page$")
+	public void i_am_Opportunity_details_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		landingPage.launch_app();
+		landingPage.gotoOpportunityPage();
+		Thread.sleep(2000);
+	}
+
+	
+
+	@Then("^I should able to register new user as$")
+	public void i_should_able_to_register_new_user_as(DataTable arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+	    // E,K,V must be a scalar (String, Integer, Date, enum etc)
+	    throw new PendingException();
+	}
+
+
+	
+	
 	
 	@Given("^I am on application start page$")
 	public void i_am_on_application_start_page() throws Throwable {

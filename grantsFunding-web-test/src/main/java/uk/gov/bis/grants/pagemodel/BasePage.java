@@ -33,7 +33,7 @@ public class BasePage {
 	
  public void launch_app(){		
 		 
-		 driver.get(envurl+"ui-opportunity/opportunity/1");
+		 driver.get(envurl);
 		//assertTrue("Failed: Application Failed to launch",driver.getTitle().equals(appTitle));
 	 }
 	
@@ -48,7 +48,7 @@ public class BasePage {
 	 
 	public void gotoOpportunityPage()
 	{
-		driver.navigate().to(envurl+"ui-opportunity/opportunity/1");
+		driver.navigate().to(envurl+"competition/1/details");
 	}
 	 
 	 public WebElement find(By locator)
