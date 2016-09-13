@@ -1,6 +1,6 @@
-Feature: Apply for new opportunity
-As a new user
-I should be able to apply for a new opportunity by registering myself
+Feature: Login to IFS
+As an existing user
+I should be able to login to IFS
 
 
 Scenario: Apply opportunity by registering as  new user
