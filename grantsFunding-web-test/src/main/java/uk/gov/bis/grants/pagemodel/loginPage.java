@@ -4,9 +4,13 @@ import static org.junit.Assert.assertTrue;
 
 import java.awt.Point;
 import java.util.Iterator;
+import java.util.List;
 
 import junit.framework.Assert;
 import uk.gov.bis.grants.utils.AppProperties;
+
+
+
 
 
 import org.openqa.selenium.By;
@@ -18,6 +22,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import cucumber.api.DataTable;
 
 
 public class loginPage extends BasePage {
@@ -31,9 +37,9 @@ public class loginPage extends BasePage {
    
 	
 	
-	 By username = By.cssSelector("#loginUser");
-	 By pwd = By.cssSelector("#loginPwd");
-	 By loginbutton = By.cssSelector(".button.button-start-now");
+	 By username = By.name("j_username");
+	 By pwd = By.name("j_password");
+	 By loginbutton = By.name("_eventId_proceed");
 	 By InvalidLoginmsg = By.xpath(".//*[@id='content']/div/div/div/div[2]/strong");
 	 By InlineErrormsg = By.xpath(".//*[@id='loginUser.errors']");
 	 By InlineErrormsg1 = By.xpath(".//*[@id='loginPwd.errors']");
@@ -51,6 +57,17 @@ public class loginPage extends BasePage {
 		type(username,arg1);
 		type(pwd,arg2);
 		click(loginbutton);
+		Thread.sleep(3000);
+	}
+	
+	public void login(DataTable datatable) throws InterruptedException
+	
+	{
+		List<List<String>> data = datatable.raw();
+		type(username,data.get(0).get(0));
+		type(pwd,data.get(0).get(1));
+		click(loginbutton);
+		
 		Thread.sleep(3000);
 	}
 	

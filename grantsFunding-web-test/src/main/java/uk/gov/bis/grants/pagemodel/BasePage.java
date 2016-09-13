@@ -24,6 +24,7 @@ public class BasePage {
 	
 	private  WebDriver driver;
 	private String envurl= AppProperties.get("envurl");
+	private String appTitle = "Innovation Funding Service - Sign in";
 	
 	public BasePage(WebDriver driver)
 	{
@@ -34,8 +35,10 @@ public class BasePage {
  public void launch_app(){		
 		 
 		 driver.get(envurl);
-		//assertTrue("Failed: Application Failed to launch",driver.getTitle().equals(appTitle));
-	 }
+		 driver.get("https://ifs:Fund1ng@auth.dev.innovateuk.org");
+		assertTrue("Failed: Application Failed to launch",driver.getTitle().equals(appTitle));
+//gotoOpportunityPage();	 
+ }
 	
 	 public void gotoLogin()
 	 {

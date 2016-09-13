@@ -25,7 +25,7 @@ public class LandingPage extends BasePage {
 	private static final boolean Exception = false;
 	 WebDriver driver;
 	
-	private String appTitle="Opportunity for Research";
+	private String appTitle="Assessor DashBoard";
 	 By oppGuidance = By.xpath(".//*[@id='related']/div/nav/ul/li[2]/a");
 	
 	 
@@ -93,6 +93,11 @@ public class LandingPage extends BasePage {
 	}
 	 
 	
+	public void verifyDashboardPage(String pageHeader)
+	{
+		assertTrue("Failed: Application Failed to launch",driver.getTitle().equals(appTitle));
+
+	}
 	
 
 // reading the text from the WebElement using Xpath

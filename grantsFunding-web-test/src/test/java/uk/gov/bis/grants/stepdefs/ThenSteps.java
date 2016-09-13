@@ -132,6 +132,12 @@ public class ThenSteps {
 	    
 	}
 	
+	@Then("^I should be able to see dashboard\\.$")
+	public void i_should_be_able_to_see_dashboard() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+	
 
 	 @After()
 	    /**

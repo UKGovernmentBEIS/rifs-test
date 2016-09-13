@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 import java.util.List;
 
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -12,6 +13,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+
+import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
@@ -119,6 +122,15 @@ public class WhenSteps {
 	public void i_choose_template(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    oppPage.Selecttemplatefromlist(arg1);
+	}
+	
+	
+	@When("^I login with user as$")
+	public void i_login_with_user_as(DataTable arg1) throws Throwable {
+	    
+		loginPage.login(arg1);
+		
+		
 	}
 	
 	
