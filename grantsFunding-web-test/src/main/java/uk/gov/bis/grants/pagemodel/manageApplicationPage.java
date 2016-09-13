@@ -50,6 +50,8 @@ public void verifymanageapplicationpage()
 }
 
 
+
+
 public void VerifyOppTemplatelist(List<String> list)
 
 {

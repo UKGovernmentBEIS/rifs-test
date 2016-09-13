@@ -6,8 +6,8 @@ import java.awt.Point;
 import java.util.Iterator;
 
 import junit.framework.Assert;
-
 import uk.gov.bis.grants.utils.AppProperties;
+
 
 
 import org.openqa.selenium.By;
@@ -25,7 +25,7 @@ public class LandingPage extends BasePage {
 	private static final boolean Exception = false;
 	 WebDriver driver;
 	
-	private String appTitle="Assessor DashBoard";
+	private String appTitle="Assessor Dashboard - Innovation Funding Service";
 	 By oppGuidance = By.xpath(".//*[@id='related']/div/nav/ul/li[2]/a");
 	
 	 
@@ -47,30 +47,15 @@ public class LandingPage extends BasePage {
 	 
 	 //----- Launches application with the given url --//
 	
-	 public void launchLandingPage()
+	 public void launchLandingPage() throws InterruptedException
 	 {
 		 launch_app();
 	 }
 	 
-	
-	 public boolean IsElementPresent(By locator)
-	 {
-	 		 	
-	  try
-	  {
-	   find(locator);
-
-	    return true;
-	  }
-	  catch(Exception e)
-	  {
-	 	 
-	 	 // System.out.println("Logo not found");
-	 	// captureScreen(this.getClass().getSimpleName(), this.testName.getMethodName());
-	 	 //System.out.println("Element not found on the page");
-	 	 return false;
-	  }
-	 }
+	public void verifyDashboard()
+	{
+		verifydPageTitle(appTitle);
+	}
 	 
 	 public boolean IsElementDisplayed(String xpath){
 		  boolean flag;
@@ -93,11 +78,7 @@ public class LandingPage extends BasePage {
 	}
 	 
 	
-	public void verifyDashboardPage(String pageHeader)
-	{
-		assertTrue("Failed: Application Failed to launch",driver.getTitle().equals(appTitle));
-
-	}
+	
 	
 
 // reading the text from the WebElement using Xpath

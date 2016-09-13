@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+
 import cucumber.api.DataTable;
 import uk.gov.bis.grants.utils.AppProperties;
 
@@ -32,10 +33,11 @@ public class BasePage {
 		
 	}
 	
- public void launch_app(){		
+ public void launch_app() throws InterruptedException{		
 		 
 		 driver.get(envurl);
 		 driver.get("https://ifs:Fund1ng@auth.dev.innovateuk.org");
+		 Thread.sleep(3000);
 		assertTrue("Failed: Application Failed to launch",driver.getTitle().equals(appTitle));
 //gotoOpportunityPage();	 
  }
@@ -163,6 +165,12 @@ public void SelectItem(By locator, String Item)
 		// TODO Auto-generated catch block
 		e1.printStackTrace();
 	}
+}
+
+public void verifydPageTitle(String title)
+{
+	assertTrue("Failed: Expected Page" + title + " did not match to actual" + driver.getTitle()+"" ,driver.getTitle().equals(title));
+
 }
 
 
