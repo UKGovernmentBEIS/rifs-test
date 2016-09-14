@@ -16,4 +16,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'grantsFudning-web-test'
+rootProject.name = 'grantsFunding-web-test'
