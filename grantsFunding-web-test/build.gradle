@@ -40,10 +40,10 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     
-     compile 'org.seleniumhq.selenium:selenium-java:2.53.0',
+     compile 'org.seleniumhq.selenium:selenium-java:2.53.1',
               'junit:junit:4.11',
               'info.cukes:cucumber-java:1.2.4',
-              'com.github.detro.ghostdriver:phantomjsdriver:1.1.0'
+              'com.github.detro.ghostdriver:phantomjsdriver:1.2.1'
               
                
     
@@ -53,12 +53,12 @@ dependencies {
             'info.cukes:cucumber-picocontainer:1.2.4',
             'org.picocontainer:picocontainer:2.14.3',
             'info.cukes:cucumber-java:1.2.4-SNAPSHOT',
-              'com.github.detro.ghostdriver:phantomjsdriver:1.1.0'
+              'com.github.detro.ghostdriver:phantomjsdriver:1.2.1'
     
     
   //  testCompile 'junit:junit:4.11'
 	//testCompile 'info.cukes:cucumber-java:1.2.4'
-    testCompile 'org.seleniumhq.selenium:selenium-java:2.53.0'
+    testCompile 'org.seleniumhq.selenium:selenium-java:2.53.1'
     //testCompile 'org.testng:testng:6.8.1'
       testCompile 'org.picocontainer:picocontainer:2.14.3'
       testCompile 'info.cukes:cucumber-java:1.2.4-SNAPSHOT'
