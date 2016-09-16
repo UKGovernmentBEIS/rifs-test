@@ -1,11 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="uk.gov.bis.grants.accceptanceTest.RegressionTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="LT03379" time="0.0">
+<testsuite name="uk.gov.bis.grants.accceptanceTest.RegressionTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Hadron.local" time="0.0">
   <properties/>
-  <system-out><![CDATA[None of the features at [src/test/resources/features.functional/] matched the filters: [@regression, ~@ignore]
+  <system-out><![CDATA[
+?[31mFailed scenarios:?[0m
+?[31mBasicSmoke/GF725-SelectOpptemplate.feature:18 ?[0m# Scenario: OppType associated to Opportunity templates
+?[31mBasicSmoke/GF725-SelectOpptemplate.feature:38 ?[0m# Scenario: Select Opptype and template
+?[31mBasicSmoke/appLogin.feature:5 ?[0m# Scenario: Applicant Successful login
+?[31mBasicSmoke/appLogin.feature:11 ?[0m# Scenario: Portfolio manager successful login
+?[31mBasicSmoke/appLogin.feature:17 ?[0m# Scenario: Invalid user login
+?[31mBasicSmoke/appLogin.feature:24 ?[0m# Scenario: login with empty email box
+?[31mBasicSmoke/appLogin.feature:31 ?[0m# Scenario: login with no password entered
 
-0 Scenarios
-0 Steps
-0m0.000s
+7 Scenarios (?[31m7 failed?[0m)
+28 Steps (?[31m7 failed?[0m, ?[36m21 skipped?[0m)
+0m52.124s
+
+java.lang.AssertionError: Failed: Application Failed to launch
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at uk.gov.bis.grants.pagemodel.BasePage.launch_app(BasePage.java:41)
+	at uk.gov.bis.grants.stepdefs.GivenSteps.i_am_on_login_page(GivenSteps.java:99)
+	at ✽.Given I am on login page(BasicSmoke/GF725-SelectOpptemplate.feature:19)
+
+java.lang.AssertionError: Failed: Application Failed to launch
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at uk.gov.bis.grants.pagemodel.BasePage.launch_app(BasePage.java:41)
+	at uk.gov.bis.grants.stepdefs.GivenSteps.i_am_on_Opportunity_initiate_page(GivenSteps.java:121)
+	at ✽.Given I am on Opportunity initiate page(BasicSmoke/GF725-SelectOpptemplate.feature:39)
+
+java.lang.AssertionError: Failed: Application Failed to launch
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at uk.gov.bis.grants.pagemodel.BasePage.launch_app(BasePage.java:41)
+	at uk.gov.bis.grants.stepdefs.GivenSteps.i_am_on_login_page(GivenSteps.java:99)
+	at ✽.Given I am on login page(BasicSmoke/appLogin.feature:6)
+
+java.lang.AssertionError: Failed: Application Failed to launch
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at uk.gov.bis.grants.pagemodel.BasePage.launch_app(BasePage.java:41)
+	at uk.gov.bis.grants.stepdefs.GivenSteps.i_am_on_login_page(GivenSteps.java:99)
+	at ✽.Given I am on login page(BasicSmoke/appLogin.feature:12)
+
+java.lang.AssertionError: Failed: Application Failed to launch
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at uk.gov.bis.grants.pagemodel.BasePage.launch_app(BasePage.java:41)
+	at uk.gov.bis.grants.stepdefs.GivenSteps.i_am_on_login_page(GivenSteps.java:99)
+	at ✽.Given I am on login page(BasicSmoke/appLogin.feature:18)
+
+java.lang.AssertionError: Failed: Application Failed to launch
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at uk.gov.bis.grants.pagemodel.BasePage.launch_app(BasePage.java:41)
+	at uk.gov.bis.grants.stepdefs.GivenSteps.i_am_on_login_page(GivenSteps.java:99)
+	at ✽.Given I am on login page(BasicSmoke/appLogin.feature:25)
+
+java.lang.AssertionError: Failed: Application Failed to launch
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at uk.gov.bis.grants.pagemodel.BasePage.launch_app(BasePage.java:41)
+	at uk.gov.bis.grants.stepdefs.GivenSteps.i_am_on_login_page(GivenSteps.java:99)
+	at ✽.Given I am on login page(BasicSmoke/appLogin.feature:32)
 
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

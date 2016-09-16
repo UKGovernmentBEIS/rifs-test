@@ -20,10 +20,19 @@ Scenario: Invalid user login
  Then  I should not be able to login
  And I should see error message
  
+@regression
+Scenario: login with empty email box
+Given I am on login page
+When I login with empty email box
+Then  I should not be able to login
+And I should see error message as "Enter valid email address"
 
-
-
-
+@regression
+Scenario: login with no password entered
+Given I am on login page
+When I login with no password
+Then  I should not be able to login
+And I should see inline error message under password field as "Enter your password"
  
  
 

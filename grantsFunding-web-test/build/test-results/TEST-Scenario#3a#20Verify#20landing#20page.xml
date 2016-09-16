@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Scenario: Verify landing page" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-05-25T09:21:29" hostname="LT03379" time="0.018">
-  <properties/>
-  <testcase name="Given I launch app" classname="Scenario: Verify landing page" time="0.0"/>
-  <testcase name="Then I should be able to see landing page." classname="Scenario: Verify landing page" time="0.0"/>
-  <testcase name="classMethod" classname="Scenario: Verify landing page" time="2.78"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

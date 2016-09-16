@@ -11,7 +11,7 @@ And I login as applicant
 When I fill in application form 
 And I submit
 Then I should successfully save application 
-And I should land on manage appilcation page
+And I should land on manage application page
 
 
 

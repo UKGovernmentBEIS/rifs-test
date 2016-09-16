@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="uk.gov.bis.grants.accceptanceTest.BasicSmokeTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="LT03379" time="0.0">
+<testsuite name="uk.gov.bis.grants.accceptanceTest.BasicSmokeTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Hadron.local" time="0.0">
   <properties/>
   <system-out><![CDATA[
-3 Scenarios (?[33m2 pending?[0m, ?[32m1 passed?[0m)
-18 Steps (?[36m10 skipped?[0m, ?[33m2 pending?[0m, ?[32m6 passed?[0m)
-0m10.939s
-
-cucumber.api.PendingException: TODO: implement me
-	at uk.gov.bis.grants.stepdefs.WhenSteps.i_login_with_test_test(WhenSteps.java:46)
-	at ?.And I login with test test(end2endApplicationSetup.feature:16)
-
-cucumber.api.PendingException: TODO: implement me
-	at uk.gov.bis.grants.stepdefs.WhenSteps.i_login_with_test_test(WhenSteps.java:52)
-	at ?.And I login with test1 test1(end2endApplicationSetup.feature:16)
+2 Scenarios (?[32m2 passed?[0m)
+5 Steps (?[32m5 passed?[0m)
+0m48.112s
 
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[[ERROR - 2016-09-16T11:06:19.366Z] Session [7f1eb500-7bfd-11e6-b1cc-276ddff80b92] - page.onError - msg: TypeError: undefined is not an object (evaluating 'IFS.formValidation.checkEmail')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2016-09-16T11:06:19.366Z] Session [7f1eb500-7bfd-11e6-b1cc-276ddff80b92] - page.onError - stack:
+  (anonymous function) (https://auth.dev.innovateuk.org/idp/profile/SAML2/Redirect/SSO?execution=e3s1:169)
+  dispatch (https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js:3)
+  handle (https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js:3)
+  dispatchEvent (:0)
+  U (:119)
+  $ (:108)
+  $ (:101)
+  gh (:141)
+  sh (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:152)
+  (anonymous function) (:153)
+
+  phantomjs://platform/console++.js:263 in error
+]]></system-err>
 </testsuite>
