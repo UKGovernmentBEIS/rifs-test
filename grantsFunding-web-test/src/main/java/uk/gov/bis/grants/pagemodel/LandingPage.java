@@ -52,7 +52,7 @@ public class LandingPage extends BasePage {
 		 launch_app();
 	 }
 	 
-	public void verifyDashboard()
+	public void verifyPage()
 	{
 		verifydPageTitle(appTitle);
 	}
