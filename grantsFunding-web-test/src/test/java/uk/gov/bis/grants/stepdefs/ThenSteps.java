@@ -1,30 +1,19 @@
 package uk.gov.bis.grants.stepdefs;
 
-import java.util.Hashtable;
-import java.util.List;
-
-import static org.junit.Assert.assertTrue;
-import junit.framework.Assert;
-//import junit.framework.Assert;
-
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.en.Then;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.support.PageFactory;
-
-import cucumber.api.DataTable;
-import cucumber.api.PendingException;
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.en.Then;
-import uk.gov.bis.grants.pagemodel.LandingPage;
-import uk.gov.bis.grants.pagemodel.applicationformPage;
-import uk.gov.bis.grants.pagemodel.createOpportunityPage;
-import uk.gov.bis.grants.pagemodel.loginPage;
-import uk.gov.bis.grants.pagemodel.manageApplicationPage;
+import uk.gov.bis.grants.pagemodel.*;
 import uk.gov.bis.grants.utils.AppProperties;
 
+import java.util.List;
+
+//import junit.framework.Assert;
 
 public class ThenSteps {
 	LandingPage mainPage;
@@ -34,8 +23,6 @@ public class ThenSteps {
 	createOpportunityPage oppPage;
 	private  WebDriver driver;
 	String platform= AppProperties.get("platform");
-
-	
 
 	public ThenSteps(SharedWebDriver driver){
 		

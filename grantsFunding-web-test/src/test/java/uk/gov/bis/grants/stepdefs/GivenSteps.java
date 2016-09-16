@@ -1,26 +1,18 @@
 package uk.gov.bis.grants.stepdefs;
 
 
-
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.support.PageFactory;
-
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
-import uk.gov.bis.grants.pagemodel.BasePage;
-import uk.gov.bis.grants.pagemodel.LandingPage;
-import uk.gov.bis.grants.pagemodel.createOpportunityPage;
-import uk.gov.bis.grants.pagemodel.guidancePage;
-import uk.gov.bis.grants.pagemodel.loginPage;
-import uk.gov.bis.grants.pagemodel.startPage;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.support.PageFactory;
+import uk.gov.bis.grants.pagemodel.*;
 
 
 public class GivenSteps {
