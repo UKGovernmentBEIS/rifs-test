@@ -134,11 +134,18 @@ public class ThenSteps {
 	
 	@Then("^I should be able to see dashboard\\.$")
 	public void i_should_be_able_to_see_dashboard() throws Throwable {
-	   mainPage.verifyDashboard();
+	   mainPage.verifyPage();
 	    //throw new PendingException();
 	}
 	
-
+	
+	@Then("^I should be able to see app landing page \"([^\"]*)\"$")
+	public void i_should_be_able_to_see_app_landing_page(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		mainPage.verifydPageTitle(arg1);
+	}
+	
+	
 	 @After()
 	    /**
 	     * Embed a screenshot in test report if test is marked as failed
