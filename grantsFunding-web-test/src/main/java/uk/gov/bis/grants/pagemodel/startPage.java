@@ -35,6 +35,7 @@ public class startPage extends BasePage {
 	 
 	By applyButton = By.xpath(".//*[@id='content']/div[3]/div[2]/a");
 	By applicantLink = By.xpath(".//*[@id='u10']/p/a");
+	By oppList = By.xpath(".//*[@id='content']/div[2]/div/ul/li/a");
 	 
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a")
@@ -57,11 +58,19 @@ public class startPage extends BasePage {
 				
 	}
 	
+	public void asanApplicant() throws InterruptedException
+	{
+		click(applicantLink);
+		Thread.sleep(2000);
+	}
+	
 	public void validateapplicantLink(){
 		this.IsElementDisplayed(applicantLink);
 		
 	}
-
+public void oppList(){
+	this.IsElementDisplayed(oppList);
+}
 
 }
 

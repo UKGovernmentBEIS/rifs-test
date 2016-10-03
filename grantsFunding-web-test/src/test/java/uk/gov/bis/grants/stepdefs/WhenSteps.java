@@ -119,6 +119,11 @@ public class WhenSteps {
 
 
     }
+    
+    @When("^I click on applicant link$")
+    public void i_click_on_applicant_link() throws Throwable {
+        appStartPge.asanApplicant();
+    }
 
 
     @After()

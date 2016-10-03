@@ -147,6 +147,11 @@ public class ThenSteps {
 	}
 	
 	
+	@Then("^I should be able to see opportunity list page$")
+	public void i_should_be_able_to_see_opportunity_list_page() throws Throwable {
+	    startpage.oppList();
+	}
+	
 	 @After()
 	    /**
 	     * Embed a screenshot in test report if test is marked as failed
