@@ -34,6 +34,7 @@ public class startPage extends BasePage {
 	 By startButton = By.cssSelector(".button.button-start-now");
 	 
 	By applyButton = By.xpath(".//*[@id='content']/div[3]/div[2]/a");
+	By applicantLink = By.xpath(".//*[@id='u10']/p/a");
 	 
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a")
@@ -56,6 +57,10 @@ public class startPage extends BasePage {
 				
 	}
 	
+	public void validateapplicantLink(){
+		this.IsElementDisplayed(applicantLink);
+		
+	}
 
 
 }

@@ -21,6 +21,7 @@ public class ThenSteps {
 	applicationformPage appformpage;
 	loginPage loginPage;
 	createOpportunityPage oppPage;
+	startPage startpage;
 	private  WebDriver driver;
 	String platform= AppProperties.get("platform");
 
@@ -34,6 +35,7 @@ public class ThenSteps {
 		appformpage = PageFactory.initElements(driver, applicationformPage.class);
 		loginPage = PageFactory.initElements(driver,loginPage.class);
 		oppPage = PageFactory.initElements(driver,createOpportunityPage.class);
+		startpage = PageFactory.initElements(driver,startPage.class);
 		
 	}
 
@@ -130,6 +132,18 @@ public class ThenSteps {
 	public void i_should_be_able_to_see_app_landing_page(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		mainPage.verifydPageTitle(arg1);
+	}
+	
+	@Then("^I should be able to land on start page$")
+	public void i_should_be_able_to_land_on_start_page() throws Throwable {
+	    mainPage.verifydPageTitle("Start Page");
+	}
+
+	
+	@Then("^I should see applicant start link$")
+	public void i_should_see_applicant_start_link() throws Throwable {
+		startpage.validateapplicantLink();
+	    
 	}
 	
 	

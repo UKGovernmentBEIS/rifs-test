@@ -25,7 +25,8 @@ public class BasePage {
 	
 	private  WebDriver driver;
 	private String envurl= AppProperties.get("envurl");
-	private String appTitle = "Innovation Funding Service - Sign in";
+	private String appTitle = "Start Page";
+	//private String appTitle = "Innovation Funding Service - Sign in";
 	
 	public BasePage(WebDriver driver)
 	{
@@ -36,7 +37,7 @@ public class BasePage {
  public void launch_app() throws InterruptedException{		
 		 
 		 driver.get(envurl);
-		 driver.get("https://ifs:Fund1ng@auth.dev.innovateuk.org");
+		// driver.get("https://ifs:Fund1ng@auth.dev.innovateuk.org");
 		 Thread.sleep(3000);
 		assertTrue("Failed: Application Failed to launch",driver.getTitle().equals(appTitle));
 //gotoOpportunityPage();	 
@@ -174,6 +175,8 @@ public void verifydPageTitle(String title)
 }
 
 
+
+
 public boolean IsElementPresent(By locator)
 {
 		 	
@@ -192,5 +195,17 @@ public boolean IsElementPresent(By locator)
 	 return false;
  }
 }
+
+public boolean IsElementDisplayed(By locator){
+	  boolean flag;
+	  if (find(locator).isDisplayed())
+	flag= true;
+	 
+	 else{
+	 flag= false;
+	 }
+return flag;
+}
+
 
 }

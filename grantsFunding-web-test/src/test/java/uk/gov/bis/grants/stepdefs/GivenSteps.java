@@ -120,6 +120,12 @@ public class GivenSteps {
 	  createOpp.click_createOpplink();  
 	}
 	
+	
+	@Given("^I launch application$")
+	public void i_launch_application() throws Throwable {
+		landingPage.launch_app();
+	}
+
 
 	@Then("^I should be able to see landing page\\.$")
 	public void i_should_be_able_to_see_landing_page() throws Throwable {
