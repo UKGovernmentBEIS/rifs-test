@@ -2,20 +2,22 @@
 Feature: Appication start page
 As a user 
 In order to apply for an opportunity
-I should be able to see applicant link to start applying.
+I should be able to see Opportunity details.
 
 
-@1118
-Scenario:Start page to show applicant start link
-Given I launch application
-Then I should be able to land on start page
-And I should see applicant start link
 
-@1118
+
+@1116
 Scenario: Applicant link clickable and open in same page.
 Given I launch application
-When I click on applicant link
-Then I should be able to see opportunity list page
+And I click on applicant link
+When I select an Opportunity from list
+Then I should be able to see details of that opportunity
+
+Scenario: Opportunity detail page to show all sections and clickable
+Given I launch application
+
+
 
 @ignore
 @manual
@@ -27,7 +29,6 @@ And I see page header as general ""
 @ignore
 @manual
 Scenario: Start page to be as per GDS Standard
-
 @ignore
 @manual 
 Scenario: Cross browser test

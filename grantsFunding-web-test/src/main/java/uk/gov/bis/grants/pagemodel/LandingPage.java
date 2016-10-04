@@ -54,7 +54,7 @@ public class LandingPage extends BasePage {
 	 
 	public void verifyPage()
 	{
-		verifydPageTitle(appTitle);
+		verifyPageTitle(appTitle);
 	}
 	 
 	 public boolean IsElementDisplayed(String xpath){

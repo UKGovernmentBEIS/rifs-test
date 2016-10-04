@@ -71,6 +71,10 @@ public class startPage extends BasePage {
 public void oppList(){
 	this.IsElementDisplayed(oppList);
 }
+public void selectOppor()
+{
+   click(oppList);
+}
 
 }
 

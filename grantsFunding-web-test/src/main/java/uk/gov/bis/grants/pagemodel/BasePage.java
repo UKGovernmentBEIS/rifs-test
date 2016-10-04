@@ -168,7 +168,7 @@ public void SelectItem(By locator, String Item)
 	}
 }
 
-public void verifydPageTitle(String title)
+public void verifyPageTitle(String title)
 {
 	assertTrue("Failed: Expected Page" + title + " did not match to actual" + driver.getTitle()+"" ,driver.getTitle().equals(title));
 

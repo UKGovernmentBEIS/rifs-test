@@ -125,6 +125,13 @@ public class WhenSteps {
         appStartPge.asanApplicant();
     }
 
+    @When("^I select an Opportunity from list$")
+    public void i_select_an_Opportunity_from_list() throws Throwable {
+    	appStartPge.selectOppor();
+        
+    }
+
+    
 
     @After()
     /**

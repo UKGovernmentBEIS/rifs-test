@@ -22,6 +22,7 @@ public class ThenSteps {
 	loginPage loginPage;
 	createOpportunityPage oppPage;
 	startPage startpage;
+	OpportunityDetailPage oppdetailPage;
 	private  WebDriver driver;
 	String platform= AppProperties.get("platform");
 
@@ -36,6 +37,7 @@ public class ThenSteps {
 		loginPage = PageFactory.initElements(driver,loginPage.class);
 		oppPage = PageFactory.initElements(driver,createOpportunityPage.class);
 		startpage = PageFactory.initElements(driver,startPage.class);
+		oppdetailPage = PageFactory.initElements(driver,OpportunityDetailPage.class);
 		
 	}
 
@@ -131,12 +133,12 @@ public class ThenSteps {
 	@Then("^I should be able to see app landing page \"([^\"]*)\"$")
 	public void i_should_be_able_to_see_app_landing_page(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-		mainPage.verifydPageTitle(arg1);
+		mainPage.verifyPageTitle(arg1);
 	}
 	
 	@Then("^I should be able to land on start page$")
 	public void i_should_be_able_to_land_on_start_page() throws Throwable {
-	    mainPage.verifydPageTitle("Start Page");
+	    mainPage.verifyPageTitle("Start Page");
 	}
 
 	
@@ -150,6 +152,12 @@ public class ThenSteps {
 	@Then("^I should be able to see opportunity list page$")
 	public void i_should_be_able_to_see_opportunity_list_page() throws Throwable {
 	    startpage.oppList();
+	}
+	
+	@Then("^I should be able to see details of that opportunity$")
+	public void i_should_be_able_to_see_details_of_that_opportunity() throws Throwable {
+		oppdetailPage.VerifyPageTitle();
+	  
 	}
 	
 	 @After()
