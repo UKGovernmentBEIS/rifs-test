@@ -50,7 +50,15 @@ public class OpportunityDetailPage extends BasePage {
 	
 public void validateAllSections()
 {
+	
+	this.IsElementDisplayed(section1);
 	this.IsElementDisplayed(section2);
+	this.IsElementDisplayed(section3);
+	this.IsElementDisplayed(section4);
+	this.IsElementDisplayed(section5);
+	this.IsElementDisplayed(section6);
+	
+	
 	
 }
 	
