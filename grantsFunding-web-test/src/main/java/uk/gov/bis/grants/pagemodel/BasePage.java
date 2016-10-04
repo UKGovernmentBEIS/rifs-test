@@ -4,7 +4,9 @@
 package uk.gov.bis.grants.pagemodel;
 
 import static org.junit.Assert.assertTrue;
+
 import org.openqa.selenium.JavascriptExecutor;
+
 import java.util.List;
 import java.util.ListIterator;
 
@@ -206,14 +208,20 @@ public boolean IsElementDisplayed(By locator){
 	  if (find(locator).isDisplayed())
 	  {
 		  
-		  WebElement element = find(locator);
-		  js.executeScript("arguments[0].style.border='3px solid red'",element);
+		 
 		  flag= true;
 	  }
 	 else{
 	 flag= false;
 	 }
 return flag;
+}
+public void highlightElements(By locator) throws InterruptedException
+{
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	 WebElement element = find(locator);
+	 js.executeScript("arguments[0].style.border='3px solid red'",element);
+	 Thread.sleep(3000);
 }
 
 
