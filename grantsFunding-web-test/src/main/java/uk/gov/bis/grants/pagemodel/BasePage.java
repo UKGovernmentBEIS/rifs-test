@@ -209,7 +209,7 @@ public boolean IsElementDisplayed(By locator) throws InterruptedException{
 	  {
 		  
 		  WebElement element = find(locator);
-			 js.executeScript("arguments[0].style.border='3px solid orange'",element);
+			 js.executeScript("arguments[0].style.border='3px grove green'",element);
 			 Thread.sleep(2000);
 		  flag= true;
 	  }

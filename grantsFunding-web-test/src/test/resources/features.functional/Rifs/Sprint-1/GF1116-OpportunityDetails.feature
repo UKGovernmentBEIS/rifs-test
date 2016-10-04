@@ -1,14 +1,12 @@
 #Auther : Nasir Khan
-Feature: Opportunity detail page
+Feature: GF-1116 Opportunity detail page
 As a user 
 In order to apply for an opportunity
 I should be able to see Opportunity details.
 
 
-
-
 @Sprint1
-Scenario: Applicant link clickable and open in same page.
+Scenario: Open Opp detail page from opp list page.
 Given I launch application
 And I click on applicant link
 When I select an Opportunity from list
