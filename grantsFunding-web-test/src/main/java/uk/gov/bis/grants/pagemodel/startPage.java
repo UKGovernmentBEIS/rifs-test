@@ -64,11 +64,11 @@ public class startPage extends BasePage {
 		Thread.sleep(2000);
 	}
 	
-	public void validateapplicantLink(){
+	public void validateapplicantLink() throws InterruptedException{
 		this.IsElementDisplayed(applicantLink);
 		
 	}
-public void oppList(){
+public void oppList() throws InterruptedException{
 	this.IsElementDisplayed(oppList);
 }
 public void selectOppor()

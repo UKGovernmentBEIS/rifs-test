@@ -48,7 +48,7 @@ public class OpportunityDetailPage extends BasePage {
 		this.verifyPageTitle(pageTitle);
 	}
 	
-public void validateAllSections()
+public void validateAllSections() throws InterruptedException
 {
 	
 	this.IsElementDisplayed(section1);

@@ -199,7 +199,7 @@ public boolean IsElementPresent(By locator)
  }
 }
 
-public boolean IsElementDisplayed(By locator){
+public boolean IsElementDisplayed(By locator) throws InterruptedException{
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 			
@@ -208,7 +208,9 @@ public boolean IsElementDisplayed(By locator){
 	  if (find(locator).isDisplayed())
 	  {
 		  
-		 
+		  WebElement element = find(locator);
+			 js.executeScript("arguments[0].style.border='3px solid red'",element);
+			 Thread.sleep(2000);
 		  flag= true;
 	  }
 	 else{
