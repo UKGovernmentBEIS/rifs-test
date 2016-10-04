@@ -4,7 +4,7 @@
 package uk.gov.bis.grants.pagemodel;
 
 import static org.junit.Assert.assertTrue;
-
+import org.openqa.selenium.JavascriptExecutor;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import cucumber.api.DataTable;
@@ -197,10 +198,18 @@ public boolean IsElementPresent(By locator)
 }
 
 public boolean IsElementDisplayed(By locator){
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	
+			
 	  boolean flag;
+	  
 	  if (find(locator).isDisplayed())
-	flag= true;
-	 
+	  {
+		  
+		  WebElement element = find(locator);
+		  js.executeScript("arguments[0].style.border='3px solid red'",element);
+		  flag= true;
+	  }
 	 else{
 	 flag= false;
 	 }
