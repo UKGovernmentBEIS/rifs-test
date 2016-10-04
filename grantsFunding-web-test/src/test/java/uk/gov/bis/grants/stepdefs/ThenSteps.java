@@ -157,10 +157,17 @@ public class ThenSteps {
 	@Then("^I should be able to see details of that opportunity$")
 	public void i_should_be_able_to_see_details_of_that_opportunity() throws Throwable {
 		oppdetailPage.VerifyPageTitle();
-		oppdetailPage.validateOppPageSections();
-		oppdetailPage.validateAllSections();
+		
 	  
 	}
+	
+	@Then("^I should see all sections on opportunity detail page$")
+	public void i_should_see_all_sections_on_opportunity_detail_page() throws Throwable {
+		oppdetailPage.validateOppPageSections();
+		oppdetailPage.validateAllSections();
+	    
+	}
+	
 	
 	 @After()
 	    /**
