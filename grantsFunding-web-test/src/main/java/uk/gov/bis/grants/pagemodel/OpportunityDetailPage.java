@@ -37,6 +37,10 @@ public class OpportunityDetailPage extends BasePage {
     By section4 = By.xpath(".//*[@id='content']/div[2]/header/table/tbody/tr[1]/td[2]/a");
     By section5 = By.xpath(".//*[@id='content']/div[2]/header/table/tbody/tr[2]/td[2]/a");
     By section6 = By.xpath(".//*[@id='content']/div[2]/header/table/tbody/tr[3]/td[2]/a");
+    By firstnextbutton = By.xpath(".//*[@id='content']/div[2]/footer/div/a");
+    By sectionHeading = By.xpath(".//*[@id='content']/div[2]/article/h1");
+    By nextbutton = By.xpath(".//*[@id='content']/div[2]/footer/div[2]/a");
+    By previousbutton = By.xpath(".//*[@id='content']/div[2]/footer/div[1]/a");
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a")
 //	    WebElement startButton;
@@ -71,5 +75,26 @@ public void validateOppPageSections()
 	Assert.assertEquals("Further Information",getText(section6));
 }	
 
+public void VerifynavigationOnDetailPage(String expectedHeader)
+{
+
+Assert.assertEquals(expectedHeader,getText(sectionHeading));
+	
+}
+
+public void clickfirstNext()
+{
+	click(firstnextbutton);
+}
+
+public void clickPrevious()
+{
+	click(previousbutton);
+}
+
+public void clickNext()
+{
+	click(nextbutton);
+}
 }
 

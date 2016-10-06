@@ -22,6 +22,7 @@ public class WhenSteps {
     loginPage loginPage;
     applicationformPage appform;
     createOpportunityPage oppPage;
+    OpportunityDetailPage oppdetailPage;
 
 
     String platform = AppProperties.get("platform");
@@ -36,6 +37,7 @@ public class WhenSteps {
         loginPage = PageFactory.initElements(driver, loginPage.class);
         appform = PageFactory.initElements(driver, applicationformPage.class);
         oppPage = PageFactory.initElements(driver, createOpportunityPage.class);
+        oppdetailPage = PageFactory.initElements(driver,OpportunityDetailPage.class);
     }
 
     @When("^I click on start$")
@@ -48,8 +50,21 @@ public class WhenSteps {
         appStartPge.clickApply();
 
     }
-
-
+    @When("^I click firstnext button$")
+    public void i_click_firstnext_button() throws Throwable {
+        oppdetailPage.clickfirstNext();
+    }
+    
+    @When("^I click on next button again$")
+    public void i_click_on_next_button_again() throws Throwable {
+        oppdetailPage.clickNext();
+    }
+    
+    @When("^I click on previous button$")
+    public void i_click_on_previous_button() throws Throwable {
+        oppdetailPage.clickPrevious();
+    }
+    
     @When("^I fill in application form$")
     public void i_fill_in_application_form() throws Throwable {
         // Write code here that turns the phrase above into concrete actions

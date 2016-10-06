@@ -167,6 +167,10 @@ public class ThenSteps {
 		oppdetailPage.validateAllSections();
 	    
 	}
+	@Then("^I should see section \"([^\"]*)\"$")
+	public void i_should_see_section(String arg1) throws Throwable {
+	    oppdetailPage.VerifynavigationOnDetailPage(arg1);
+	}
 	
 	
 	 @After()
