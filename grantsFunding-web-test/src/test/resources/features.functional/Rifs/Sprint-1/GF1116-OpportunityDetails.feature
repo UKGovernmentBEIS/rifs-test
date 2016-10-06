@@ -12,7 +12,7 @@ And I click on applicant link
 When I select an Opportunity from list
 Then I should be able to see details of that opportunity
 
-@Current
+@Sprint1
 Scenario: Opportunity detail page to show all sections and clickable
 Given I launch application
 And I click on applicant link
