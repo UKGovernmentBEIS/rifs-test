@@ -127,6 +127,15 @@ public class GivenSteps {
 	}
 
 
+@Given("^I am on the opportunity detail page$")
+public void i_am_on_the_opportunity_detail_page() throws Throwable {
+	landingPage.launch_app();
+	landingPage.gotoOpportunityPage();
+	
+}
+
+	
+
 	@Then("^I should be able to see landing page\\.$")
 	public void i_should_be_able_to_see_landing_page() throws Throwable {
 		

@@ -57,8 +57,10 @@ public class BasePage {
 	 
 	public void gotoOpportunityPage()
 	{
-		driver.navigate().to(envurl+"competition/1/details");
+		driver.navigate().to(envurl+"opportunity/1");
 	}
+	
+	
 	 
 	 public WebElement find(By locator)
      {

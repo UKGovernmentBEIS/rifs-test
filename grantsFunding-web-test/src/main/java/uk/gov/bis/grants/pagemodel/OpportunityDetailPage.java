@@ -41,6 +41,10 @@ public class OpportunityDetailPage extends BasePage {
     By sectionHeading = By.xpath(".//*[@id='content']/div[2]/article/h1");
     By nextbutton = By.xpath(".//*[@id='content']/div[2]/footer/div[2]/a");
     By previousbutton = By.xpath(".//*[@id='content']/div[2]/footer/div[1]/a");
+    
+    By makeanapplication = By.xpath(".//*[@id='content']/div[2]/div/a");
+    
+    
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a")
 //	    WebElement startButton;
@@ -96,5 +100,10 @@ public void clickNext()
 {
 	click(nextbutton);
 }
+public void makeApplication()
+{
+	click(makeanapplication);
+}
+
 }
 

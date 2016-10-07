@@ -65,20 +65,7 @@ public class WhenSteps {
         oppdetailPage.clickPrevious();
     }
     
-    @When("^I fill in application form$")
-    public void i_fill_in_application_form() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        appform.validateLandingPage();
-        appform.fillinAppForm("AutoTest-title2", "AutoTestDescription1");
-
-    }
-
-    @When("^I submit$")
-    public void i_submit() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        appform.submitapplication();
-    }
-
+   
     @When("^I login as applicant user$")
     public void i_login_as_applicant_user() throws Throwable {
         loginPage.login_app("newbie.nina@rc.co.uk", "password");
@@ -140,12 +127,22 @@ public class WhenSteps {
         appStartPge.asanApplicant();
     }
 
+    @When("^I click on Make an application$")
+    public void i_click_on_Make_an_application() throws Throwable {
+        
+    	oppdetailPage.makeApplication();
+    	
+    	
+    }
+    
+    
     @When("^I select an Opportunity from list$")
     public void i_select_an_Opportunity_from_list() throws Throwable {
     	appStartPge.selectOppor();
         
     }
-
+    
+   
     
 
     @After()
