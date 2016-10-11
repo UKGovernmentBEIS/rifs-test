@@ -66,7 +66,7 @@ public class SharedWebDriver extends EventFiringWebDriver {
                 caps.setCapability("cssSelectorsEnabled", false);
                 caps.setCapability("applicationCacheEnabled", true);
                 caps.setCapability("acceptSslCerts", true);
-                String phantomjspath = System.getProperty("user.dir") + "/src/test/resources/phantomjs-2.1.1-macosx/bin/phantomjs";
+                String phantomjspath = System.getProperty("user.dir") + "/src/test/resources/phantomjs-2.1.1-linux-x86_64/bin/phantomjs";
                 caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, phantomjspath);
                 driver = new PhantomJSDriver(caps);
             } else if (browser.equalsIgnoreCase("firefox")) {
