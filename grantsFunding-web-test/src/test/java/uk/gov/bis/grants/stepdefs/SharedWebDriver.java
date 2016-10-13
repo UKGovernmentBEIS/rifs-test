@@ -27,10 +27,12 @@ public class SharedWebDriver extends EventFiringWebDriver {
             String envUrl = AppProperties.get("envurl");
             String saucelabaccountname = AppProperties.get("saucelabUser");
             String saucelabaccesskey = AppProperties.get("saucelabKey");
+            String OS = AppProperties.get("OS");
 
             if (platform.equalsIgnoreCase("browserstack")) {
                 String USERNAME = AppProperties.get("bsUsername");
                 String AUTOMATE_KEY = AppProperties.get("bsUserkey");
+                
 
                 String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 
@@ -56,18 +58,34 @@ public class SharedWebDriver extends EventFiringWebDriver {
                 //desiredCap.SetCapability("browserstack.debug", "true");
                 driver = new RemoteWebDriver(new URL(URL), desiredCap);
             } else if (platform.equalsIgnoreCase("headless")) {
+            	 DesiredCapabilities caps = new DesiredCapabilities();
+            	
+            	switch(OS)
+            	{
+            	case "MAC":
+            		caps.setJavascriptEnabled(true);
+                    caps.setCapability("cssSelectorsEnabled", false);
+                    caps.setCapability("applicationCacheEnabled", true);
+                    caps.setCapability("acceptSslCerts", true);
+                    String Macphantomjspath = System.getProperty("user.dir") + "/src/test/resources/phantomjs-2.1.1-macosx/bin/phantomjs";
+                    caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, Macphantomjspath);
+            	break;
+            	case  "linux" :
+            		caps.setJavascriptEnabled(true);
+                    caps.setCapability("cssSelectorsEnabled", false);
+                    caps.setCapability("applicationCacheEnabled", true);
+                    caps.setCapability("acceptSslCerts", true);
+                    String Linuxphantomjspath = System.getProperty("user.dir") + "/src/test/resources/phantomjs-2.1.1-linux-x86_64/bin/phantomjs";
+                    caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, Linuxphantomjspath);
+            	}
                 // driver = new HtmlUnitDriver();
                 // driver.get("http://google.co.uk");
                 //System.out.println("htmlUnitdriver");
 
                 // Create instance of PhantomJS driver
-                DesiredCapabilities caps = new DesiredCapabilities();
-                caps.setJavascriptEnabled(true);
-                caps.setCapability("cssSelectorsEnabled", false);
-                caps.setCapability("applicationCacheEnabled", true);
-                caps.setCapability("acceptSslCerts", true);
-                String phantomjspath = System.getProperty("user.dir") + "/src/test/resources/phantomjs-2.1.1-linux-x86_64/bin/phantomjs";
-                caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, phantomjspath);
+               
+                ;
+               
                 driver = new PhantomJSDriver(caps);
             } else if (browser.equalsIgnoreCase("firefox")) {
                 System.out.println("shared webdriver");
