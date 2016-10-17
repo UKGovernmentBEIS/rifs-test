@@ -1,5 +1,5 @@
 #Auther : Nasir Khan
-Feature: GF1116 Opportunity overview page
+Feature: GF1119 Opportunity overview page
 As a user 
 In order to apply for an opportunity
 I should be able see opportuntiy oview page with questions
