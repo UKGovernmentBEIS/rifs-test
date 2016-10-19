@@ -19,6 +19,7 @@ public class applicationformPage extends BasePage {
 
 	private  WebDriver driver;
 	private String pageTitle="Overview";
+	private String eventPagetitle="Event title";
    
 	 By pageHeader = By.xpath(".//*[@id='content']/div[2]/h1");
 	 String expectedHeader = "Application Overview";
@@ -30,9 +31,9 @@ public class applicationformPage extends BasePage {
 	 By question5 = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[5]/td[1]");
 	 By question6 = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[6]/td[1]");
 	 
-	 
-	 
-	
+	 By eventTitle = By.xpath(".//*[@id='content']/div[2]/form/fieldset/input");
+	 By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/form/div/input[1]");
+	 By eventSection = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[1]/td[1]/a");
 	
 	 
 	
@@ -68,5 +69,23 @@ public class applicationformPage extends BasePage {
 			Assert.assertEquals("6. Costs",getText(question6));
 			
 		}	
-}
+		public void OpenTitilePage()
+		{
+			
+			this.click(eventSection);
+		}
+		
+		public void EnterTitle(String title)
+		{
+		verifyPageTitle(eventPagetitle);
+	     type(eventTitle, title);
+		}
+
+		public void SaveAndContine()
+		{
+		click(saveAndcontinue);
+		verifyPageTitle(pageTitle);
+		
+		}
+	}
 

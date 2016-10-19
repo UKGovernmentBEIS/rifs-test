@@ -187,6 +187,23 @@ public class ThenSteps {
      appformpage.verifyQuestions();
 	}
 	
+	@Then("^I should be able to enter title \"([^\"]*)\"$")
+	public void i_should_be_able_to_enter_title(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    appformpage.EnterTitle(arg1);
+	}
+
+	@Then("^I should be able save and Continue$")
+	public void i_should_be_able_save_and_Continue() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    appformpage.SaveAndContine();
+	    }
+
+	@Then("^I should return back to overview page\\.$")
+	public void i_should_return_back_to_overview_page() throws Throwable {
+	   // nothing to do in this step as its verified in above step.
+	}
+	
 	
 	 @After()
 	    /**

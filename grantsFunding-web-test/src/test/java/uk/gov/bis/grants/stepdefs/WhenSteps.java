@@ -142,7 +142,10 @@ public class WhenSteps {
         
     }
     
-   
+    @When("^I click on event title link on application overview page$")
+    public void i_click_on_event_title_link_on_application_overview_page() throws Throwable {
+        appform.OpenTitilePage();
+    }
     
 
     @After()
