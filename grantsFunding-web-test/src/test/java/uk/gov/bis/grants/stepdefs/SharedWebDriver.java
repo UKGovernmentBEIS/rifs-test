@@ -29,7 +29,18 @@ public class SharedWebDriver extends EventFiringWebDriver {
             String saucelabaccesskey = AppProperties.get("saucelabKey");
             String OS = AppProperties.get("OS");
 
-            if (platform.equalsIgnoreCase("browserstack")) {
+            if (platform.equalsIgnoreCase("Remote")) {
+				if (browser.equalsIgnoreCase("firefox")) {
+					DesiredCapabilities cap = DesiredCapabilities.firefox();
+					cap.setBrowserName("firefox");
+					cap.setPlatform(org.openqa.selenium.Platform.ANY);
+					// driver = new RemoteWebDriver(new
+					// URL("http://osvm944.ordsvy.gov.uk:4444/wd/hub"), cap);
+					driver = new RemoteWebDriver(new URL(
+							"http://10.0.2.15:4444/wd/hub"), cap);
+				}
+            }
+				else if (platform.equalsIgnoreCase("browserstack")) {
                 String USERNAME = AppProperties.get("bsUsername");
                 String AUTOMATE_KEY = AppProperties.get("bsUserkey");
                 
@@ -37,10 +48,15 @@ public class SharedWebDriver extends EventFiringWebDriver {
                 String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub.browserstack.com/wd/hub";
 
                 DesiredCapabilities caps = new DesiredCapabilities();
-                caps.setCapability("browser", "Iphone");
-                caps.setCapability("platform", "MAC");
-                caps.setCapability("device", "iPhone 6S Plus");
-                //caps.setCapability("os_version", "XP");
+                caps.setCapability("browser", "Firefox");
+                caps.setCapability("browser_version", "45.0");
+                caps.setCapability("os", "Windows");
+                caps.setCapability("os_version", "7");
+                caps.setCapability("resolution", "1024x768");
+//                caps.setCapability("browser", "Iphone");
+//                caps.setCapability("platform", "MAC");
+//                caps.setCapability("device", "iPhone 6S Plus");
+//                //caps.setCapability("os_version", "XP");
                 caps.setCapability("browserstack.debug", "true");
                 caps.setCapability("browserstack.local", "true");
 

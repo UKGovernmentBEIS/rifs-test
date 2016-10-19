@@ -76,6 +76,7 @@ public class BasePage {
 
 public void type(By locator,String arg1)
 {
+	find(locator).clear();
 	find(locator).sendKeys(arg1);
 }
 

@@ -8,7 +8,7 @@ Scenario: Verify user able enter free text in title field and able to save.
 Given I am on the opportunity detail page
 When I click on Make an application
 And I click on event title link on application overview page
-Then I should be able to enter title "Seminar on space Technologies"
+Then I should be able to enter title "Seminar on space Technologies AutoTest"
 And I should be able save and Continue
 And I should return back to overview page.
 
