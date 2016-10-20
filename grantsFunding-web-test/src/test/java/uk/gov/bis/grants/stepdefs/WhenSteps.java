@@ -146,8 +146,20 @@ public class WhenSteps {
     public void i_click_on_event_title_link_on_application_overview_page() throws Throwable {
         appform.OpenTitilePage();
     }
+    @When("^I enter title \"([^\"]*)\"$")
+    public void i_enter_title(String arg1) throws Throwable {
+        appform.EnterTitle(arg1);
+    }
     
-
+    @When("^I save and continue$")
+    public void i_save_and_continue() throws Throwable {
+        appform.SaveAndContine();    }
+    
+    @When("^I open event title page again$")
+    public void i_open_event_title_page_again() throws Throwable {
+        appform.OpenTitilePage();
+    }
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed

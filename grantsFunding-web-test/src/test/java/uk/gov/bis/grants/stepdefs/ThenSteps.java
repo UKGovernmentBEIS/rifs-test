@@ -204,6 +204,11 @@ public class ThenSteps {
 	   // nothing to do in this step as its verified in above step.
 	}
 	
+	@Then("^I should see word count \"([^\"]*)\"$")
+	public void i_should_see_word_count(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    appformpage.Validatewordcount(arg1);
+	}
 	
 	 @After()
 	    /**

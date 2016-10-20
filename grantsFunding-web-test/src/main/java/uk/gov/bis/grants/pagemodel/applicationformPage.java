@@ -34,7 +34,7 @@ public class applicationformPage extends BasePage {
 	 By eventTitle = By.xpath(".//*[@id='content']/div[2]/form/fieldset/input");
 	 By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/form/div/input[1]");
 	 By eventSection = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[1]/td[1]/a");
-	
+	 By wordcount = By.xpath(".//*[@id='content']/div[2]/form");
 	 
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a")
@@ -87,5 +87,12 @@ public class applicationformPage extends BasePage {
 		verifyPageTitle(pageTitle);
 		
 		}
-	}
+		public void Validatewordcount(String count)
+		
+		{
+			assertTrue("Failed word count is not as expected",getText(wordcount).contains(count));
+			
+		}
+
+}
 
