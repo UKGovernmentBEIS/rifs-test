@@ -160,6 +160,12 @@ public class WhenSteps {
         appform.OpenTitilePage();
     }
     
+    @When("^I click on \"([^\"]*)\"$")
+    public void i_click_on(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        appform.OpenSection(arg1);
+    }
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed

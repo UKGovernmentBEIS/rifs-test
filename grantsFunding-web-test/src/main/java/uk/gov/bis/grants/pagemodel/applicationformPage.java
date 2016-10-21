@@ -34,10 +34,15 @@ public class applicationformPage extends BasePage {
 	 By eventTitle = By.xpath(".//*[@id='content']/div[2]/form/fieldset/input");
 	 By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/form/div/input[1]");
 	 By eventSection = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[1]/td[1]/a");
+	 By provisionalDate = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[2]/td[1]/a");
+	 By evenObjectives = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[3]/td[1]/a");
+	 By topicsnspeakers = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[4]/td[1]/a");
+	 By evenAudience = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[5]/td[1]/a");
+	 By costs = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[6]/td[1]/a");
 	 By wordcount = By.xpath(".//*[@id='content']/div[2]/form");
 	 
 	
-//	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a")
+//	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
 //	    WebElement startButton;
 	 
 	 
@@ -73,6 +78,38 @@ public class applicationformPage extends BasePage {
 		{
 			
 			this.click(eventSection);
+		}
+		
+		public void OpenSection(String section){
+			switch(section)
+			{
+			case "provisionalDate" :
+				click(provisionalDate);
+				break;
+				
+			case "EventObjs" :
+			 click(evenObjectives);
+			 break;
+			 
+			case "TopicsnSpeakers" :
+				click(topicsnspeakers);
+				break;
+				
+			case "EventAudience" :
+				click(evenAudience);
+				break;
+				
+			case "costs" :
+				click(costs);
+				break;
+				
+			}		
+			
+		}
+		
+		
+		public void verifyEventPageTitle(){
+			verifyPageTitle(eventPagetitle);
 		}
 		
 		public void EnterTitle(String title)

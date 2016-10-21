@@ -210,6 +210,31 @@ public class ThenSteps {
 	    appformpage.Validatewordcount(arg1);
 	}
 	
+	
+	@Then("^I should see all six questions are clickable$")
+	public void i_should_see_all_six_questions_are_clickable() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		appformpage.verifyQuestions();
+	}
+
+	@Then("^I should be click event title$")
+	public void i_should_be_click_event_title() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		appformpage.OpenTitilePage();
+	   
+	}
+
+	@Then("^navigate to \"([^\"]*)\" page$")
+	public void navigate_to_page(String arg1) throws Throwable {
+	    appformpage.verifyPageTitle(arg1);
+	}
+
+	@Then("^I should be able to naviate to page \"([^\"]*)\"$")
+	public void i_should_be_able_to_naviate_to_page(String arg1) throws Throwable {
+		 appformpage.verifyPageTitle(arg1);
+	   
+	}
+
 	 @After()
 	    /**
 	     * Embed a screenshot in test report if test is marked as failed
