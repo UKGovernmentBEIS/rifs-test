@@ -38,10 +38,10 @@ And I open event title page again
 Then I should see word count "<count>"
 Examples:
 |text|count|
-|Seminar on space Technologies AutoTest| 15 words remaining |
-|Seminar|19 words remaining |
-|Seminar on space Technologies|16 words remaining|
-|Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test|0 words remaining|
+|Seminar on space Technologies AutoTest| Words remaining: 15 |
+|Seminar|Words remaining: 19 |
+|Seminar on space Technologies|Words remaining: 16|
+|Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test|Words remaining: 0|
 |Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test test test|2 words over limit|
 
 
