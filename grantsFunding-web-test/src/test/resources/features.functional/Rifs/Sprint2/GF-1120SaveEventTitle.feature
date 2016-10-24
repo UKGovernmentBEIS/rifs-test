@@ -16,18 +16,23 @@ Then I should be able to enter title "Seminar on space Technologies AutoTest"
 And I should be able save and Continue
 And I should return back to overview page.
 
-@Pending
-Scenario: Verify user able to enter free text in the title field and able to mark as complete
-And I  enter title "Seminar on space Technologies AutoTest"
-Then I should be able click mark as complete link
-And I should remain on the same page.
 
-@Pending
-Scenario: Verify date time stamp is displayed when mark as complete is clicked
-And I  enter title "Seminar on space Technologies AutoTest"
+Scenario Outline: Verify user able to enter free text in the title field and able to mark as complete
+And I enter title "<title>"
+Then I should be able click mark as complete link
+And I should return back to overview page.
+Examples:
+|title|
+|Seminar on space Technologies AutoTest|
+
+@Sprint2
+Scenario Outline: Verify date time stamp is displayed when mark as complete is clicked
+And I enter title "<title>"
 And I should be able click mark as complete link
 Then I should be able to see date and time stamp 
-
+Examples:
+|title|
+|Seminar on space Technologies AutoTest|
 
 #Validate word count:
 @Sprint2

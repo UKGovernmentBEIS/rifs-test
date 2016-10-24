@@ -20,26 +20,29 @@ public class applicationformPage extends BasePage {
 	private  WebDriver driver;
 	private String pageTitle="Overview";
 	private String eventPagetitle="Event title";
+	
    
-	 By pageHeader = By.xpath(".//*[@id='content']/div[2]/h1");
-	 String expectedHeader = "Application Overview";
-	 By question1 = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[1]/td[1]");
-	 By question2 = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[2]/td[1]");
-	 By question3 = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[3]/td[1]");
-	 By question4 = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[4]/td[1]");
+	 By pageHeader = By.xpath(".//*[@id='content']/div[2]/div[1]/div[1]/h1");
+	 String expectedHeader = "Application overview";
+	 By question1 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a");
+	 By question2 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[2]/td[1]/a");
+	 By question3 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[3]/td[1]/a");
+	 By question4 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[4]/td[1]/a");
 	 
-	 By question5 = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[5]/td[1]");
-	 By question6 = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[6]/td[1]");
+	 By question5 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[5]/td[1]/a");
+	 By question6 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[6]/td[1]/a");
 	 
-	 By eventTitle = By.xpath(".//*[@id='content']/div[2]/form/fieldset/input");
-	 By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/form/div/input[1]");
-	 By eventSection = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[1]/td[1]/a");
+	 By eventTitle = By.xpath(".//*[@id='title']");
+	 By saveAndcontinue = By.xpath(".//*[@id='content']/div/form/div/input[1]");
+	 By eventSection = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a");
 	 By provisionalDate = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[2]/td[1]/a");
 	 By evenObjectives = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[3]/td[1]/a");
 	 By topicsnspeakers = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[4]/td[1]/a");
 	 By evenAudience = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[5]/td[1]/a");
 	 By costs = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[6]/td[1]/a");
-	 By wordcount = By.xpath(".//*[@id='content']/div[2]/form");
+	 By wordcount = By.xpath(".//*[@id='title_help_text']");
+	 By markAsComplete = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/input");
+	 By dateTimestamp = By.xpath(".//*[@id='content']/div/div[1]/form/fieldset");
 	 
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
@@ -66,12 +69,12 @@ public class applicationformPage extends BasePage {
 		public void verifyQuestions()
 		{
 
-			Assert.assertEquals("1. Event title",getText(question1));
-			Assert.assertEquals("2. Provisional date",getText(question2));
-			Assert.assertEquals("3. Event objectives",getText(question3));
-			Assert.assertEquals("4. Topics and speakers",getText(question4));
-			Assert.assertEquals("5. Event audience",getText(question5));
-			Assert.assertEquals("6. Costs",getText(question6));
+			Assert.assertEquals("Event title",getText(question1));
+			Assert.assertEquals("Provisional date",getText(question2));
+			Assert.assertEquals("Event objectives",getText(question3));
+			Assert.assertEquals("Topics and speakers",getText(question4));
+			Assert.assertEquals("Event audience",getText(question5));
+			Assert.assertEquals("Costs",getText(question6));
 			
 		}	
 		public void OpenTitilePage()
@@ -106,6 +109,18 @@ public class applicationformPage extends BasePage {
 			}		
 			
 		}
+		
+		public void markAsComplete(){
+			click(markAsComplete);
+		}
+		
+		public void verifyDatetimestamp(){
+			
+			click(eventSection);
+			assertTrue("Failed:timestamp not displayed",getText(dateTimestamp).contains("Completed"));
+			
+		}
+
 		
 		
 		public void verifyEventPageTitle(){

@@ -235,6 +235,12 @@ public class ThenSteps {
 	   
 	}
 
+	@Then("^I should be able to see date and time stamp$")
+    public void i_should_be_able_to_see_date_and_time_stamp() throws Throwable {
+       
+    }
+	
+	
 	 @After()
 	    /**
 	     * Embed a screenshot in test report if test is marked as failed

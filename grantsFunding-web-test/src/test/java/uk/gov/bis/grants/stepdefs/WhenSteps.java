@@ -146,6 +146,7 @@ public class WhenSteps {
     public void i_click_on_event_title_link_on_application_overview_page() throws Throwable {
         appform.OpenTitilePage();
     }
+    
     @When("^I enter title \"([^\"]*)\"$")
     public void i_enter_title(String arg1) throws Throwable {
         appform.EnterTitle(arg1);
@@ -165,6 +166,20 @@ public class WhenSteps {
         // Write code here that turns the phrase above into concrete actions
         appform.OpenSection(arg1);
     }
+    
+
+
+
+    
+
+    @When("^I should be able click mark as complete link$")
+    public void i_should_be_able_click_mark_as_complete_link() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        appform.markAsComplete();
+    }
+
+    
+    
     
     @After()
     /**

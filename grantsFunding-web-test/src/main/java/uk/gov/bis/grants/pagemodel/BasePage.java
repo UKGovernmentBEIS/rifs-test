@@ -183,6 +183,7 @@ public void verifyPageTitle(String title)
 
 
 
+
 public boolean IsElementPresent(By locator)
 {
 		 	
