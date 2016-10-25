@@ -103,6 +103,7 @@ public class SharedWebDriver extends EventFiringWebDriver {
                 ;
                
                 driver = new PhantomJSDriver(caps);
+                System.out.println("#####Started test run on  " + envUrl + "  on " + platform + " browser #####");
             } else if (browser.equalsIgnoreCase("firefox")) {
                 System.out.println("shared webdriver");
                 FirefoxProfile prof = new FirefoxProfile();
