@@ -1,5 +1,5 @@
 #Author: Nasir Khan
-Feature: Preview title
+Feature: GF-1117 Preview title
 	As a user in order to submit application
 	I should be able preview entered title.
 	
