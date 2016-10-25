@@ -22,6 +22,7 @@ public class GivenSteps {
 	startPage  appStartPge;
 	loginPage loginpage;
 	createOpportunityPage createOpp;
+	applicationformPage appformPage;
 	
 	public WebDriver driver;
 
@@ -33,6 +34,8 @@ public class GivenSteps {
 		appStartPge = PageFactory.initElements(driver,startPage.class);
 		loginpage= PageFactory.initElements(driver,loginPage.class);
 		createOpp = PageFactory.initElements(driver,createOpportunityPage.class);
+		appformPage = PageFactory.initElements(driver, applicationformPage.class);
+		
 	}
  
 	
@@ -143,6 +146,15 @@ public void i_am_on_the_opportunity_detail_page() throws Throwable {
 	   
 	}
 
+	
+	@Given("^I am on the event tite page$")
+	public void i_am_on_the_event_tite_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   // throw new PendingException();
+		
+	    appformPage.OpenTitilePage();
+	}
+	
 	
 	 @After()
 	    /**

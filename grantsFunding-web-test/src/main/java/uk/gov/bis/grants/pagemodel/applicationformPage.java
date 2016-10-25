@@ -43,6 +43,8 @@ public class applicationformPage extends BasePage {
 	 By wordcount = By.xpath(".//*[@id='title_help_text']");
 	 By markAsComplete = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/input");
 	 By dateTimestamp = By.xpath(".//*[@id='content']/div/div[1]/form/fieldset");
+	 By previewPage = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[2]");
+	 By previewContent = By.xpath(".//*[@id='content']/div/div[1]/p");
 	 
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
@@ -120,7 +122,17 @@ public class applicationformPage extends BasePage {
 			assertTrue("Failed:timestamp not displayed",getText(dateTimestamp).contains("Completed"));
 			
 		}
+		
+		public void preview()
+		{
+			click(previewPage);
+		}
+public void verifyonPreviewPage(String enteredString)
 
+{
+
+	Assert.assertEquals(enteredString,getText(previewContent));
+}
 		
 		
 		public void verifyEventPageTitle(){

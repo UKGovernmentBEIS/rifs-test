@@ -237,8 +237,21 @@ public class ThenSteps {
 
 	@Then("^I should be able to see date and time stamp$")
     public void i_should_be_able_to_see_date_and_time_stamp() throws Throwable {
+		appformpage.verifyDatetimestamp();
        
     }
+	
+	@Then("^I should be able to preview$")
+	public void i_should_be_able_to_preview() throws Throwable {
+		appformpage.preview();
+		
+	    
+	}
+	
+	@Then("^I should be able to view entered \"([^\"]*)\"$")
+	public void i_should_be_able_to_view_entered(String arg1) throws Throwable {
+	    appformpage.verifyonPreviewPage(arg1);
+	}
 	
 	
 	 @After()

@@ -152,6 +152,15 @@ public class WhenSteps {
         appform.EnterTitle(arg1);
     }
     
+    @When("^I enter title \"([^\"]*)\" within required word size limit$")
+    public void i_enter_title_within_required_word_size_limit(String arg1) throws Throwable {
+        appform.EnterTitle(arg1);
+    }
+    @When("^I enter title \"([^\"]*)\" outside required word size limit$")
+    public void i_enter_title_outside_required_word_size_limit(String arg1) throws Throwable {
+       appform.EnterTitle(arg1);
+    }
+    
     @When("^I save and continue$")
     public void i_save_and_continue() throws Throwable {
         appform.SaveAndContine();    }
