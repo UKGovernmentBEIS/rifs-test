@@ -80,6 +80,10 @@ public void type(By locator,String arg1)
 	find(locator).sendKeys(arg1);
 }
 
+public void emptytextbox(By locator)
+{
+	find(locator).clear();
+}
 
 public String getText(By locator)
 {

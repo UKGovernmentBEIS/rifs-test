@@ -30,6 +30,13 @@ Examples:
 |title|
 |Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test test test|
 
+@Sprint2
+Scenario: Empty title cannot preview
+And I am on the event tite page
+When I keep title field empty
+And I click on preview
+Then I should see error message "Field cannot be empty"
+
 
 
 Scenario: Entered words marked as complete should be previewable.

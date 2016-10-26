@@ -45,6 +45,7 @@ public class applicationformPage extends BasePage {
 	 By dateTimestamp = By.xpath(".//*[@id='content']/div/div[1]/form/fieldset");
 	 By previewPage = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[2]");
 	 By previewContent = By.xpath(".//*[@id='content']/div/div[1]/p");
+	 By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
 	 
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
@@ -85,6 +86,9 @@ public class applicationformPage extends BasePage {
 			this.click(eventSection);
 		}
 		
+		
+		
+		
 		public void OpenSection(String section){
 			switch(section)
 			{
@@ -116,6 +120,8 @@ public class applicationformPage extends BasePage {
 			click(markAsComplete);
 		}
 		
+		
+		
 		public void verifyDatetimestamp(){
 			
 			click(eventSection);
@@ -126,6 +132,11 @@ public class applicationformPage extends BasePage {
 		public void preview()
 		{
 			click(previewPage);
+		}
+		public void validateErrormsg()
+		{
+			assertTrue("Failed:Error message not displayed,",getText(errormsg).contains("Field cannot be empty"));
+		
 		}
 public void verifyonPreviewPage(String enteredString)
 
@@ -143,6 +154,11 @@ public void verifyonPreviewPage(String enteredString)
 		{
 		verifyPageTitle(eventPagetitle);
 	     type(eventTitle, title);
+		}
+		
+		public void Cleartextfield()
+		{
+		emptytextbox(eventTitle);
 		}
 
 		public void SaveAndContine()

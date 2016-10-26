@@ -254,6 +254,11 @@ public class ThenSteps {
 	}
 	
 	
+	@Then("^I should see error message \"([^\"]*)\"$")
+	public void i_should_see_error_message(String arg1) throws Throwable {
+	    appformpage.validateErrormsg();
+	}
+	
 	 @After()
 	    /**
 	     * Embed a screenshot in test report if test is marked as failed

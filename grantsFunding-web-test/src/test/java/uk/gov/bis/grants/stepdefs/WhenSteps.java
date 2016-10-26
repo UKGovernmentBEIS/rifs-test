@@ -160,6 +160,10 @@ public class WhenSteps {
     public void i_enter_title_outside_required_word_size_limit(String arg1) throws Throwable {
        appform.EnterTitle(arg1);
     }
+    @When("^I keep title field empty$")
+    public void i_keep_title_field_empty() throws Throwable {
+      appform.Cleartextfield();
+    }
     
     @When("^I save and continue$")
     public void i_save_and_continue() throws Throwable {
@@ -168,6 +172,10 @@ public class WhenSteps {
     @When("^I open event title page again$")
     public void i_open_event_title_page_again() throws Throwable {
         appform.OpenTitilePage();
+    }
+    @When("^I click on preview$")
+    public void i_click_on_preview() throws Throwable {
+        appform.preview();
     }
     
     @When("^I click on \"([^\"]*)\"$")
