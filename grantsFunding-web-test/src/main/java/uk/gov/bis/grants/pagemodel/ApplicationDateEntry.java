@@ -82,6 +82,7 @@ public class ApplicationDateEntry extends BasePage {
 		else {
 			click(saveandContinue);
 			click(openProvisionalDate);
+			click(markasComplete);
 		}
 		
 	}
