@@ -20,7 +20,7 @@ And I enter valid date
 And I enter valid duration
 Then I should be able to mark as complete
 
-@current
+@Sprint2
 Scenario: Verify user able to mark as complete for valid date and duration
 Given I am on application overview page
 When I open provisional date section
@@ -31,7 +31,7 @@ And I click mark as complete
 Then I should return back to overview page.
 
 
-@current
+@Sprint2
 Scenario: Verify user not able mark as complete with invalid month
 When I open provisional date section
 And I enter invalid date
@@ -39,7 +39,7 @@ And I enter invalid date
 And I enter duration "4"
 And I click mark as complete
 Then I should see error message "Must provide a valid date"
-@current
+@Sprint2
 Scenario: invalid day
 And I enter invalid date
 |35|01|2017|
@@ -47,7 +47,7 @@ And I enter duration "4"
 When I click mark as complete
 Then I should see error message "Must provide a valid date"
 
-@current
+@Sprint2
 Scenario: Validate error messsage when duration is empty
 When I enter invalid date
 |3|01|2017|
@@ -76,23 +76,4 @@ User should not be able to save special chars or -negative values
 User should not enter too long number 6 or 10 digits number
 User can't save date with empty days in the field? should give error message?
 
-@tag1
-Scenario: Title of your scenario
-Given I want to write a step with precondition
-	And some other precondition
-When I complete action
-	And some other action
-	And yet another action
-Then I validate the outcomes
-	And check more outcomes
 
-@tag2
-Scenario Outline: Title of your scenario outline
-Given I want to write a step with <name>
-When I check for the <value> in step
-Then I verify the <status> in step
-
-Examples:
-    | name  |value | status |
-    | name1 |  5   | success|
-    | name2 |  7   | Fail   |
