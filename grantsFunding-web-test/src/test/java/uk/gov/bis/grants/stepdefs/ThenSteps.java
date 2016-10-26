@@ -23,6 +23,7 @@ public class ThenSteps {
 	createOpportunityPage oppPage;
 	startPage startpage;
 	OpportunityDetailPage oppdetailPage;
+	ApplicationDateEntry dateEntry;
 	private  WebDriver driver;
 	String platform= AppProperties.get("platform");
 
@@ -38,6 +39,7 @@ public class ThenSteps {
 		oppPage = PageFactory.initElements(driver,createOpportunityPage.class);
 		startpage = PageFactory.initElements(driver,startPage.class);
 		oppdetailPage = PageFactory.initElements(driver,OpportunityDetailPage.class);
+		dateEntry = PageFactory.initElements(driver, ApplicationDateEntry.class);
 		
 	}
 
@@ -256,9 +258,17 @@ public class ThenSteps {
 	
 	@Then("^I should see error message \"([^\"]*)\"$")
 	public void i_should_see_error_message(String arg1) throws Throwable {
-	    appformpage.validateErrormsg();
+		
+		dateEntry.validateErrorMessage(arg1);
+	    
 	}
 	
+	
+
+@Then("^I should see duration field error \"([^\"]*)\"$")
+public void i_should_see_duration_field_error(String arg1) throws Throwable {
+    dateEntry.ValidatedurationfieldError(arg1);
+}
 	 @After()
 	    /**
 	     * Embed a screenshot in test report if test is marked as failed

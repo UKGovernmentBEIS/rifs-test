@@ -23,6 +23,7 @@ public class WhenSteps {
     applicationformPage appform;
     createOpportunityPage oppPage;
     OpportunityDetailPage oppdetailPage;
+    ApplicationDateEntry dateEntry;
 
 
     String platform = AppProperties.get("platform");
@@ -38,6 +39,8 @@ public class WhenSteps {
         appform = PageFactory.initElements(driver, applicationformPage.class);
         oppPage = PageFactory.initElements(driver, createOpportunityPage.class);
         oppdetailPage = PageFactory.initElements(driver,OpportunityDetailPage.class);
+       dateEntry = PageFactory.initElements(driver, ApplicationDateEntry.class);
+        
     }
 
     @When("^I click on start$")
@@ -186,7 +189,6 @@ public class WhenSteps {
     
 
 
-
     
 
     @When("^I should be able click mark as complete link$")
@@ -195,8 +197,29 @@ public class WhenSteps {
         appform.markAsComplete();
     }
 
+    @When("^I enter invalid date$")
+    public void i_enter_invalid_date(DataTable arg1) throws Throwable {
+    	dateEntry.EnterDate(arg1);
+        
+    }
     
     
+    @When("^I enter duration \"([^\"]*)\"$")
+    public void i_enter_duration(String arg1) throws Throwable {
+       dateEntry.Enterduration(arg1);
+    }
+    
+    
+    @When("^I open provisional date section$")
+    public void i_open_provisional_date_section() throws Throwable {
+        appform.OpenSection("provisionalDate");
+    }
+    
+    @When("^I click mark as complete$")
+    public void i_click_mark_as_complete() throws Throwable {
+    	dateEntry.clickMarkcomplete();
+        
+    }
     
     @After()
     /**

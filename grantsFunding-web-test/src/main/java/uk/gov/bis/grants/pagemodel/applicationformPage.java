@@ -2,11 +2,14 @@ package uk.gov.bis.grants.pagemodel;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.List;
 
 import org.junit.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
+import cucumber.api.DataTable;
 
 
 
@@ -35,7 +38,7 @@ public class applicationformPage extends BasePage {
 	 By eventTitle = By.xpath(".//*[@id='title']");
 	 By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[1]");
 	 By eventSection = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a");
-	 By provisionalDate = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[2]/td[1]/a");
+	 By provisionalDate = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[2]/td[1]/a");
 	 By evenObjectives = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[3]/td[1]/a");
 	 By topicsnspeakers = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[4]/td[1]/a");
 	 By evenAudience = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[5]/td[1]/a");
@@ -46,6 +49,7 @@ public class applicationformPage extends BasePage {
 	 By previewPage = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[2]");
 	 By previewContent = By.xpath(".//*[@id='content']/div/div[1]/p");
 	 By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
+	 
 	 
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
@@ -173,6 +177,7 @@ public void verifyonPreviewPage(String enteredString)
 			assertTrue("Failed word count is not as expected",getText(wordcount).contains(count));
 			
 		}
+		
 
 }
 

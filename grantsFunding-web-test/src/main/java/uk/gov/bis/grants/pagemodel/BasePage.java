@@ -61,6 +61,12 @@ public class BasePage {
 	}
 	
 	
+	public void gotoApplicationOverviewPage()
+	{
+		driver.navigate().to(envurl+"application/1");
+		
+	}
+	
 	 
 	 public WebElement find(By locator)
      {

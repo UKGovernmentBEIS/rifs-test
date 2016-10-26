@@ -155,6 +155,14 @@ public void i_am_on_the_opportunity_detail_page() throws Throwable {
 	    appformPage.OpenTitilePage();
 	}
 	
+	@Given("^I am on application overview page$")
+	public void i_am_on_application_overview_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new PendingException();
+	    appformPage.gotoApplicationOverviewPage();
+	    appformPage.verifyPageTitle("Overview");
+	}
+	
 	
 	 @After()
 	    /**
