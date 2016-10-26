@@ -42,7 +42,7 @@ public class ApplicationDateEntry extends BasePage {
 		private String eventPagetitle="Event title";
 		
 	 
-	    By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
+	    By errormsg = By.xpath(".//fieldset/div[1]");
 	    By durationfieldError = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[3]/p");
 	    By dayfield = By.xpath(".//input[@title='date__day']");
 	                           
@@ -50,6 +50,8 @@ public class ApplicationDateEntry extends BasePage {
 	    By yearfield = By.xpath(".//input[@title='date__year']");
 	    By durationfield = By.xpath(".//*[@id='days']");
 	    By markasComplete = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/input");
+	    By saveandContinue = By.xpath(".//input[@name='_save_button']");
+	    By openProvisionalDate = By.xpath(".//a[@href ='/application/1/section/2']");
 	   // By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
 	   
 	
@@ -71,9 +73,17 @@ public class ApplicationDateEntry extends BasePage {
 	}
 
 
-	public void clickMarkcomplete()
+	public void clickMarkcomplete() throws InterruptedException
 	{
+		if(this.IsElementPresent(markasComplete))
+		{
 		click(markasComplete);
+		}
+		else {
+			click(saveandContinue);
+			click(openProvisionalDate);
+		}
+		
 	}
 	
 	public void validateErrorMessage(String msg)

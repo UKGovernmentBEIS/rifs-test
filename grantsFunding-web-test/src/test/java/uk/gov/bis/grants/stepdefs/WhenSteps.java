@@ -203,6 +203,10 @@ public class WhenSteps {
         
     }
     
+    @When("^I enter valid date$")
+    public void i_enter_valid_date(DataTable arg1) throws Throwable {
+    	dateEntry.EnterDate(arg1);
+    }
     
     @When("^I enter duration \"([^\"]*)\"$")
     public void i_enter_duration(String arg1) throws Throwable {

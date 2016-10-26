@@ -38,7 +38,7 @@ public class applicationformPage extends BasePage {
 	 By eventTitle = By.xpath(".//*[@id='title']");
 	 By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[1]");
 	 By eventSection = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a");
-	 By provisionalDate = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[2]/td[1]/a");
+	 By provisionalDate = By.xpath(".//a[@href ='/application/1/section/2']");
 	 By evenObjectives = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[3]/td[1]/a");
 	 By topicsnspeakers = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[4]/td[1]/a");
 	 By evenAudience = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[5]/td[1]/a");

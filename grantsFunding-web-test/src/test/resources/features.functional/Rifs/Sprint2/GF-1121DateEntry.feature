@@ -21,23 +21,34 @@ And I enter valid duration
 Then I should be able to mark as complete
 
 @current
-Scenario: Verify user able to mark as complete only valid date and duration
+Scenario: Verify user able to mark as complete for valid date and duration
 Given I am on application overview page
+When I open provisional date section
+And I enter valid date
+|22|01|2017|
+And I enter duration "4"
+And I click mark as complete
+Then I should return back to overview page.
+
+
+@current
+Scenario: Verify user not able mark as complete with invalid month
 When I open provisional date section
 And I enter invalid date
 |22|00|2017|
 And I enter duration "4"
 And I click mark as complete
 Then I should see error message "Must provide a valid date"
-
-#When I open provisional date section
+@current
+Scenario: invalid day
 And I enter invalid date
 |35|01|2017|
 And I enter duration "4"
 When I click mark as complete
 Then I should see error message "Must provide a valid date"
 
-
+@current
+Scenario: Validate error messsage when duration is empty
 When I enter invalid date
 |3|01|2017|
 And I enter duration ""
