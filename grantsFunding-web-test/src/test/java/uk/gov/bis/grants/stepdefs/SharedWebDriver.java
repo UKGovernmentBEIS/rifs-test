@@ -93,6 +93,17 @@ public class SharedWebDriver extends EventFiringWebDriver {
                     caps.setCapability("acceptSslCerts", true);
                     String Linuxphantomjspath = System.getProperty("user.dir") + "/src/test/resources/phantomjs-2.1.1-linux-x86_64/bin/phantomjs";
                     caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, Linuxphantomjspath);
+            	    break;
+            	    
+            	case "Windows" :
+            		
+            		caps.setJavascriptEnabled(true);
+                    caps.setCapability("cssSelectorsEnabled", false);
+                    caps.setCapability("applicationCacheEnabled", true);
+                    caps.setCapability("acceptSslCerts", true);
+                    String windowsphantomjspath = System.getProperty("user.dir") + "/src/test/resources/phantomjs-2.1.1-windows/bin/phantomjs.exe";
+                    caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, windowsphantomjspath);
+            	    break;
             	}
                 // driver = new HtmlUnitDriver();
                 // driver.get("http://google.co.uk");
