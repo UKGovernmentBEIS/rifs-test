@@ -35,7 +35,7 @@ public class startPage extends BasePage {
 	 
 	By applyButton = By.xpath(".//*[@id='content']/div[3]/div[2]/a");
 	By applicantLink = By.xpath(".//*[@id='u10']/p/a");
-	By oppList = By.xpath(".//*[@id='content']/div/div/ul/li/a");
+	By oppList = By.xpath(".//a[@href='/opportunity/1']");
 	 
 	
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a")

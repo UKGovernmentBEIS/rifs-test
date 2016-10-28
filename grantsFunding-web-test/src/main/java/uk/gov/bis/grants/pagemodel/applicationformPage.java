@@ -25,7 +25,7 @@ public class applicationformPage extends BasePage {
 	private String eventPagetitle="Event title";
 	
    
-	 By pageHeader = By.xpath(".//*[@id='content']/div[2]/div[1]/div[1]/h1");
+	 By pageHeader = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/h1");
 	 String expectedHeader = "Application overview";
 	 By question1 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a");
 	 By question2 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[2]/td[1]/a");
@@ -37,17 +37,17 @@ public class applicationformPage extends BasePage {
 	 
 	 By eventTitle = By.xpath(".//*[@id='title']");
 	 By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[1]");
-	 By eventSection = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a");
+	 By eventSection = By.xpath(".//a[@href ='/application/1/section/1']");
 	 By provisionalDate = By.xpath(".//a[@href ='/application/1/section/2']");
 	 By evenObjectives = By.xpath(".//a[@href ='/application/1/section/3']");
-	 By topicsnspeakers = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[4]/td[1]/a");
-	 By evenAudience = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[5]/td[1]/a");
-	 By costs = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[6]/td[1]/a");
+	 By topicsnspeakers = By.xpath(".//a[@href ='/application/1/section/4']");
+	 By evenAudience = By.xpath(".//a[@href ='/application/1/section/5']");
+	 By costs = By.xpath(".//a[@href ='/application/1/section/6']");
 	 By wordcount = By.xpath(".//*[@id='title_help_text']");
 	 By markAsComplete = By.xpath(".//input[@name='_complete_checkbox']");
 	 By dateTimestamp = By.xpath(".//*[@id='content']/div/div[1]/form/fieldset");
 	 By previewPage = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[2]");
-	 By previewContent = By.xpath(".//*[@id='content']/div/div[1]/p");
+	 By previewContent = By.xpath(".//*[@id='content']/div/div/div[2]/p");
 	 By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
 	 
 	 
@@ -61,7 +61,8 @@ public class applicationformPage extends BasePage {
 	
 		public void validateLandingPage() throws InterruptedException
 		{
-			Assert.assertEquals(expectedHeader,getText(pageHeader));
+			//Assert.assertEquals(expectedHeader,getText(pageHeader)); title header has two lines so commenting out this section.
+			assertTrue("Failed:Overview Page not displayed",getText(pageHeader).contains("expectedHeader"));
 			
 			
 			//assertTrue("Failed:User not on correct Page,actual header is:"+getText(pageHeader),getText(pageHeader).equals(pageheaderTitle));
@@ -76,12 +77,12 @@ public class applicationformPage extends BasePage {
 		public void verifyQuestions()
 		{
 
-			Assert.assertEquals("Event title",getText(question1));
-			Assert.assertEquals("Provisional date",getText(question2));
-			Assert.assertEquals("Event objectives",getText(question3));
-			Assert.assertEquals("Topics and speakers",getText(question4));
-			Assert.assertEquals("Event audience",getText(question5));
-			Assert.assertEquals("Costs",getText(question6));
+			Assert.assertEquals("Event title",getText(eventSection));
+			Assert.assertEquals("Provisional date",getText(provisionalDate));
+			Assert.assertEquals("Event objectives",getText(evenObjectives));
+			Assert.assertEquals("Topics and speakers",getText(topicsnspeakers));
+			Assert.assertEquals("Event audience",getText(evenAudience));
+			Assert.assertEquals("Costs",getText(costs));
 			
 		}	
 		public void OpenTitilePage()
