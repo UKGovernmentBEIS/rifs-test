@@ -43,7 +43,7 @@ public class ApplicationDateEntry extends BasePage {
 		
 	 
 	    By errormsg = By.xpath(".//fieldset/div[1]");
-	    By durationfieldError = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[3]/p");
+	    By durationfieldError = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[2]/span");
 	    By dayfield = By.xpath(".//input[@title='date__day']");
 	                           
 	    By monthfield = By.xpath(".//input[@title='date__month']");
