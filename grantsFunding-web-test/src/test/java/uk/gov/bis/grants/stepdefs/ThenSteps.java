@@ -24,6 +24,7 @@ public class ThenSteps {
 	startPage startpage;
 	OpportunityDetailPage oppdetailPage;
 	ApplicationDateEntry dateEntry;
+	ApplicationEventObjEntry eventEntry;
 	private  WebDriver driver;
 	String platform= AppProperties.get("platform");
 
@@ -40,6 +41,8 @@ public class ThenSteps {
 		startpage = PageFactory.initElements(driver,startPage.class);
 		oppdetailPage = PageFactory.initElements(driver,OpportunityDetailPage.class);
 		dateEntry = PageFactory.initElements(driver, ApplicationDateEntry.class);
+		eventEntry = PageFactory.initElements(driver,ApplicationEventObjEntry.class);
+		
 		
 	}
 
@@ -264,12 +267,24 @@ public class ThenSteps {
 	}
 	
 	
+	@Then("^I should be able select mark as complete checkbox$")
+	public void i_should_be_able_select_mark_as_complete_checkbox() throws Throwable {
+	    appformpage.clickMarkcomplete();
+	}
+	
 
 @Then("^I should see duration field error \"([^\"]*)\"$")
 public void i_should_see_duration_field_error(String arg1) throws Throwable {
     dateEntry.ValidatedurationfieldError(arg1);
 }
-	 @After()
+	
+@Then("^I should be able to enter event objective \"([^\"]*)\"$")
+public void i_should_be_able_to_enter_event_objective(String arg1) throws Throwable {
+	eventEntry.EnterObjectives(arg1);
+    
+}
+
+@After()
 	    /**
 	     * Embed a screenshot in test report if test is marked as failed
 	     */

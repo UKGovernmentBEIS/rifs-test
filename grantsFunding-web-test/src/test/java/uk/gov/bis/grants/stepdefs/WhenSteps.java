@@ -24,6 +24,7 @@ public class WhenSteps {
     createOpportunityPage oppPage;
     OpportunityDetailPage oppdetailPage;
     ApplicationDateEntry dateEntry;
+    ApplicationEventObjEntry eventEntry;
 
 
     String platform = AppProperties.get("platform");
@@ -40,7 +41,8 @@ public class WhenSteps {
         oppPage = PageFactory.initElements(driver, createOpportunityPage.class);
         oppdetailPage = PageFactory.initElements(driver,OpportunityDetailPage.class);
        dateEntry = PageFactory.initElements(driver, ApplicationDateEntry.class);
-        
+       eventEntry = PageFactory.initElements(driver,ApplicationEventObjEntry.class);
+       
     }
 
     @When("^I click on start$")
@@ -150,6 +152,19 @@ public class WhenSteps {
         appform.OpenTitilePage();
     }
     
+    @When("^I open event objectives page$")
+    public void i_open_event_objectives_page() throws Throwable {
+    	appform.OpenSection("EventObjs");
+        
+    }
+
+    
+    @When("^I  enter event objective \"([^\"]*)\"$")
+    public void i_enter_event_objective(String arg1) throws Throwable {
+    	eventEntry.EnterObjectives(arg1);
+        
+    }
+    
     @When("^I enter title \"([^\"]*)\"$")
     public void i_enter_title(String arg1) throws Throwable {
         appform.EnterTitle(arg1);
@@ -171,6 +186,11 @@ public class WhenSteps {
     @When("^I save and continue$")
     public void i_save_and_continue() throws Throwable {
         appform.SaveAndContine();    }
+    
+    @When("^I save and continue on date entry$")
+    public void i_save_and_continue_on_date_entry() throws Throwable {
+        dateEntry.SaveAndContineValidationCheck();
+    }
     
     @When("^I open event title page again$")
     public void i_open_event_title_page_again() throws Throwable {
@@ -194,7 +214,7 @@ public class WhenSteps {
     @When("^I should be able click mark as complete link$")
     public void i_should_be_able_click_mark_as_complete_link() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        appform.markAsComplete();
+        appform.clickMarkcomplete();
     }
 
     @When("^I enter invalid date$")

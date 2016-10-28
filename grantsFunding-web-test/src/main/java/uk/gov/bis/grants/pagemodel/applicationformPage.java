@@ -39,12 +39,12 @@ public class applicationformPage extends BasePage {
 	 By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[1]");
 	 By eventSection = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a");
 	 By provisionalDate = By.xpath(".//a[@href ='/application/1/section/2']");
-	 By evenObjectives = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[3]/td[1]/a");
+	 By evenObjectives = By.xpath(".//a[@href ='/application/1/section/3']");
 	 By topicsnspeakers = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[4]/td[1]/a");
 	 By evenAudience = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[5]/td[1]/a");
 	 By costs = By.xpath(".//*[@id='content']/div[3]/table/tbody/tr[6]/td[1]/a");
 	 By wordcount = By.xpath(".//*[@id='title_help_text']");
-	 By markAsComplete = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/input");
+	 By markAsComplete = By.xpath(".//input[@name='_complete_checkbox']");
 	 By dateTimestamp = By.xpath(".//*[@id='content']/div/div[1]/form/fieldset");
 	 By previewPage = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[2]");
 	 By previewContent = By.xpath(".//*[@id='content']/div/div[1]/p");
@@ -93,6 +93,7 @@ public class applicationformPage extends BasePage {
 		
 		
 		
+		
 		public void OpenSection(String section){
 			switch(section)
 			{
@@ -120,10 +121,22 @@ public class applicationformPage extends BasePage {
 			
 		}
 		
-		public void markAsComplete(){
-			click(markAsComplete);
-		}
 		
+		
+		
+		public void clickMarkcomplete() throws InterruptedException
+		{
+			if(this.IsElementPresent(markAsComplete))
+			{
+			click(markAsComplete);
+			}
+			else {
+				click(saveAndcontinue);
+				click(eventSection);
+				click(markAsComplete);
+			}
+			
+		}
 		
 		
 		public void verifyDatetimestamp(){

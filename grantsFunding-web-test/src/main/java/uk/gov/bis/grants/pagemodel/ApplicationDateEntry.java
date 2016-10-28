@@ -49,7 +49,7 @@ public class ApplicationDateEntry extends BasePage {
 	    By monthfield = By.xpath(".//input[@title='date__month']");
 	    By yearfield = By.xpath(".//input[@title='date__year']");
 	    By durationfield = By.xpath(".//*[@id='days']");
-	    By markasComplete = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/input");
+	    By markasComplete = By.xpath(".//input[@name='_complete_checkbox']");
 	    By saveandContinue = By.xpath(".//input[@name='_save_button']");
 	    By openProvisionalDate = By.xpath(".//a[@href ='/application/1/section/2']");
 	   // By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
@@ -85,6 +85,13 @@ public class ApplicationDateEntry extends BasePage {
 			click(markasComplete);
 		}
 		
+	}
+	
+	public void SaveAndContineValidationCheck()
+	{
+	click(saveandContinue);
+	
+	
 	}
 	
 	public void validateErrorMessage(String msg)

@@ -14,6 +14,7 @@ And I enter valid date
 |22|01|2017|
 And I enter duration "4"
 And I click mark as complete
+And I save and continue
 Then I should return back to overview page.
 
 @Sprint2
@@ -57,6 +58,7 @@ And I enter invalid date
 |22|00|2017|
 And I enter duration "4"
 And I click mark as complete
+And I save and continue on date entry 
 Then I should see error message "Must provide a valid date"
 
 @Sprint2
@@ -65,6 +67,7 @@ And I enter invalid date
 |35|01|2017|
 And I enter duration "4"
 When I click mark as complete
+And I save and continue on date entry 
 Then I should see error message "Must provide a valid date"
 
 @Sprint2
@@ -73,6 +76,7 @@ And I enter invalid date
 |-3|01|2017|
 And I enter duration "4"
 When I click mark as complete
+And I save and continue on date entry 
 Then I should see error message "Must provide a valid date"
 
 @Sprint2
@@ -81,6 +85,7 @@ And I enter invalid date
 |3|-01|2017|
 And I enter duration "4"
 When I click mark as complete
+And I save and continue on date entry 
 Then I should see error message "Must provide a valid date"
 
 @Sprint2
@@ -89,6 +94,7 @@ And I enter invalid date
 |3|01|-2017|
 And I enter duration "4"
 When I click mark as complete
+And I save and continue on date entry
 Then I should see error message "Must be today or later"
 
 @Sprint2
@@ -97,6 +103,7 @@ And I enter invalid date
 |3|01|2016|
 And I enter duration "4"
 When I click mark as complete
+And I save and continue on date entry 
 Then I should see error message "Must be today or later"
 
 @Sprint2
@@ -104,7 +111,8 @@ Scenario: Validate error messsage when duration is empty
 When I enter invalid date
 |3|01|2017|
 And I enter duration ""
-When I click mark as complete
+And I click mark as complete
+And I save and continue on date entry 
 Then I should see duration field error "Field cannot be empty"
 
 @Sprint2
@@ -113,6 +121,7 @@ When I enter invalid date
 |3|01|2017|
 And I enter duration "-6"
 When I click mark as complete
+And I save and continue on date entry
 Then I should see duration field error "Minimum value is 1"
 
 @Sprint2
@@ -121,6 +130,7 @@ When I enter invalid date
 |3|01|2017|
 And I enter duration "days"
 When I click mark as complete
+And I save and continue on date entry 
 Then I should see duration field error "Must be a whole number"
 
 Scenario: Validate when user enters valid future date and mark as complete, it should show time stamp replacing mark as complete link.

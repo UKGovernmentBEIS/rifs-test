@@ -1,24 +1,24 @@
 #Author: Nasir Khan
-Feature: GF-1120 Event title 
+Feature: GF-1122 Event Objective 
 As a user 
 In order to apply for an opportunity
-I should be able to enter title and save
+I should be able to enter event object and preview
 
 Background:
 Given I am on the opportunity detail page
 When I click on Make an application
-And I click on event title link on application overview page
+And I open event objectives page
 
 
-@Sprint2
-Scenario: Verify user able enter free text in title field and able to save.
-Then I should be able to enter title "Seminar on space Technologies AutoTest"
+@Sprint3
+Scenario: Verify user able enter objectives and save.
+Then I should be able to enter event objective "Seminar on space Technologies AutoTest"
 And I should be able save and Continue
 And I should return back to overview page.
 
-@Sprint2
+@Sprint3
 Scenario Outline: Verify user able to enter free text in the title field and able to mark as complete
-And I enter title "<title>"
+And I  enter event objective "Seminar on space Technologies AutoTest"
 Then I should be able select mark as complete checkbox
 And I should be able save and Continue
 And I should return back to overview page.
@@ -26,18 +26,19 @@ Examples:
 |title|
 |Seminar on space Technologies AutoTest|
 
-@Sprint2
+
 Scenario Outline: Verify date time stamp is displayed when mark as complete is clicked
-And I enter title "<title>"
+And I  enter event objective "Seminar on space Technologies AutoTest"
 And I should be able select mark as complete checkbox
 And I save and continue
+And I open event objectives page
 Then I should be able to see date and time stamp 
 Examples:
 |title|
 |Seminar on space Technologies AutoTest|
 
 #Validate word count:
-@Sprint2
+@wip
 Scenario Outline: Verify word count to show n words remaining when marked as complete
 And I enter title "<text>"
 And I save and continue
@@ -51,7 +52,7 @@ Examples:
 |Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test|Words remaining: 0|
 |Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test test test|2 words over limit|
 
-
+@wip
 Scenario: Verify word count to show n words remaining for <20 words when user clicks on save and continue and revisits event title page.
 Scenario: Verify word count to show n words remaining for <20 words in title and user navigates to other links and revisits event title page.
 #Entered words > 20 words
