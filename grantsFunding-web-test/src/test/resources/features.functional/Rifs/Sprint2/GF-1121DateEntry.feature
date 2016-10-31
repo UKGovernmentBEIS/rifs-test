@@ -113,7 +113,7 @@ When I enter invalid date
 And I enter duration ""
 And I click mark as complete
 And I save and continue on date entry 
-Then I should see duration field error "Field cannot be empty"
+Then I should see duration field error "Must be a whole number"
 
 @Sprint2
 Scenario: Validate error messsage when duration is negative value
