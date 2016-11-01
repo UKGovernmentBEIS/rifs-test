@@ -18,7 +18,7 @@ And I should return back to overview page.
 
 @Sprint3
 Scenario Outline: Verify user able to enter free text in the title field and able to mark as complete
-And I  enter event objective "Seminar on space Technologies AutoTest"
+And I  enter event objective "<title>"
 Then I should be able select mark as complete checkbox
 And I should be able save and Continue
 And I should return back to overview page.
@@ -26,13 +26,13 @@ Examples:
 |title|
 |Seminar on space Technologies AutoTest|
 
-
+@Sprint3
 Scenario Outline: Verify date time stamp is displayed when mark as complete is clicked
 And I  enter event objective "Seminar on space Technologies AutoTest"
-And I should be able select mark as complete checkbox
+And I should be able select mark as complete checkbox  "EventObjs" page
 And I save and continue
 And I open event objectives page
-Then I should be able to see date and time stamp 
+Then I should be able to see date and time stamp on "EvenObjs" page
 Examples:
 |title|
 |Seminar on space Technologies AutoTest|

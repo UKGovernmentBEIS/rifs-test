@@ -214,9 +214,15 @@ public class WhenSteps {
     @When("^I should be able click mark as complete link$")
     public void i_should_be_able_click_mark_as_complete_link() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        appform.clickMarkcomplete();
+        appform.clickMarkcomplete("EventTitle");
     }
 
+    @When("^I should be able select mark as complete checkbox  \"([^\"]*)\" page$")
+    public void i_should_be_able_select_mark_as_complete_checkbox_page(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        appform.clickMarkcomplete(arg1);
+    }
+    
     @When("^I enter invalid date$")
     public void i_enter_invalid_date(DataTable arg1) throws Throwable {
     	dateEntry.EnterDate(arg1);

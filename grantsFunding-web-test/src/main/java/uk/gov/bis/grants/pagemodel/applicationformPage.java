@@ -81,6 +81,10 @@ public class applicationformPage extends BasePage {
 
     public void OpenSection(String section) {
         switch (section) {
+        
+        case "EventTitle":
+        	click(eventSection);
+        
             case "provisionalDate":
                 click(provisionalDate);
                 break;
@@ -105,19 +109,19 @@ public class applicationformPage extends BasePage {
 
     }
 
-    public void clickMarkcomplete() throws InterruptedException {
+    public void clickMarkcomplete(String section) throws InterruptedException {
         if (this.IsElementPresent(markAsComplete)) {
             click(markAsComplete);
         } else {
             click(saveAndcontinue);
-            click(eventSection);
+            OpenSection(section);
             click(markAsComplete);
         }
 
     }
 
-    public void verifyDatetimestamp() {
-        click(eventSection);
+    public void verifyDatetimestamp(String section) {
+        OpenSection(section);
         assertTrue("Failed:timestamp not displayed", getText(dateTimestamp).contains("Completed"));
     }
 

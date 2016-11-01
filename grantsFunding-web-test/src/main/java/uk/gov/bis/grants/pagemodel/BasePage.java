@@ -147,7 +147,7 @@ public class BasePage {
     }
 
     public void verifyPageTitle(String title) {
-        assertTrue("Failed: Expected Page" + title + " did not match to actual" + driver.getTitle() + "", driver.getTitle().equals(title));
+        assertTrue("Failed: Expected Page" + title + " did not match to actual  " + driver.getTitle() + "", driver.getTitle().equals(title));
 
     }
 

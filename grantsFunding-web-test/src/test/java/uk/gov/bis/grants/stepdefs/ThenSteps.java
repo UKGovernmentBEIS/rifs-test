@@ -202,6 +202,7 @@ public class ThenSteps {
     public void i_should_be_able_save_and_Continue() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         appformpage.SaveAndContine();
+        
     }
 
     @Then("^I should return back to overview page\\.$")
@@ -239,7 +240,13 @@ public class ThenSteps {
 
     @Then("^I should be able to see date and time stamp$")
     public void i_should_be_able_to_see_date_and_time_stamp() throws Throwable {
-        appformpage.verifyDatetimestamp();
+       // appformpage.verifyDatetimestamp();
+    }
+    
+    @Then("^I should be able to see date and time stamp on \"([^\"]*)\" page$")
+    public void i_should_be_able_to_see_date_and_time_stamp_on_page(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       appformpage.verifyDatetimestamp(arg1);
     }
 
     @Then("^I should be able to preview$")
@@ -259,7 +266,7 @@ public class ThenSteps {
 
     @Then("^I should be able select mark as complete checkbox$")
     public void i_should_be_able_select_mark_as_complete_checkbox() throws Throwable {
-        appformpage.clickMarkcomplete();
+      //  appformpage.clickMarkcomplete();
     }
 
     @Then("^I should see duration field error \"([^\"]*)\"$")
