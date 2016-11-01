@@ -10,13 +10,13 @@ When I click on Make an application
 And I click on event title link on application overview page
 
 
-@Sprint2
+@Smoke
 Scenario: Verify user able enter free text in title field and able to save.
 Then I should be able to enter title "Seminar on space Technologies AutoTest"
 And I should be able save and Continue
 And I should return back to overview page.
 
-@Sprint2
+@Smoke
 Scenario Outline: Verify user able to enter free text in the title field and able to mark as complete
 And I enter title "<title>"
 Then I should be able select mark as complete checkbox
@@ -26,7 +26,7 @@ Examples:
 |title|
 |Seminar on space Technologies AutoTest|
 
-@Sprint2
+@Smoke
 Scenario Outline: Verify date time stamp is displayed when mark as complete is clicked
 And I enter title "<title>"
 And I should be able select mark as complete checkbox

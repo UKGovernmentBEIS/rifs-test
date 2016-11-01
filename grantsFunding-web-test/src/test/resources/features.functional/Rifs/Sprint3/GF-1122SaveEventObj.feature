@@ -9,7 +9,6 @@ Given I am on the opportunity detail page
 When I click on Make an application
 And I open event objectives page
 
-
 @Sprint3
 Scenario: Verify user able enter objectives and save.
 Then I should be able to enter event objective "Seminar on space Technologies AutoTest"
@@ -40,17 +39,16 @@ Examples:
 #Validate word count:
 @wip
 Scenario Outline: Verify word count to show n words remaining when marked as complete
-And I enter title "<text>"
+And I  enter event objective "<text>"
 And I save and continue
-And I open event title page again
+And I open event objectives page
 Then I should see word count "<count>"
 Examples:
 |text|count|
 |Seminar on space Technologies AutoTest| Words remaining: 15 |
 |Seminar|Words remaining: 19 |
 |Seminar on space Technologies|Words remaining: 16|
-|Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test|Words remaining: 0|
-|Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test test test|2 words over limit|
+
 
 @wip
 Scenario: Verify word count to show n words remaining for <20 words when user clicks on save and continue and revisits event title page.
