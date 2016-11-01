@@ -34,13 +34,13 @@ public class OpportunityDetailPage extends BasePage {
     By section2 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[1]/li[2]/a");
     By section1 = By.xpath(".//*[@id='content']/div/header/table/tbody/tr[1]/td[1]");
     By section3 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[1]/li[3]/a");
-    By section4 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[1]/li[4]/a");
-    By section5 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[1]/li[5]/a");
-    By section6 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[1]/li[6]/a");
-    By firstnextbutton = By.xpath(".//*[@id='content']/div/footer/div/a");
-    By sectionHeading = By.xpath(".//*[@id='content']/div/article/h1");
-    By nextbutton = By.xpath(".//*[@id='content']/div/footer/div[2]/a");
-    By previousbutton = By.xpath(".//*[@id='content']/div/footer/div[1]/a");
+    By section4 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[2]/li[1]/a");
+    By section5 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[2]/li[2]/a");
+    By section6 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[2]/li[3]/a");
+    //By firstnextbutton = By.xpath(".//*[@id='content']/div/footer/div/a");
+    By sectionHeading = By.xpath(".//*[@id='content']/div/div[1]/article/h2");
+    By nextbutton = By.xpath(".//*[@id='content']/div/div[1]/footer/nav/ul/li[2]/a");
+    By previousbutton = By.xpath(".//*[@id='content']/div/div[1]/footer/nav/ul/li[1]/a/span[1]");
     
     By makeanapplication = By.xpath(".//a[@href='/application_form/1/apply']");
     
@@ -88,7 +88,7 @@ Assert.assertEquals(expectedHeader,getText(sectionHeading));
 
 public void clickfirstNext()
 {
-	click(firstnextbutton);
+	click(nextbutton);
 }
 
 public void clickPrevious()
