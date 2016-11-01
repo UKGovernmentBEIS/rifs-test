@@ -31,12 +31,12 @@ public class applicationformPage extends BasePage {
 
     By eventTitle = By.xpath(".//*[@id='title']");
     By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[1]");
-    By eventSection = By.xpath(".//a[@href ='/application/1/section/1']");
-    By provisionalDate = By.xpath(".//a[@href ='/application/1/section/2']");
-    By evenObjectives = By.xpath(".//a[@href ='/application/1/section/3']");
-    By topicsnspeakers = By.xpath(".//a[@href ='/application/1/section/4']");
-    By evenAudience = By.xpath(".//a[@href ='/application/1/section/5']");
-    By costs = By.xpath(".//a[@href ='/application/1/section/6']");
+    By eventSection = By.id("section-1-link");
+    By provisionalDate = By.id("section-2-link");
+    By evenObjectives = By.id("section-3-link");
+    By topicsnspeakers = By.id("section-4-link");
+    By evenAudience = By.id("section-5-link");
+    By costs = By.id("section-6-link");
     By wordcount = By.xpath(".//*[@id='title_hint_text']");
     By markAsComplete = By.xpath(".//input[@name='_complete_checkbox']");
     By dateTimestamp = By.xpath(".//*[@id='content']/div/div[1]/form/fieldset");

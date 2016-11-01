@@ -29,7 +29,7 @@ public class ApplicationDateEntry extends BasePage {
     By durationfield = By.id("provisionalDate.days");
     By markasComplete = By.id("complete-checkbox");
     By saveandContinue = By.name("_save_button");
-    By openProvisionalDate = By.xpath(".//a[@href ='/application/1/section/2']");
+    By openProvisionalDate = By.id("section-2-link");
     // By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
 
     public void EnterDate(DataTable datatable) throws InterruptedException {
@@ -37,7 +37,7 @@ public class ApplicationDateEntry extends BasePage {
         type(dayfield, data.get(0).get(0));
         type(monthfield, data.get(0).get(1));
         type(yearfield, data.get(0).get(2));
-        Thread.sleep(3000);
+        Thread.sleep(2000);
     }
 
     public void Enterduration(String duration) {

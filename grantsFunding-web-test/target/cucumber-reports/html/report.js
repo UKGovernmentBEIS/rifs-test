@@ -50,40 +50,40 @@ formatter.match({
   "location": "GivenSteps.i_launch_application()"
 });
 formatter.result({
-  "duration": 4546324009,
+  "duration": 5478548216,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_applicant_link()"
 });
 formatter.result({
-  "duration": 2284169994,
+  "duration": 2380631185,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_select_an_Opportunity_from_list()"
 });
 formatter.result({
-  "duration": 147392475,
+  "duration": 165962672,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_to_see_details_of_that_opportunity()"
 });
 formatter.result({
-  "duration": 7351586,
+  "duration": 10411128,
   "status": "passed"
 });
 formatter.after({
-  "duration": 181277,
+  "duration": 165159,
   "status": "passed"
 });
 formatter.after({
-  "duration": 21558,
+  "duration": 36043,
   "status": "passed"
 });
 formatter.after({
-  "duration": 20530,
+  "duration": 36054,
   "status": "passed"
 });
 formatter.scenario({
@@ -154,35 +154,35 @@ formatter.match({
   "location": "GivenSteps.i_launch_application()"
 });
 formatter.result({
-  "duration": 3024986347,
+  "duration": 3027318582,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_applicant_link()"
 });
 formatter.result({
-  "duration": 2144392450,
+  "duration": 2150910548,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_select_an_Opportunity_from_list()"
 });
 formatter.result({
-  "duration": 143049897,
+  "duration": 148399264,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_see_all_sections_on_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 10372055972,
+  "duration": 10408570020,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_firstnext_button()"
 });
 formatter.result({
-  "duration": 146394911,
+  "duration": 154859321,
   "status": "passed"
 });
 formatter.match({
@@ -195,14 +195,14 @@ formatter.match({
   "location": "ThenSteps.i_should_see_section(String)"
 });
 formatter.result({
-  "duration": 28896419,
+  "duration": 41080417,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_next_button_again()"
 });
 formatter.result({
-  "duration": 182352206,
+  "duration": 193711584,
   "status": "passed"
 });
 formatter.match({
@@ -215,14 +215,14 @@ formatter.match({
   "location": "ThenSteps.i_should_see_section(String)"
 });
 formatter.result({
-  "duration": 20102951,
+  "duration": 28545077,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_previous_button()"
 });
 formatter.result({
-  "duration": 154419129,
+  "duration": 149990637,
   "status": "passed"
 });
 formatter.match({
@@ -235,19 +235,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_section(String)"
 });
 formatter.result({
-  "duration": 21420885,
+  "duration": 23403898,
   "status": "passed"
 });
 formatter.after({
-  "duration": 26067,
+  "duration": 49598,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12935,
+  "duration": 38482,
   "status": "passed"
 });
 formatter.after({
-  "duration": 13941,
+  "duration": 36149,
   "status": "passed"
 });
 formatter.uri("Sprint-1/GF1118-ApplicationStart.feature");
@@ -297,33 +297,33 @@ formatter.match({
   "location": "GivenSteps.i_launch_application()"
 });
 formatter.result({
-  "duration": 3024417545,
+  "duration": 3025842464,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_to_land_on_start_page()"
 });
 formatter.result({
-  "duration": 7816457,
+  "duration": 8371189,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_see_applicant_start_link()"
 });
 formatter.result({
-  "duration": 2033441702,
+  "duration": 2046029678,
   "status": "passed"
 });
 formatter.after({
-  "duration": 277536,
+  "duration": 291424,
   "status": "passed"
 });
 formatter.after({
-  "duration": 15622,
+  "duration": 15367,
   "status": "passed"
 });
 formatter.after({
-  "duration": 16486,
+  "duration": 18580,
   "status": "passed"
 });
 formatter.scenario({
@@ -359,33 +359,33 @@ formatter.match({
   "location": "GivenSteps.i_launch_application()"
 });
 formatter.result({
-  "duration": 3025159536,
+  "duration": 3024865224,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_applicant_link()"
 });
 formatter.result({
-  "duration": 2141886186,
+  "duration": 2149035143,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_to_see_opportunity_list_page()"
 });
 formatter.result({
-  "duration": 2038750473,
+  "duration": 2052321350,
   "status": "passed"
 });
 formatter.after({
-  "duration": 26494,
+  "duration": 29317,
   "status": "passed"
 });
 formatter.after({
-  "duration": 14027,
+  "duration": 16195,
   "status": "passed"
 });
 formatter.after({
-  "duration": 13485,
+  "duration": 15241,
   "status": "passed"
 });
 formatter.uri("Sprint-1/GF1119-OpportunityOverview.feature");
@@ -440,14 +440,14 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3141062945,
+  "duration": 3148765962,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 139201728,
+  "duration": 154100909,
   "status": "passed"
 });
 formatter.match({
@@ -460,26 +460,26 @@ formatter.match({
   "location": "ThenSteps.i_should_see_application_page(String)"
 });
 formatter.result({
-  "duration": 6559121,
+  "duration": 9379708,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_see_all_six_questions_displayed()"
 });
 formatter.result({
-  "duration": 135380129,
+  "duration": 169182820,
   "status": "passed"
 });
 formatter.after({
-  "duration": 24291,
+  "duration": 42537,
   "status": "passed"
 });
 formatter.after({
-  "duration": 19079,
+  "duration": 25421,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11115,
+  "duration": 33078,
   "status": "passed"
 });
 formatter.uri("Sprint2/GF-1120SaveEventTitle.feature");
@@ -522,21 +522,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3142007130,
+  "duration": 3146382611,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 138370504,
+  "duration": 142517742,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_event_title_link_on_application_overview_page()"
 });
 formatter.result({
-  "duration": 139628486,
+  "duration": 144151704,
   "status": "passed"
 });
 formatter.scenario({
@@ -578,33 +578,33 @@ formatter.match({
   "location": "ThenSteps.i_should_be_able_to_enter_title(String)"
 });
 formatter.result({
-  "duration": 103598004,
+  "duration": 123199764,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_save_and_Continue()"
 });
 formatter.result({
-  "duration": 149109605,
+  "duration": 151798339,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_return_back_to_overview_page()"
 });
 formatter.result({
-  "duration": 33539,
+  "duration": 27171,
   "status": "passed"
 });
 formatter.after({
-  "duration": 24195,
+  "duration": 17746,
   "status": "passed"
 });
 formatter.after({
-  "duration": 13108,
+  "duration": 14214,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11329,
+  "duration": 14114,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -690,21 +690,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3142180105,
+  "duration": 3151281893,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 135386226,
+  "duration": 143278800,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_event_title_link_on_application_overview_page()"
 });
 formatter.result({
-  "duration": 136518361,
+  "duration": 146744114,
   "status": "passed"
 });
 formatter.scenario({
@@ -754,40 +754,40 @@ formatter.match({
   "location": "WhenSteps.i_enter_title(String)"
 });
 formatter.result({
-  "duration": 67598789,
+  "duration": 111496687,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_select_mark_as_complete_checkbox()"
 });
 formatter.result({
-  "duration": 45211703,
+  "duration": 54767214,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_save_and_Continue()"
 });
 formatter.result({
-  "duration": 146049175,
+  "duration": 156040142,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_return_back_to_overview_page()"
 });
 formatter.result({
-  "duration": 46078,
+  "duration": 25103,
   "status": "passed"
 });
 formatter.after({
-  "duration": 15268,
+  "duration": 32349,
   "status": "passed"
 });
 formatter.after({
-  "duration": 19676,
+  "duration": 14935,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12982,
+  "duration": 14774,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -873,21 +873,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3140899154,
+  "duration": 3141659848,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 140118708,
+  "duration": 144239612,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_event_title_link_on_application_overview_page()"
 });
 formatter.result({
-  "duration": 139765179,
+  "duration": 150459525,
   "status": "passed"
 });
 formatter.scenario({
@@ -937,40 +937,40 @@ formatter.match({
   "location": "WhenSteps.i_enter_title(String)"
 });
 formatter.result({
-  "duration": 67542365,
+  "duration": 155968736,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_select_mark_as_complete_checkbox()"
 });
 formatter.result({
-  "duration": 726836511,
+  "duration": 881102977,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 141240912,
+  "duration": 149578895,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_to_see_date_and_time_stamp()"
 });
 formatter.result({
-  "duration": 164386590,
+  "duration": 261277499,
   "status": "passed"
 });
 formatter.after({
-  "duration": 23980,
+  "duration": 43098,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12643,
+  "duration": 33414,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11639,
+  "duration": 23315,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -1096,21 +1096,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3137732139,
+  "duration": 3151821491,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 141702269,
+  "duration": 157000671,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_event_title_link_on_application_overview_page()"
 });
 formatter.result({
-  "duration": 135976933,
+  "duration": 319638227,
   "status": "passed"
 });
 formatter.scenario({
@@ -1163,21 +1163,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_title(String)"
 });
 formatter.result({
-  "duration": 89438334,
+  "duration": 119558561,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 159942288,
+  "duration": 165988667,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_open_event_title_page_again()"
 });
 formatter.result({
-  "duration": 137379957,
+  "duration": 267881055,
   "status": "passed"
 });
 formatter.match({
@@ -1190,19 +1190,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_word_count(String)"
 });
 formatter.result({
-  "duration": 22715901,
+  "duration": 31224949,
   "status": "passed"
 });
 formatter.after({
-  "duration": 23742,
+  "duration": 35400,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12633,
+  "duration": 36728,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12188,
+  "duration": 19036,
   "status": "passed"
 });
 formatter.background({
@@ -1231,21 +1231,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3146046114,
+  "duration": 3144390461,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 136822598,
+  "duration": 174615147,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_event_title_link_on_application_overview_page()"
 });
 formatter.result({
-  "duration": 150354573,
+  "duration": 152968590,
   "status": "passed"
 });
 formatter.scenario({
@@ -1298,21 +1298,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_title(String)"
 });
 formatter.result({
-  "duration": 89922447,
+  "duration": 109003627,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 151853573,
+  "duration": 174732031,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_open_event_title_page_again()"
 });
 formatter.result({
-  "duration": 134669187,
+  "duration": 154216580,
   "status": "passed"
 });
 formatter.match({
@@ -1325,19 +1325,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_word_count(String)"
 });
 formatter.result({
-  "duration": 22643195,
+  "duration": 25905562,
   "status": "passed"
 });
 formatter.after({
-  "duration": 121220,
+  "duration": 27939,
   "status": "passed"
 });
 formatter.after({
-  "duration": 16654,
+  "duration": 12804,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12589,
+  "duration": 12367,
   "status": "passed"
 });
 formatter.background({
@@ -1366,21 +1366,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3137263022,
+  "duration": 3152975675,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 138114505,
+  "duration": 150875509,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_event_title_link_on_application_overview_page()"
 });
 formatter.result({
-  "duration": 142905544,
+  "duration": 170174197,
   "status": "passed"
 });
 formatter.scenario({
@@ -1433,21 +1433,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_title(String)"
 });
 formatter.result({
-  "duration": 66145088,
+  "duration": 87738792,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 149277618,
+  "duration": 160037703,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_open_event_title_page_again()"
 });
 formatter.result({
-  "duration": 149292722,
+  "duration": 151253169,
   "status": "passed"
 });
 formatter.match({
@@ -1460,19 +1460,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_word_count(String)"
 });
 formatter.result({
-  "duration": 18993176,
+  "duration": 30289979,
   "status": "passed"
 });
 formatter.after({
-  "duration": 23922,
+  "duration": 26622,
   "status": "passed"
 });
 formatter.after({
-  "duration": 28423,
+  "duration": 12842,
   "status": "passed"
 });
 formatter.after({
-  "duration": 20739,
+  "duration": 13072,
   "status": "passed"
 });
 formatter.background({
@@ -1501,21 +1501,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3140785148,
+  "duration": 3192558945,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 138564719,
+  "duration": 178711155,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_event_title_link_on_application_overview_page()"
 });
 formatter.result({
-  "duration": 136683828,
+  "duration": 197661895,
   "status": "passed"
 });
 formatter.scenario({
@@ -1568,21 +1568,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_title(String)"
 });
 formatter.result({
-  "duration": 95519635,
+  "duration": 126087003,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 168551651,
+  "duration": 151094400,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_open_event_title_page_again()"
 });
 formatter.result({
-  "duration": 142188770,
+  "duration": 151994257,
   "status": "passed"
 });
 formatter.match({
@@ -1595,19 +1595,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_word_count(String)"
 });
 formatter.result({
-  "duration": 19381516,
+  "duration": 29385351,
   "status": "passed"
 });
 formatter.after({
-  "duration": 26496,
+  "duration": 27901,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12093,
+  "duration": 13690,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12342,
+  "duration": 12796,
   "status": "passed"
 });
 formatter.background({
@@ -1636,21 +1636,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3147257662,
+  "duration": 3248361858,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 342092001,
+  "duration": 173330938,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_event_title_link_on_application_overview_page()"
 });
 formatter.result({
-  "duration": 140898937,
+  "duration": 149092087,
   "status": "passed"
 });
 formatter.scenario({
@@ -1703,21 +1703,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_title(String)"
 });
 formatter.result({
-  "duration": 99610382,
+  "duration": 196979301,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 350118428,
+  "duration": 180996032,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_open_event_title_page_again()"
 });
 formatter.result({
-  "duration": 139056459,
+  "duration": 152081903,
   "status": "passed"
 });
 formatter.match({
@@ -1730,19 +1730,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_word_count(String)"
 });
 formatter.result({
-  "duration": 22129762,
+  "duration": 28063063,
   "status": "passed"
 });
 formatter.after({
-  "duration": 25379,
+  "duration": 42795,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12277,
+  "duration": 22162,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11382,
+  "duration": 16697,
   "status": "passed"
 });
 formatter.uri("Sprint2/GF-1121DateEntry.feature");
@@ -1822,21 +1822,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_application_overview_page()"
 });
 formatter.result({
-  "duration": 129558943,
+  "duration": 130026571,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_open_provisional_date_section()"
 });
 formatter.result({
-  "duration": 140375295,
+  "duration": 205042158,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_enter_valid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3187848954,
+  "duration": 2285436665,
   "status": "passed"
 });
 formatter.match({
@@ -1849,40 +1849,40 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 55444273,
+  "duration": 64891290,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_mark_as_complete()"
 });
 formatter.result({
-  "duration": 43332332,
+  "duration": 53430048,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 550848980,
+  "duration": 152413840,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_return_back_to_overview_page()"
 });
 formatter.result({
-  "duration": 227292,
+  "duration": 202612,
   "status": "passed"
 });
 formatter.after({
-  "duration": 14564,
+  "duration": 16759,
   "status": "passed"
 });
 formatter.after({
-  "duration": 11919,
+  "duration": 12842,
   "status": "passed"
 });
 formatter.after({
-  "duration": 13342,
+  "duration": 16895,
   "status": "passed"
 });
 formatter.scenario({
@@ -1938,14 +1938,14 @@ formatter.match({
   "location": "WhenSteps.i_open_provisional_date_section()"
 });
 formatter.result({
-  "duration": 137815473,
+  "duration": 146712123,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_enter_valid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3154293015,
+  "duration": 2199462643,
   "status": "passed"
 });
 formatter.match({
@@ -1958,33 +1958,33 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 61176657,
+  "duration": 71094127,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 170309593,
+  "duration": 188479191,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_return_back_to_overview_page()"
 });
 formatter.result({
-  "duration": 199703,
+  "duration": 330416,
   "status": "passed"
 });
 formatter.after({
-  "duration": 13919,
+  "duration": 25636,
   "status": "passed"
 });
 formatter.after({
-  "duration": 92677,
+  "duration": 21143,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9618,
+  "duration": 212302,
   "status": "passed"
 });
 formatter.scenario({
@@ -2025,7 +2025,7 @@ formatter.match({
   "location": "WhenSteps.i_open_provisional_date_section()"
 });
 formatter.result({
-  "duration": 146305978,
+  "duration": 151443193,
   "status": "passed"
 });
 formatter.match({
@@ -2038,33 +2038,33 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 74696197,
+  "duration": 61246921,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 146041282,
+  "duration": 154914154,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_return_back_to_overview_page()"
 });
 formatter.result({
-  "duration": 748625,
+  "duration": 923994,
   "status": "passed"
 });
 formatter.after({
-  "duration": 169904,
+  "duration": 236799,
   "status": "passed"
 });
 formatter.after({
-  "duration": 379303,
+  "duration": 700002,
   "status": "passed"
 });
 formatter.after({
-  "duration": 148749,
+  "duration": 1995691,
   "status": "passed"
 });
 formatter.scenario({
@@ -2115,40 +2115,40 @@ formatter.match({
   "location": "WhenSteps.i_open_provisional_date_section()"
 });
 formatter.result({
-  "duration": 137587148,
+  "duration": 144332641,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_enter_valid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3173948000,
+  "duration": 2227718560,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 158322433,
+  "duration": 149854737,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_return_back_to_overview_page()"
 });
 formatter.result({
-  "duration": 210663,
+  "duration": 276889,
   "status": "passed"
 });
 formatter.after({
-  "duration": 25199,
+  "duration": 28935,
   "status": "passed"
 });
 formatter.after({
-  "duration": 161297,
+  "duration": 23460,
   "status": "passed"
 });
 formatter.after({
-  "duration": 20761,
+  "duration": 250875,
   "status": "passed"
 });
 formatter.scenario({
@@ -2204,14 +2204,14 @@ formatter.match({
   "location": "WhenSteps.i_open_provisional_date_section()"
 });
 formatter.result({
-  "duration": 142464749,
+  "duration": 146176234,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_enter_invalid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3203346376,
+  "duration": 2224600339,
   "status": "passed"
 });
 formatter.match({
@@ -2224,33 +2224,33 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 69002412,
+  "duration": 66632090,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue()"
 });
 formatter.result({
-  "duration": 155078012,
+  "duration": 151701500,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_return_back_to_overview_page()"
 });
 formatter.result({
-  "duration": 225114,
+  "duration": 284204,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12648,
+  "duration": 16760,
   "status": "passed"
 });
 formatter.after({
-  "duration": 106838,
+  "duration": 11907,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9445,
+  "duration": 204155,
   "status": "passed"
 });
 formatter.scenario({
@@ -2311,14 +2311,14 @@ formatter.match({
   "location": "WhenSteps.i_open_provisional_date_section()"
 });
 formatter.result({
-  "duration": 141499404,
+  "duration": 143040465,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_enter_invalid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3185776721,
+  "duration": 2247198975,
   "status": "passed"
 });
 formatter.match({
@@ -2331,21 +2331,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 78097455,
+  "duration": 61987794,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_mark_as_complete()"
 });
 formatter.result({
-  "duration": 45615875,
+  "duration": 57773928,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue_on_date_entry()"
 });
 formatter.result({
-  "duration": 341099591,
+  "duration": 150763556,
   "status": "passed"
 });
 formatter.match({
@@ -2358,19 +2358,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_error_message(String)"
 });
 formatter.result({
-  "duration": 29412589,
+  "duration": 36040161,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18602,
+  "duration": 39368,
   "status": "passed"
 });
 formatter.after({
-  "duration": 127782,
+  "duration": 193210,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9285,
+  "duration": 240653,
   "status": "passed"
 });
 formatter.scenario({
@@ -2426,7 +2426,7 @@ formatter.match({
   "location": "WhenSteps.i_enter_invalid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3185144568,
+  "duration": 2225894931,
   "status": "passed"
 });
 formatter.match({
@@ -2439,21 +2439,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 49091500,
+  "duration": 65929784,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_mark_as_complete()"
 });
 formatter.result({
-  "duration": 43017689,
+  "duration": 54097488,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue_on_date_entry()"
 });
 formatter.result({
-  "duration": 244778539,
+  "duration": 155862490,
   "status": "passed"
 });
 formatter.match({
@@ -2466,19 +2466,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_error_message(String)"
 });
 formatter.result({
-  "duration": 51773572,
+  "duration": 31797066,
   "status": "passed"
 });
 formatter.after({
-  "duration": 23747,
+  "duration": 25034,
   "status": "passed"
 });
 formatter.after({
-  "duration": 225567,
+  "duration": 17103,
   "status": "passed"
 });
 formatter.after({
-  "duration": 10525,
+  "duration": 287585,
   "status": "passed"
 });
 formatter.scenario({
@@ -2534,7 +2534,7 @@ formatter.match({
   "location": "WhenSteps.i_enter_invalid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3168427651,
+  "duration": 2191155129,
   "status": "passed"
 });
 formatter.match({
@@ -2547,21 +2547,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 50385242,
+  "duration": 64490994,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_mark_as_complete()"
 });
 formatter.result({
-  "duration": 40957000,
+  "duration": 50974210,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue_on_date_entry()"
 });
 formatter.result({
-  "duration": 243425893,
+  "duration": 148888250,
   "status": "passed"
 });
 formatter.match({
@@ -2574,19 +2574,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_error_message(String)"
 });
 formatter.result({
-  "duration": 22223353,
+  "duration": 26927439,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18902,
+  "duration": 39956,
   "status": "passed"
 });
 formatter.after({
-  "duration": 252942,
+  "duration": 14763,
   "status": "passed"
 });
 formatter.after({
-  "duration": 10585,
+  "duration": 296501,
   "status": "passed"
 });
 formatter.scenario({
@@ -2642,7 +2642,7 @@ formatter.match({
   "location": "WhenSteps.i_enter_invalid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3166495903,
+  "duration": 2200874115,
   "status": "passed"
 });
 formatter.match({
@@ -2655,21 +2655,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 52219206,
+  "duration": 63620299,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_mark_as_complete()"
 });
 formatter.result({
-  "duration": 41639385,
+  "duration": 53501963,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue_on_date_entry()"
 });
 formatter.result({
-  "duration": 238707392,
+  "duration": 151262962,
   "status": "passed"
 });
 formatter.match({
@@ -2682,19 +2682,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_error_message(String)"
 });
 formatter.result({
-  "duration": 22369818,
+  "duration": 41363505,
   "status": "passed"
 });
 formatter.after({
-  "duration": 36007,
+  "duration": 36707,
   "status": "passed"
 });
 formatter.after({
-  "duration": 263775,
+  "duration": 25924,
   "status": "passed"
 });
 formatter.after({
-  "duration": 15329,
+  "duration": 261625,
   "status": "passed"
 });
 formatter.scenario({
@@ -2750,7 +2750,7 @@ formatter.match({
   "location": "WhenSteps.i_enter_invalid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3171723296,
+  "duration": 2212748940,
   "status": "passed"
 });
 formatter.match({
@@ -2763,21 +2763,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 50533990,
+  "duration": 93152103,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_mark_as_complete()"
 });
 formatter.result({
-  "duration": 46666024,
+  "duration": 47299160,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue_on_date_entry()"
 });
 formatter.result({
-  "duration": 144397811,
+  "duration": 145907194,
   "status": "passed"
 });
 formatter.match({
@@ -2790,19 +2790,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_error_message(String)"
 });
 formatter.result({
-  "duration": 23528189,
+  "duration": 28265194,
   "status": "passed"
 });
 formatter.after({
-  "duration": 25675,
+  "duration": 29472,
   "status": "passed"
 });
 formatter.after({
-  "duration": 168559,
+  "duration": 40620,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9867,
+  "duration": 204334,
   "status": "passed"
 });
 formatter.scenario({
@@ -2858,7 +2858,7 @@ formatter.match({
   "location": "WhenSteps.i_enter_invalid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3149889232,
+  "duration": 2235167304,
   "status": "passed"
 });
 formatter.match({
@@ -2871,21 +2871,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 69286090,
+  "duration": 60697915,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_mark_as_complete()"
 });
 formatter.result({
-  "duration": 41528843,
+  "duration": 51205171,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue_on_date_entry()"
 });
 formatter.result({
-  "duration": 136102596,
+  "duration": 147407649,
   "status": "passed"
 });
 formatter.match({
@@ -2898,19 +2898,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_error_message(String)"
 });
 formatter.result({
-  "duration": 22497235,
+  "duration": 55468641,
   "status": "passed"
 });
 formatter.after({
-  "duration": 27800,
+  "duration": 18676,
   "status": "passed"
 });
 formatter.after({
-  "duration": 183144,
+  "duration": 9364,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9306,
+  "duration": 129113,
   "status": "passed"
 });
 formatter.scenario({
@@ -2966,7 +2966,7 @@ formatter.match({
   "location": "WhenSteps.i_enter_invalid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3141680123,
+  "duration": 2217848632,
   "status": "passed"
 });
 formatter.match({
@@ -2979,21 +2979,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 48732983,
+  "duration": 98514102,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_mark_as_complete()"
 });
 formatter.result({
-  "duration": 72334112,
+  "duration": 66691749,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue_on_date_entry()"
 });
 formatter.result({
-  "duration": 136050147,
+  "duration": 143443069,
   "status": "passed"
 });
 formatter.match({
@@ -3006,19 +3006,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_duration_field_error(String)"
 });
 formatter.result({
-  "duration": 25930405,
+  "duration": 25350346,
   "status": "passed"
 });
 formatter.after({
-  "duration": 15992,
+  "duration": 18049,
   "status": "passed"
 });
 formatter.after({
-  "duration": 120394,
+  "duration": 9728,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8009,
+  "duration": 173318,
   "status": "passed"
 });
 formatter.scenario({
@@ -3074,7 +3074,7 @@ formatter.match({
   "location": "WhenSteps.i_enter_invalid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3155821500,
+  "duration": 2214135520,
   "status": "passed"
 });
 formatter.match({
@@ -3087,21 +3087,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 61153783,
+  "duration": 65186142,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_mark_as_complete()"
 });
 formatter.result({
-  "duration": 43007500,
+  "duration": 63756051,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue_on_date_entry()"
 });
 formatter.result({
-  "duration": 265007628,
+  "duration": 152295860,
   "status": "passed"
 });
 formatter.match({
@@ -3114,19 +3114,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_duration_field_error(String)"
 });
 formatter.result({
-  "duration": 23314507,
+  "duration": 35286719,
   "status": "passed"
 });
 formatter.after({
-  "duration": 16447,
+  "duration": 22514,
   "status": "passed"
 });
 formatter.after({
-  "duration": 125185,
+  "duration": 15849,
   "status": "passed"
 });
 formatter.after({
-  "duration": 31776,
+  "duration": 145977,
   "status": "passed"
 });
 formatter.scenario({
@@ -3182,7 +3182,7 @@ formatter.match({
   "location": "WhenSteps.i_enter_invalid_date(DataTable)"
 });
 formatter.result({
-  "duration": 3168239043,
+  "duration": 2269370697,
   "status": "passed"
 });
 formatter.match({
@@ -3195,21 +3195,21 @@ formatter.match({
   "location": "WhenSteps.i_enter_duration(String)"
 });
 formatter.result({
-  "duration": 48914407,
+  "duration": 69744116,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_mark_as_complete()"
 });
 formatter.result({
-  "duration": 39430442,
+  "duration": 48735099,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_save_and_continue_on_date_entry()"
 });
 formatter.result({
-  "duration": 137215287,
+  "duration": 156705191,
   "status": "passed"
 });
 formatter.match({
@@ -3222,19 +3222,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_duration_field_error(String)"
 });
 formatter.result({
-  "duration": 23129729,
+  "duration": 31776040,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18363,
+  "duration": 23769,
   "status": "passed"
 });
 formatter.after({
-  "duration": 130703,
+  "duration": 14818,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8947,
+  "duration": 192507,
   "status": "passed"
 });
 formatter.uri("Sprint2/GF-1212ApplicationOverview.feature");
@@ -3293,14 +3293,14 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3140041473,
+  "duration": 3141062167,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 138789371,
+  "duration": 157145517,
   "status": "passed"
 });
 formatter.match({
@@ -3313,21 +3313,21 @@ formatter.match({
   "location": "ThenSteps.i_should_see_application_page(String)"
 });
 formatter.result({
-  "duration": 18463440,
+  "duration": 9777181,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_see_all_six_questions_are_clickable()"
 });
 formatter.result({
-  "duration": 163433186,
+  "duration": 170027754,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_click_event_title()"
 });
 formatter.result({
-  "duration": 145915800,
+  "duration": 152321587,
   "status": "passed"
 });
 formatter.match({
@@ -3340,19 +3340,19 @@ formatter.match({
   "location": "ThenSteps.navigate_to_page(String)"
 });
 formatter.result({
-  "duration": 6207216,
+  "duration": 6742716,
   "status": "passed"
 });
 formatter.after({
-  "duration": 17280,
+  "duration": 19672,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8187,
+  "duration": 10248,
   "status": "passed"
 });
 formatter.after({
-  "duration": 7724,
+  "duration": 67441,
   "status": "passed"
 });
 formatter.uri("Sprint2/GF1117PreviewTitle.feature");
@@ -3454,14 +3454,14 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3142132977,
+  "duration": 3144797038,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 154717521,
+  "duration": 158622505,
   "status": "passed"
 });
 formatter.scenario({
@@ -3508,7 +3508,7 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_event_tite_page()"
 });
 formatter.result({
-  "duration": 143304896,
+  "duration": 151355203,
   "status": "passed"
 });
 formatter.match({
@@ -3521,14 +3521,14 @@ formatter.match({
   "location": "WhenSteps.i_enter_title_within_required_word_size_limit(String)"
 });
 formatter.result({
-  "duration": 68189627,
+  "duration": 195380576,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_to_preview()"
 });
 formatter.result({
-  "duration": 141764551,
+  "duration": 163375009,
   "status": "passed"
 });
 formatter.match({
@@ -3541,19 +3541,19 @@ formatter.match({
   "location": "ThenSteps.i_should_be_able_to_view_entered(String)"
 });
 formatter.result({
-  "duration": 23867522,
+  "duration": 34020416,
   "status": "passed"
 });
 formatter.after({
-  "duration": 16837,
+  "duration": 31718,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8963,
+  "duration": 22517,
   "status": "passed"
 });
 formatter.after({
-  "duration": 8335,
+  "duration": 17708,
   "status": "passed"
 });
 formatter.background({
@@ -3577,14 +3577,14 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3139684137,
+  "duration": 3244173669,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 154487664,
+  "duration": 149049923,
   "status": "passed"
 });
 formatter.scenario({
@@ -3631,7 +3631,7 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_event_tite_page()"
 });
 formatter.result({
-  "duration": 146776216,
+  "duration": 141092501,
   "status": "passed"
 });
 formatter.match({
@@ -3644,14 +3644,14 @@ formatter.match({
   "location": "WhenSteps.i_enter_title_within_required_word_size_limit(String)"
 });
 formatter.result({
-  "duration": 70732186,
+  "duration": 85113218,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_to_preview()"
 });
 formatter.result({
-  "duration": 144103038,
+  "duration": 149130175,
   "status": "passed"
 });
 formatter.match({
@@ -3664,19 +3664,19 @@ formatter.match({
   "location": "ThenSteps.i_should_be_able_to_view_entered(String)"
 });
 formatter.result({
-  "duration": 23921760,
+  "duration": 22364071,
   "status": "passed"
 });
 formatter.after({
-  "duration": 19090,
+  "duration": 20315,
   "status": "passed"
 });
 formatter.after({
-  "duration": 13986,
+  "duration": 9502,
   "status": "passed"
 });
 formatter.after({
-  "duration": 218611,
+  "duration": 9002,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -3757,14 +3757,14 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3136998658,
+  "duration": 3141376905,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 138202600,
+  "duration": 143554200,
   "status": "passed"
 });
 formatter.scenario({
@@ -3811,7 +3811,7 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_event_tite_page()"
 });
 formatter.result({
-  "duration": 140304181,
+  "duration": 143008148,
   "status": "passed"
 });
 formatter.match({
@@ -3824,14 +3824,14 @@ formatter.match({
   "location": "WhenSteps.i_enter_title_outside_required_word_size_limit(String)"
 });
 formatter.result({
-  "duration": 96742335,
+  "duration": 135606194,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_to_preview()"
 });
 formatter.result({
-  "duration": 140555172,
+  "duration": 155861557,
   "status": "passed"
 });
 formatter.match({
@@ -3844,19 +3844,19 @@ formatter.match({
   "location": "ThenSteps.i_should_be_able_to_view_entered(String)"
 });
 formatter.result({
-  "duration": 20117321,
+  "duration": 57959488,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18342,
+  "duration": 29887,
   "status": "passed"
 });
 formatter.after({
-  "duration": 12331,
+  "duration": 22180,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9060,
+  "duration": 40627,
   "status": "passed"
 });
 formatter.background({
@@ -3880,14 +3880,14 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3136220624,
+  "duration": 3143747411,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 148631742,
+  "duration": 149615189,
   "status": "passed"
 });
 formatter.scenario({
@@ -3928,21 +3928,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_event_tite_page()"
 });
 formatter.result({
-  "duration": 140688649,
+  "duration": 142770544,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_keep_title_field_empty()"
 });
 formatter.result({
-  "duration": 20051817,
+  "duration": 25398097,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_preview()"
 });
 formatter.result({
-  "duration": 139399415,
+  "duration": 149481744,
   "status": "passed"
 });
 formatter.match({
@@ -3955,19 +3955,19 @@ formatter.match({
   "location": "ThenSteps.i_should_see_error_message(String)"
 });
 formatter.result({
-  "duration": 21734850,
+  "duration": 29151889,
   "status": "passed"
 });
 formatter.after({
-  "duration": 18651,
+  "duration": 20881,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9540,
+  "duration": 13237,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9072,
+  "duration": 10561,
   "status": "passed"
 });
 formatter.uri("Sprint3/GF-1122SaveEventTitle.feature");
@@ -4010,21 +4010,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3136392653,
+  "duration": 3143616807,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 135849013,
+  "duration": 144670790,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_open_event_objectives_page()"
 });
 formatter.result({
-  "duration": 144619069,
+  "duration": 143556781,
   "status": "passed"
 });
 formatter.scenario({
@@ -4066,33 +4066,33 @@ formatter.match({
   "location": "ThenSteps.i_should_be_able_to_enter_event_objective(String)"
 });
 formatter.result({
-  "duration": 54878306,
+  "duration": 72581603,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_save_and_Continue()"
 });
 formatter.result({
-  "duration": 171870275,
+  "duration": 162998740,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_return_back_to_overview_page()"
 });
 formatter.result({
-  "duration": 19880,
+  "duration": 26538,
   "status": "passed"
 });
 formatter.after({
-  "duration": 19318,
+  "duration": 18100,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9597,
+  "duration": 14059,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9281,
+  "duration": 12952,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -4178,21 +4178,21 @@ formatter.match({
   "location": "GivenSteps.i_am_on_the_opportunity_detail_page()"
 });
 formatter.result({
-  "duration": 3156647201,
+  "duration": 3138740159,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_click_on_Make_an_application()"
 });
 formatter.result({
-  "duration": 135718155,
+  "duration": 155129557,
   "status": "passed"
 });
 formatter.match({
   "location": "WhenSteps.i_open_event_objectives_page()"
 });
 formatter.result({
-  "duration": 142829246,
+  "duration": 149660032,
   "status": "passed"
 });
 formatter.scenario({
@@ -4239,40 +4239,40 @@ formatter.match({
   "location": "WhenSteps.i_enter_event_objective(String)"
 });
 formatter.result({
-  "duration": 55431532,
+  "duration": 100133308,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_select_mark_as_complete_checkbox()"
 });
 formatter.result({
-  "duration": 48952458,
+  "duration": 51406714,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_be_able_save_and_Continue()"
 });
 formatter.result({
-  "duration": 149615581,
+  "duration": 151179824,
   "status": "passed"
 });
 formatter.match({
   "location": "ThenSteps.i_should_return_back_to_overview_page()"
 });
 formatter.result({
-  "duration": 28734,
+  "duration": 25948,
   "status": "passed"
 });
 formatter.after({
-  "duration": 17454,
+  "duration": 23277,
   "status": "passed"
 });
 formatter.after({
-  "duration": 9732,
+  "duration": 15004,
   "status": "passed"
 });
 formatter.after({
-  "duration": 14701,
+  "duration": 15910,
   "status": "passed"
 });
 });
