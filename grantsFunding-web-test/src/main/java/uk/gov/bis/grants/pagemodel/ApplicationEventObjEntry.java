@@ -17,8 +17,9 @@ public class ApplicationEventObjEntry extends BasePage {
     private String pageTitle = "Overview";
     private String eventPagetitle = "Event objectives";
 
-    By eventObjfield = By.xpath(".//*[@id='eventObjectives']");
+    By eventObjfield = By.id("eventObjectives");
     By eventobjDatetimestamp = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset");
+    By wordcount = By.id("eventObjectives_hint_text");
 
     public void EnterObjectives(String text) throws InterruptedException {
         type(eventObjfield, text);
@@ -28,45 +29,9 @@ public class ApplicationEventObjEntry extends BasePage {
         assertTrue("Failed:timestamp not displayed", getText(eventobjDatetimestamp).contains("Completed"));
     }
 
-
-//	public void Enterduration(String duration)
-//	{
-//		type(durationfield,duration);
-//	}
-//
-//
-//	public void clickMarkcomplete() throws InterruptedException
-//	{
-//		if(this.IsElementPresent(markasComplete))
-//		{
-//		click(markasComplete);
-//		}
-//		else {
-//			click(saveandContinue);
-//			click(openProvisionalDate);
-//			click(markasComplete);
-//		}
-//		
-//	}
-//	
-//	public void SaveAndContineValidationCheck()
-//	{
-//	click(saveandContinue);
-//	
-//	
-//	}
-//	
-//	public void validateErrorMessage(String msg)
-//	{
-//		
-//		assertTrue("Failed:Error message not displayed,",getText(errormsg).contains(msg));
-//	}
-//	
-//	public void ValidatedurationfieldError(String msg)
-//	{
-//		assertTrue("Failed:Error message not displayed,",getText(durationfieldError).contains(msg));
-//	}
-
+    public void Validatewordcount(String count) {
+        assertTrue("Failed word count is not as expected", getText(wordcount).contains(count));
+    }
 }
 
 

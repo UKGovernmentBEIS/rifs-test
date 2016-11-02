@@ -21,7 +21,7 @@ public class ApplicationDateEntry extends BasePage {
     private String eventPagetitle = "Event title";
 
 
-    By errormsg = By.xpath(".//fieldset/div[1]");
+    By errormsg = By.xpath("//span[contains(@class,'error-message')]");
     By durationfieldError = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[2]/span");
     By dayfield = By.id("provisionalDate.date.day");
     By monthfield = By.id("provisionalDate.date.month");

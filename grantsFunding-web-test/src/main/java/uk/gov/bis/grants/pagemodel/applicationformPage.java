@@ -152,7 +152,7 @@ public class applicationformPage extends BasePage {
 
     public void SaveAndContine() {
         click(saveAndcontinue);
-        verifyPageTitle(pageTitle);
+        //verifyPageTitle(pageTitle);
     }
 
     public void Validatewordcount(String count) {

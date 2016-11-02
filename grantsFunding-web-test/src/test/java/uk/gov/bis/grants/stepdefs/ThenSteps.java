@@ -216,6 +216,11 @@ public class ThenSteps {
         appformpage.Validatewordcount(arg1);
     }
 
+    @Then("^I should see word count \"([^\"]*)\" on event ObjectivePage$")
+    public void i_should_see_word_count_on_event_ObjectivePage(String arg1) throws Throwable {
+       eventEntry.Validatewordcount(arg1);
+    }
+    
     @Then("^I should see all six questions are clickable$")
     public void i_should_see_all_six_questions_are_clickable() throws Throwable {
         // Write code here that turns the phrase above into concrete actions

@@ -51,7 +51,6 @@ Examples:
 |Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test|Words remaining: 0|
 |Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test test test|2 words over limit|
 
-
 Scenario: Verify word count to show n words remaining for <20 words when user clicks on save and continue and revisits event title page.
 Scenario: Verify word count to show n words remaining for <20 words in title and user navigates to other links and revisits event title page.
 #Entered words > 20 words
