@@ -37,7 +37,7 @@ Examples:
 |Seminar on space Technologies AutoTest|
 
 #Validate word count:
-
+@Sprint3
 Scenario Outline: Verify word count to show n words remaining when marked as complete
 And I  enter event objective "<text>"
 And I save and continue
@@ -59,8 +59,7 @@ Examples:
 |text|
 |t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t  t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t|
 @Sprint3
-Scenario: Validate user able to enter 500 words and mark as complete
-Scenario Outline: Verify date time stamp is displayed when mark as complete is clicked
+Scenario Outline: Validate user able to enter 500 words and mark as complete
 And I  enter event objective "<text>"
 And I should be able select mark as complete checkbox  "EventObjs" page
 And I save and continue

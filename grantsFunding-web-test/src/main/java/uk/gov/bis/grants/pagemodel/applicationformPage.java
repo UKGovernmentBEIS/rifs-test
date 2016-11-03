@@ -21,13 +21,13 @@ public class applicationformPage extends BasePage {
 
     By pageHeader = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/h1");
     String expectedHeader = "Application overview";
-    By question1 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a");
-    By question2 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[2]/td[1]/a");
-    By question3 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[3]/td[1]/a");
-    By question4 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[4]/td[1]/a");
-
-    By question5 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[5]/td[1]/a");
-    By question6 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[6]/td[1]/a");
+//    By question1 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a");
+//    By question2 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[2]/td[1]/a");
+//    By question3 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[3]/td[1]/a");
+//    By question4 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[4]/td[1]/a");
+//
+//    By question5 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[5]/td[1]/a");
+//    By question6 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[6]/td[1]/a");
 
     By eventTitle = By.xpath(".//*[@id='title']");
     By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[1]");
@@ -37,12 +37,17 @@ public class applicationformPage extends BasePage {
     By topicsnspeakers = By.xpath(".//a[@href ='/application/1/section/4']");
     By evenAudience = By.xpath(".//a[@href ='/application/1/section/5']");
     By costs = By.xpath(".//a[@href ='/application/1/section/6']");
-    By wordcount = By.xpath(".//*[@id='title_hint_text']");
+    By wordcount_title = By.xpath(".//*[@id='title_hint_text']");
+    By wordcount_eventObj = By.id("");
+    By wordcount_topicsnspeakers = By.id("topicAndSpeaker_hint_text");
+    By wordcount_eventaudience = By.id("eventAudience_hint_text");
     By markAsComplete = By.xpath(".//input[@name='_complete_checkbox']");
     By dateTimestamp = By.xpath(".//*[@id='content']/div/div[1]/form/fieldset");
     By previewPage = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[2]");
     By previewContent = By.xpath(".//*[@id='content']/div/div/div[2]/p");
     By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
+    By topicsnspeakerfield = By.id("topicAndSpeaker");
+    By eventAudience = By.id("eventAudience");
 
 
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
@@ -108,6 +113,24 @@ public class applicationformPage extends BasePage {
         }
 
     }
+    
+    public void Entertext(String text, String section)
+    {
+    switch(section)
+    {
+    case "TopicsnSpeakers":
+    		type(topicsnspeakerfield,text);
+    		break;
+    		
+    		
+    case "EventAudience":
+		type(eventAudience,text);
+		break;
+    }
+    }
+    
+    
+    
 
     public void clickMarkcomplete(String section) throws InterruptedException {
         if (this.IsElementPresent(markAsComplete)) {
@@ -128,7 +151,8 @@ public class applicationformPage extends BasePage {
     public void preview() {
         click(previewPage);
     }
-
+ 
+    
     public void validateErrormsg() {
         assertTrue("Failed:Error message not displayed,", getText(errormsg).contains("Field cannot be empty"));
     }
@@ -155,8 +179,38 @@ public class applicationformPage extends BasePage {
         //verifyPageTitle(pageTitle);
     }
 
-    public void Validatewordcount(String count) {
-        assertTrue("Failed word count is not as expected", getText(wordcount).contains(count));
+    public void Validatewordcount(String count,String section) {
+    	
+    switch(section)
+    {
+    case "EventTitle":
+    	assertTrue("Failed word count is not as expected", getText(wordcount_title).contains(count));
+    
+        case "provisionalDate":
+        	assertTrue("Failed word count is not as expected", getText(wordcount_title).contains(count));
+            break;
+
+        case "EventObjs":
+        	assertTrue("Failed word count is not as expected", getText(wordcount_title).contains(count));
+            break;
+
+        case "TopicsnSpeakers":
+        	assertTrue("Failed word count is not as expected", getText(wordcount_topicsnspeakers).contains(count));
+            break;
+
+        case "EventAudience":
+        	assertTrue("Failed word count is not as expected", getText(wordcount_eventaudience).contains(count));
+            break;
+
+        case "costs":
+        	assertTrue("Failed word count is not as expected", getText(wordcount_title).contains(count));
+            break;
+
+    }
+
+    	
+    	
+        
     }
 
 

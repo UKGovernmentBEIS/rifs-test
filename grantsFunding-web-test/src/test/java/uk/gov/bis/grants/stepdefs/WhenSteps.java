@@ -157,6 +157,11 @@ public class WhenSteps {
     	appform.OpenSection("EventObjs");
         
     }
+    @When("^I open section \"([^\"]*)\"$")
+    public void i_open_section(String arg1) throws Throwable {
+       appform.OpenSection(arg1);
+    }
+
 
     
     @When("^I  enter event objective \"([^\"]*)\"$")
@@ -164,6 +169,13 @@ public class WhenSteps {
     	eventEntry.EnterObjectives(arg1);
         
     }
+    
+    @When("^I  enter \"([^\"]*)\" in \"([^\"]*)\"$")
+    public void i_enter_in(String arg1, String arg2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        appform.Entertext(arg1, arg2);
+    }
+
     
     @When("^I enter title \"([^\"]*)\"$")
     public void i_enter_title(String arg1) throws Throwable {
@@ -207,8 +219,7 @@ public class WhenSteps {
         appform.OpenSection(arg1);
     }
     
-
-
+    
     
 
     @When("^I should be able click mark as complete link$")

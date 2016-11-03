@@ -213,13 +213,20 @@ public class ThenSteps {
     @Then("^I should see word count \"([^\"]*)\"$")
     public void i_should_see_word_count(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        appformpage.Validatewordcount(arg1);
+       // appformpage.Validatewordcount(arg1);
     }
 
     @Then("^I should see word count \"([^\"]*)\" on event ObjectivePage$")
     public void i_should_see_word_count_on_event_ObjectivePage(String arg1) throws Throwable {
        eventEntry.Validatewordcount(arg1);
     }
+
+@Then("^I should see word count \"([^\"]*)\" on \"([^\"]*)\"$")
+public void i_should_see_word_count_on(String arg1, String arg2) throws Throwable {
+	appformpage.Validatewordcount(arg1, arg2);
+    
+}
+
     
     @Then("^I should see all six questions are clickable$")
     public void i_should_see_all_six_questions_are_clickable() throws Throwable {
@@ -285,6 +292,12 @@ public class ThenSteps {
 
     }
 
+    @Then("^I should be able to enter \"([^\"]*)\" in \"([^\"]*)\"$")
+    public void i_should_be_able_to_enter_in(String arg1, String arg2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       appformpage.Entertext(arg1, arg2);
+    }
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed
