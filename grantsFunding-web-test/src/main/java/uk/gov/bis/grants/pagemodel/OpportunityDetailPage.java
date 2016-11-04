@@ -42,7 +42,7 @@ public class OpportunityDetailPage extends BasePage {
     By nextbutton = By.xpath(".//*[@id='content']/div/div[1]/footer/nav/ul/li[2]/a");
     By previousbutton = By.xpath(".//*[@id='content']/div/div[1]/footer/nav/ul/li[1]/a/span[1]");
     
-    By makeanapplication = By.xpath(".//a[@href='/application_form/1/apply']");
+    By makeanapplication = By.xpath("//a[contains(@class,'button')]");
     
     
 	

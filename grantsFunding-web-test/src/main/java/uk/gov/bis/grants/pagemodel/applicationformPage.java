@@ -43,10 +43,11 @@ public class applicationformPage extends BasePage {
     By wordcount_eventaudience = By.id("eventAudience_hint_text");
     By markAsComplete = By.xpath(".//input[@name='_complete_checkbox']");
     By dateTimestamp = By.xpath(".//*[@id='content']/div/div[1]/form/fieldset");
-    By previewPage = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[2]");
+    By previewPage = By.name("_preview_button");
     By previewContent = By.xpath(".//*[@id='content']/div/div/div[2]/p");
     By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
     By topicsnspeakerfield = By.id("topicAndSpeaker");
+    By eventobjfield = By.id("eventObjectives");
     By eventAudience = By.id("eventAudience");
 
 
@@ -118,14 +119,21 @@ public class applicationformPage extends BasePage {
     {
     switch(section)
     {
+    case "EventObjs" : 
+    	type(eventobjfield,text);
+		break;
+		
     case "TopicsnSpeakers":
-    		type(topicsnspeakerfield,text);
-    		break;
+    	    
+    	type(topicsnspeakerfield,text);
+    	break;
     		
     		
     case "EventAudience":
 		type(eventAudience,text);
 		break;
+		
+		
     }
     }
     
