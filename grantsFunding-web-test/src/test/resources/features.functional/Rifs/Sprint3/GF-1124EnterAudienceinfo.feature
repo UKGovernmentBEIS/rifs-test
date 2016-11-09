@@ -38,7 +38,7 @@ And I save and continue
 Then I should be able to see date and time stamp on "EventAudience" page
 Examples:
 |text|
-|Seminar on space Technologies AutoTest|
+|Seminar on space Technologies time stamp|
 
 @Sprint3
 Scenario Outline: Validate mark as complete for entered text >500

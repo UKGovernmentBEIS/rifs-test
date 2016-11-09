@@ -38,7 +38,7 @@ And I should be able save and Continue
 Then I should be able to see date and time stamp on "TopicsnSpeakers" page
 Examples:
 |text|
-|Seminar on space Technologies AutoTest|
+|Seminar on space Technologies verify timestamp|
 
 @Sprint3
 Scenario Outline: Validate mark as complete for entered text >500
