@@ -5,7 +5,9 @@ In order to apply for an opportunity
 I should be able to enter title and save
 
 Background:
-Given I am on the opportunity detail page
+Given I launch application
+And I click on applicant link
+And I select an Opportunity from list
 When I click on Make an application
 And I click on event title link on application overview page
 

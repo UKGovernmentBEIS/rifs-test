@@ -298,6 +298,29 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
        appformpage.Entertext(arg1, arg2);
     }
     
+    
+    @Then("^I should see entered date\"([^\"]*)\" in preview page$")
+    public void i_should_see_entered_date_in_preview_page(String arg1) throws Throwable {
+    	dateEntry.ValidateStartDateonPreviewpage(arg1);
+        
+    }
+    @Then("^I should see end date \"([^\"]*)\" in preview page$")
+    public void i_should_see_end_date_in_preview_page(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       dateEntry.ValidateEndDateonPreviewpage(arg1);
+    }
+
+    @Then("^I should see duration \"([^\"]*)\" in preview page$")
+    public void i_should_see_duration_in_preview_page(String arg1) throws Throwable {
+    	dateEntry.ValidateDurationPreviewpage(arg1);
+        
+    }
+    @Then("^I should return back to Dateform page$")
+    public void i_should_return_back_to_Dateform_page() throws Throwable {
+      dateEntry.ValidatePagetitle();
+    }
+    
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed

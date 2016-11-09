@@ -262,6 +262,17 @@ public class WhenSteps {
         
     }
     
+    @When("^I click on close button preview$")
+    public void i_click_on_close_button_preview() throws Throwable {
+       dateEntry.Closepreview();
+    }
+    
+    @When("^I click on edit link on preview page$")
+    public void i_click_on_edit_link_on_preview_page() throws Throwable {
+      dateEntry.EditPage();
+    }
+    
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed

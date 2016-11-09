@@ -10,7 +10,7 @@ When I click on Make an application
 And I open section "TopicsnSpeakers"
 
 
-@Sprint3
+@current
 Scenario Outline: Verify user able topics and speakers info and save.
 Then I should be able to enter "<text>" in "TopicsnSpeakers"
 And I should be able save and Continue
@@ -34,7 +34,7 @@ Examples:
 Scenario Outline: Verify date time stamp is displayed when mark as complete is clicked
 And I  enter "<text>" in "TopicsnSpeakers"
 And I should be able select mark as complete checkbox  "TopicsnSpeakers" page
-And I save and continue
+And I should be able save and Continue
 Then I should be able to see date and time stamp on "TopicsnSpeakers" page
 Examples:
 |text|
