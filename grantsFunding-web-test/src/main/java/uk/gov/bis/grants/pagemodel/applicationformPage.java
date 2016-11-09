@@ -21,22 +21,15 @@ public class applicationformPage extends BasePage {
 
     By pageHeader = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/h1");
     String expectedHeader = "Application overview";
-//    By question1 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[1]/td[1]/a");
-//    By question2 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[2]/td[1]/a");
-//    By question3 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[3]/td[1]/a");
-//    By question4 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[4]/td[1]/a");
-//
-//    By question5 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[5]/td[1]/a");
-//    By question6 = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/table/tbody/tr[6]/td[1]/a");
 
     By eventTitle = By.xpath(".//*[@id='title']");
     By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[1]");
-    By eventSection = By.xpath(".//a[@href ='/application/1/section/1']");
-    By provisionalDate = By.xpath(".//a[@href ='/application/1/section/2']");
-    By evenObjectives = By.xpath(".//a[@href ='/application/1/section/3']");
-    By topicsnspeakers = By.xpath(".//a[@href ='/application/1/section/4']");
-    By evenAudience = By.xpath(".//a[@href ='/application/1/section/5']");
-    By costs = By.xpath(".//a[@href ='/application/1/section/6']");
+    By eventSection = By.id("section-1-link");
+    By provisionalDate = By.id("section-2-link");
+    By evenObjectives = By.id("section-3-link");
+    By topicsnspeakers = By.id("section-4-link");
+    By evenAudience = By.id("section-5-link");
+    By costs = By.id("section-6-link");
     By wordcount_title = By.xpath(".//*[@id='title_hint_text']");
     By wordcount_eventObj = By.id("");
     By wordcount_topicsnspeakers = By.id("topicAndSpeaker_hint_text");
