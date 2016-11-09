@@ -5,18 +5,20 @@ In order to apply for an opportunity
 I should be able to enter title and save
 
 Background:
-Given I am on the opportunity detail page
+Given I launch application
+And I click on applicant link
+And I select an Opportunity from list
 When I click on Make an application
 And I click on event title link on application overview page
 
 
-@Sprint2
+@Smoke
 Scenario: Verify user able enter free text in title field and able to save.
 Then I should be able to enter title "Seminar on space Technologies AutoTest"
 And I should be able save and Continue
 And I should return back to overview page.
 
-@Sprint2
+@Smoke
 Scenario Outline: Verify user able to enter free text in the title field and able to mark as complete
 And I enter title "<title>"
 Then I should be able select mark as complete checkbox
@@ -26,7 +28,7 @@ Examples:
 |title|
 |Seminar on space Technologies AutoTest|
 
-@Sprint2
+@Smoke
 Scenario Outline: Verify date time stamp is displayed when mark as complete is clicked
 And I enter title "<title>"
 And I should be able select mark as complete checkbox
@@ -50,7 +52,6 @@ Examples:
 |Seminar on space Technologies|Words remaining: 16|
 |Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test|Words remaining: 0|
 |Seminar on space Technologies AutoTest test test test test test test test test test test test test test test test test test|2 words over limit|
-
 
 Scenario: Verify word count to show n words remaining for <20 words when user clicks on save and continue and revisits event title page.
 Scenario: Verify word count to show n words remaining for <20 words in title and user navigates to other links and revisits event title page.

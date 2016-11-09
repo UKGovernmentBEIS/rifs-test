@@ -1,6 +1,8 @@
 package uk.gov.bis.grants.pagemodel;
 
 import cucumber.api.DataTable;
+import org.junit.Assert;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -18,11 +20,11 @@ public class ApplicationDateEntry extends BasePage {
 
     private WebDriver driver;
     private String pageTitle = "Overview";
-    private String eventPagetitle = "Event title";
+    private String DateSectionPagetitle = "Provisional date";
 
 
-    By errormsg = By.xpath(".//fieldset/div[1]");
-    By durationfieldError = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[2]/span");
+    By errormsg = By.xpath("//span[contains(@class,'error-message')]");
+    By durationfieldError = By.xpath("//span[contains(@class,'error-message')]");
     By dayfield = By.id("provisionalDate.date.day");
     By monthfield = By.id("provisionalDate.date.month");
     By yearfield = By.id("provisionalDate.date.year");
@@ -30,7 +32,11 @@ public class ApplicationDateEntry extends BasePage {
     By markasComplete = By.id("complete-checkbox");
     By saveandContinue = By.name("_save_button");
     By openProvisionalDate = By.id("section-2-link");
-    // By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
+    By p_endDate = By.xpath(".//*[@id='content']/div/div/div[2]/div[3]/dl/dd");
+    By p_startDate = By.xpath(".//*[@id='content']/div/div/div[2]/div[1]/dl/dd");
+    By p_duration = By.xpath(".//*[@id='content']/div/div/div[2]/div[2]/dl/dd");
+    By p_close = By.xpath(".//*[@id='content']/div/div/div[3]/a[1]");
+    By p_editPage = By.xpath(".//*[@id='content']/div/div/div[3]/a[2]");
 
     public void EnterDate(DataTable datatable) throws InterruptedException {
         List<List<String>> data = datatable.raw();
@@ -66,6 +72,47 @@ public class ApplicationDateEntry extends BasePage {
     public void ValidatedurationfieldError(String msg) {
         assertTrue("Failed:Error message not displayed,", getText(durationfieldError).contains(msg));
     }
+
+    
+    public void  ValidateEndDateonPreviewpage(String date)
+    
+    {
+    
+    	Assert.assertEquals(date, getText(p_endDate));
+    	
+    }
+    
+    
+public void  ValidateStartDateonPreviewpage(String date)
+    
+    {
+    
+    	Assert.assertEquals(date, getText(p_startDate));
+    	
+    }
+    
+
+public void  ValidateDurationPreviewpage(String duration)
+
+{
+
+	Assert.assertEquals(duration, getText(p_duration));
+	
+}
+
+public void Closepreview()
+{
+	click(p_close);
+}
+
+public void EditPage()
+{
+	click(p_editPage);
+}
+public void ValidatePagetitle()
+{
+	verifyPageTitle(DateSectionPagetitle);
+}
 
 }
 

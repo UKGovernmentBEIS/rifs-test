@@ -8,7 +8,10 @@ Feature: GF-1121 Enter start date
 
 @Sprint2
 Scenario: Verify user able to mark as complete for valid date and duration
-Given I am on application overview page
+Given I launch application
+And I click on applicant link
+And I select an Opportunity from list
+And I click on Make an application
 When I open provisional date section
 And I enter valid date
 |22|01|2017|

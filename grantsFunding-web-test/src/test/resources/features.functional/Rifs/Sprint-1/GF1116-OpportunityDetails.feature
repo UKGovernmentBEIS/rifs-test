@@ -5,7 +5,7 @@ In order to apply for an opportunity
 I should be able to see Opportunity details.
 
 
-@Sprint1
+@Smoke
 Scenario: Open Opp detail page from opp list page.
 Given I launch application
 And I click on applicant link

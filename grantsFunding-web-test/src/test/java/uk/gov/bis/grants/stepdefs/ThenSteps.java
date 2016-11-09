@@ -213,9 +213,21 @@ public class ThenSteps {
     @Then("^I should see word count \"([^\"]*)\"$")
     public void i_should_see_word_count(String arg1) throws Throwable {
         // Write code here that turns the phrase above into concrete actions
-        appformpage.Validatewordcount(arg1);
+       // appformpage.Validatewordcount(arg1);
     }
 
+    @Then("^I should see word count \"([^\"]*)\" on event ObjectivePage$")
+    public void i_should_see_word_count_on_event_ObjectivePage(String arg1) throws Throwable {
+       eventEntry.Validatewordcount(arg1);
+    }
+
+@Then("^I should see word count \"([^\"]*)\" on \"([^\"]*)\"$")
+public void i_should_see_word_count_on(String arg1, String arg2) throws Throwable {
+	appformpage.Validatewordcount(arg1, arg2);
+    
+}
+
+    
     @Then("^I should see all six questions are clickable$")
     public void i_should_see_all_six_questions_are_clickable() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
@@ -280,6 +292,35 @@ public class ThenSteps {
 
     }
 
+    @Then("^I should be able to enter \"([^\"]*)\" in \"([^\"]*)\"$")
+    public void i_should_be_able_to_enter_in(String arg1, String arg2) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       appformpage.Entertext(arg1, arg2);
+    }
+    
+    
+    @Then("^I should see entered date\"([^\"]*)\" in preview page$")
+    public void i_should_see_entered_date_in_preview_page(String arg1) throws Throwable {
+    	dateEntry.ValidateStartDateonPreviewpage(arg1);
+        
+    }
+    @Then("^I should see end date \"([^\"]*)\" in preview page$")
+    public void i_should_see_end_date_in_preview_page(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       dateEntry.ValidateEndDateonPreviewpage(arg1);
+    }
+
+    @Then("^I should see duration \"([^\"]*)\" in preview page$")
+    public void i_should_see_duration_in_preview_page(String arg1) throws Throwable {
+    	dateEntry.ValidateDurationPreviewpage(arg1);
+        
+    }
+    @Then("^I should return back to Dateform page$")
+    public void i_should_return_back_to_Dateform_page() throws Throwable {
+      dateEntry.ValidatePagetitle();
+    }
+    
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed
