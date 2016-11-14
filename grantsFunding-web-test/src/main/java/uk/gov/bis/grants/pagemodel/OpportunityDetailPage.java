@@ -33,7 +33,7 @@ public class OpportunityDetailPage extends BasePage {
 	
     By section2 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[1]/li[2]/a");
     By section1 = By.xpath(".//*[@id='content']/div/header/table/tbody/tr[1]/td[1]");
-    By section3 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[1]/li[3]/a");
+    By section3 = By.xpath(".//*[@id='title-3']/a");
     By section4 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[2]/li[1]/a");
     By section5 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[2]/li[2]/a");
     By section6 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[2]/li[3]/a");
@@ -63,8 +63,8 @@ public void validateAllSections() throws InterruptedException
 	this.IsElementDisplayed(section2);
 	this.IsElementDisplayed(section3);
 	this.IsElementDisplayed(section4);
-	this.IsElementDisplayed(section5);
-	this.IsElementDisplayed(section6);
+	//this.IsElementDisplayed(section5);
+	//this.IsElementDisplayed(section6);
 	
 	
 	
@@ -72,11 +72,9 @@ public void validateAllSections() throws InterruptedException
 	
 public void validateOppPageSections()
 {
-	Assert.assertEquals("The events we will fund",getText(section2));
-	Assert.assertEquals("What events should cover",getText(section3));
-	Assert.assertEquals("How to get funding",getText(section4));
-	Assert.assertEquals("Assessment Criteria",getText(section5));
-	Assert.assertEquals("Further Information",getText(section6));
+	Assert.assertEquals("What we will ask you",getText(section2));
+	Assert.assertEquals("Assessment criteria",getText(section3));
+	
 }	
 
 public void VerifynavigationOnDetailPage(String expectedHeader)

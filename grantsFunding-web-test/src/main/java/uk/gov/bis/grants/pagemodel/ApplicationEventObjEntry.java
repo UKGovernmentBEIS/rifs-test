@@ -20,9 +20,15 @@ public class ApplicationEventObjEntry extends BasePage {
     By eventObjfield = By.id("eventObjectives");
     By eventobjDatetimestamp = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset");
     By wordcount = By.id("eventObjectives_hint_text");
+    By EditthisPage = By.xpath("//input[contains(@class,'button--link-style')]");
 
     public void EnterObjectives(String text) throws InterruptedException {
+    	if(IsElementPresent(eventObjfield))
         type(eventObjfield, text);
+    	else {
+    		click(EditthisPage);
+    		type(eventObjfield, text);
+    	}
     }
 
     public void verifyEventTitleDatetimestamp() {

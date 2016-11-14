@@ -37,13 +37,28 @@ public class ApplicationDateEntry extends BasePage {
     By p_duration = By.xpath(".//*[@id='content']/div/div/div[2]/div[2]/dl/dd");
     By p_close = By.xpath(".//*[@id='content']/div/div/div[3]/a[1]");
     By p_editPage = By.xpath(".//*[@id='content']/div/div/div[3]/a[2]");
+    By EditthisPage = By.xpath("//input[contains(@class,'button--link-style')]");
+   
 
     public void EnterDate(DataTable datatable) throws InterruptedException {
         List<List<String>> data = datatable.raw();
+        if(IsElementPresent(dayfield))
+        {
         type(dayfield, data.get(0).get(0));
         type(monthfield, data.get(0).get(1));
         type(yearfield, data.get(0).get(2));
         Thread.sleep(2000);
+        
+        }
+    
+        else {
+        	click(EditthisPage);
+        	type(dayfield, data.get(0).get(0));
+            type(monthfield, data.get(0).get(1));
+            type(yearfield, data.get(0).get(2));
+            Thread.sleep(2000);
+        	
+        }
     }
 
     public void Enterduration(String duration) {
@@ -107,7 +122,7 @@ public void Closepreview()
 
 public void EditPage()
 {
-	click(p_editPage);
+	click(EditthisPage);
 }
 public void ValidatePagetitle()
 {

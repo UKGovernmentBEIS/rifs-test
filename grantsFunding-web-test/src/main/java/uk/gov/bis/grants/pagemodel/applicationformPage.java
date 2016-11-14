@@ -22,8 +22,9 @@ public class applicationformPage extends BasePage {
     By pageHeader = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/h1");
     String expectedHeader = "Application overview";
 
+
     By eventTitle = By.xpath(".//*[@id='title']");
-    By saveAndcontinue = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/input[1]");
+    By saveAndcontinue = By.xpath("//input[contains(@class,'button button--start')]");
     By eventSection = By.id("section-1-link");
     By provisionalDate = By.id("section-2-link");
     By evenObjectives = By.id("section-3-link");
@@ -34,14 +35,15 @@ public class applicationformPage extends BasePage {
     By wordcount_eventObj = By.id("");
     By wordcount_topicsnspeakers = By.id("topicAndSpeaker_hint_text");
     By wordcount_eventaudience = By.id("eventAudience_hint_text");
-    By markAsComplete = By.xpath(".//input[@name='_complete_checkbox']");
-    By dateTimestamp = By.xpath(".//*[@id='content']/div/div[1]/form/fieldset");
+    By markAsComplete = By.id("complete-checkbox");
+    By dateTimestamp = By.xpath(".//*[@id='content']/div/div");
     By previewPage = By.name("_preview_button");
     By previewContent = By.xpath(".//*[@id='content']/div/div/div[2]/p");
     By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
     By topicsnspeakerfield = By.id("topicAndSpeaker");
     By eventobjfield = By.id("eventObjectives");
     By eventAudience = By.id("eventAudience");
+    By EditthisPage = By.xpath("//input[contains(@class,'button--link-style')]");
 
 
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
@@ -113,17 +115,39 @@ public class applicationformPage extends BasePage {
     switch(section)
     {
     case "EventObjs" : 
+    	if(IsElementPresent(eventobjfield))
+    	{
     	type(eventobjfield,text);
+    	}
+    	else 
+    		click(EditthisPage);
+    	type(eventobjfield,text);
+    	
 		break;
 		
     case "TopicsnSpeakers":
-    	    
+    	
+    	if(IsElementPresent(topicsnspeakerfield)) 
+    	{
     	type(topicsnspeakerfield,text);
+    	}
+    	else
+    	{
+    		click(EditthisPage);
+    		type(topicsnspeakerfield,text);
+    		}
     	break;
     		
     		
     case "EventAudience":
+    	if(IsElementPresent(eventAudience))
 		type(eventAudience,text);
+    	else 
+    	{
+    		click(EditthisPage);
+    		type(eventAudience,text);
+    	}
+    	
 		break;
 		
 		
@@ -137,8 +161,8 @@ public class applicationformPage extends BasePage {
         if (this.IsElementPresent(markAsComplete)) {
             click(markAsComplete);
         } else {
-            click(saveAndcontinue);
-            OpenSection(section);
+            click(EditthisPage);
+            //OpenSection(section);
             click(markAsComplete);
         }
 
@@ -167,8 +191,17 @@ public class applicationformPage extends BasePage {
     }
 
     public void EnterTitle(String title) {
-        verifyPageTitle(eventPagetitle);
+        //verifyPageTitle(eventPagetitle);
+    	if(IsElementPresent(eventTitle))
+    	{
         type(eventTitle, title);
+    	}
+    	else 
+    	{
+    		click(EditthisPage);
+    		type(eventTitle,title);
+    	}
+    		
     }
 
     public void Cleartextfield() {

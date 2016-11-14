@@ -20,13 +20,13 @@ When I select an Opportunity from list
 Then I should see all sections on opportunity detail page
 
 When I click firstnext button 
-Then I should see section "2. The events we will fund"
+Then I should see section "2. What we will ask you"
 
 When I click on next button again 
-Then I should see section "3. What events should cover"
+Then I should see section "3. Assessment criteria"
 
 When I click on previous button 
-Then I should see section "2. The events we will fund"
+Then I should see section "2. What we will ask you"
 
 Scenario: Opportunity detail page should show about this opportunity section as default and should display only "Next" button.
 
