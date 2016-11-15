@@ -12,7 +12,7 @@ When I click on Make an application
 Scenario: Verify status when user marks as complete for event title
 And I open section "EventTitle"
 And I  enter "Test status for event title question" in "EventTitle"
-And I should be able select mark as complete checkbox  "EventAudience" page
+And I should be able select mark as complete checkbox  "EventTitle" page
 And I should be able save and Continue
 Then I should return back to overview page.
 And I should be able to see "EventTitle"status as "Completed"
