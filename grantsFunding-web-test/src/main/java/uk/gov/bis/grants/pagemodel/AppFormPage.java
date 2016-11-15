@@ -41,7 +41,7 @@ public class AppFormPage extends BasePage {
     By previewContent = By.xpath(".//*[@id='content']/div/div/div[2]/p");
     By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
     By topicsnspeakerfield = By.id("topicAndSpeaker");
-    By eventtitlefield = By.id("id");
+    By eventtitlefield = By.id("title");
     By eventobjfield = By.id("eventObjectives");
     By eventAudience = By.id("eventAudience");
     By EditthisPage = By.xpath("//input[contains(@class,'button--link-style')]");
