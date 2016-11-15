@@ -10,7 +10,7 @@ When I click on Make an application
 And I open section "TopicsnSpeakers"
 
 
-@current
+@Sprint3
 Scenario Outline: Verify user able topics and speakers info and save.
 Then I should be able to enter "<text>" in "TopicsnSpeakers"
 And I should be able save and Continue
