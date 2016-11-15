@@ -321,6 +321,11 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
     }
     
     
+    @Then("^I should be able to see \"([^\"]*)\"status as \"([^\"]*)\"$")
+    public void i_should_be_able_to_see_status_as(String arg1, String arg2) throws Throwable {
+        appformpage.verifyStatus(arg1, arg2);
+    }
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed
