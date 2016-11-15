@@ -46,6 +46,18 @@ public class applicationformPage extends BasePage {
     By EditthisPage = By.xpath("//input[contains(@class,'button--link-style')]");
 
 
+
+    
+    By EventTitleStatus = By.xpath("//form/div/table/tbody/tr[1]/td[2]/span");
+    By provisionalDateStatus = By.xpath("//form/div/table/tbody/tr[2]/td[2]/span");
+    By EventObjStatus = By.xpath("//form/div/table/tbody/tr[3]/td[2]/span");
+    By TopicsnSpeakersStatus = By.xpath("//form/div/table/tbody/tr[4]/td[2]/span");
+    By EventAudStatus = By.xpath("//form/div/table/tbody/tr[5]/td[2]/span");
+    By CostStatus = By.xpath("//form/div/table/tbody/tr[6]/td[2]/span");
+    
+    		
+
+
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
 //	    WebElement startButton;
 
@@ -85,6 +97,7 @@ public class applicationformPage extends BasePage {
         
         case "EventTitle":
         	click(eventSection);
+        	break;
         
             case "provisionalDate":
                 click(provisionalDate);
@@ -100,12 +113,11 @@ public class applicationformPage extends BasePage {
 
             case "EventAudience":
                 click(evenAudience);
-                break;
-
+                break;            
+                
             case "costs":
                 click(costs);
                 break;
-
         }
 
     }
@@ -114,6 +126,18 @@ public class applicationformPage extends BasePage {
     {
     switch(section)
     {
+    
+    case "EventTitle" : 
+    	if(IsElementPresent(eventtitlefield))
+    	{
+    	type(eventtitlefield,text);
+    	}
+    	else 
+    		click(EditthisPage);
+    	type(eventtitlefield,text);
+    	
+		break;
+    
     case "EventObjs" : 
     	if(IsElementPresent(eventobjfield))
     	{
@@ -204,6 +228,30 @@ public class applicationformPage extends BasePage {
     		
     }
 
+    public void verifyStatus(String question,String exp) {
+    	
+    	switch(question) 
+    	{
+    	case "EventTitle" :
+    	Assert.assertEquals(exp, getText(EventTitleStatus));
+    	break;
+    		
+    	case "provisionalDate" :
+    		Assert.assertEquals(exp, getText(provisionalDateStatus));
+    		
+       	break;
+        	
+       	
+    	case "EventAudience" :
+    		Assert.assertEquals(exp, getText(EventAudStatus));
+    		
+       	break;
+        	
+    	
+    	}
+    	
+    }
+    
     public void Cleartextfield() {
         emptytextbox(eventTitle);
     }
