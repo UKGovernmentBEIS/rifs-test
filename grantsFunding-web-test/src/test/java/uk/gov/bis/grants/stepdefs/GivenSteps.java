@@ -22,7 +22,7 @@ public class GivenSteps {
     startPage appStartPge;
     loginPage loginpage;
     createOpportunityPage createOpp;
-    applicationformPage appformPage;
+    AppFormPage appformPage;
 
     public WebDriver driver;
 
@@ -34,7 +34,7 @@ public class GivenSteps {
         appStartPge = PageFactory.initElements(driver, startPage.class);
         loginpage = PageFactory.initElements(driver, loginPage.class);
         createOpp = PageFactory.initElements(driver, createOpportunityPage.class);
-        appformPage = PageFactory.initElements(driver, applicationformPage.class);
+        appformPage = PageFactory.initElements(driver, AppFormPage.class);
 
     }
 

@@ -20,7 +20,7 @@ public class WhenSteps {
     LandingPage mainPage;
     startPage appStartPge;
     loginPage loginPage;
-    applicationformPage appform;
+    AppFormPage appform;
     createOpportunityPage oppPage;
     OpportunityDetailPage oppdetailPage;
     ApplicationDateEntry dateEntry;
@@ -37,7 +37,7 @@ public class WhenSteps {
 
         appStartPge = PageFactory.initElements(driver, startPage.class);
         loginPage = PageFactory.initElements(driver, loginPage.class);
-        appform = PageFactory.initElements(driver, applicationformPage.class);
+        appform = PageFactory.initElements(driver, AppFormPage.class);
         oppPage = PageFactory.initElements(driver, createOpportunityPage.class);
         oppdetailPage = PageFactory.initElements(driver,OpportunityDetailPage.class);
        dateEntry = PageFactory.initElements(driver, ApplicationDateEntry.class);

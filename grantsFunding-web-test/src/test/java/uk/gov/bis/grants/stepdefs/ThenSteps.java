@@ -18,7 +18,7 @@ import java.util.List;
 public class ThenSteps {
     LandingPage mainPage;
     manageApplicationPage mngeApplication;
-    applicationformPage appformpage;
+    AppFormPage appformpage;
     loginPage loginPage;
     createOpportunityPage oppPage;
     startPage startpage;
@@ -35,7 +35,7 @@ public class ThenSteps {
                 LandingPage.class);
 
         mngeApplication = PageFactory.initElements(driver, manageApplicationPage.class);
-        appformpage = PageFactory.initElements(driver, applicationformPage.class);
+        appformpage = PageFactory.initElements(driver, AppFormPage.class);
         loginPage = PageFactory.initElements(driver, loginPage.class);
         oppPage = PageFactory.initElements(driver, createOpportunityPage.class);
         startpage = PageFactory.initElements(driver, startPage.class);
