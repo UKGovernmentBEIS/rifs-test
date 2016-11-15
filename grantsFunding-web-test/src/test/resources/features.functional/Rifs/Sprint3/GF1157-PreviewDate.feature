@@ -36,10 +36,10 @@ And I click on close button preview
 Then I should return back to overview page.
 
 @Sprint3
-Scenario: Edit link on preview page to return back to Date entry page
+Scenario: close link on preview page to return back to Date entry page
 
 And I click on preview
-And I click on edit link on preview page
+And I click on close button preview
 Then I should return back to Dateform page
 
 @Sprint3
