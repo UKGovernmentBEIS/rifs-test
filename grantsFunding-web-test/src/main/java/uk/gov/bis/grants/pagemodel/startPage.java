@@ -34,7 +34,7 @@ public class startPage extends BasePage {
 	 By startButton = By.cssSelector(".button.button-start-now");
 	 
 	By applyButton = By.xpath(".//*[@id='content']/div[3]/div[2]/a");
-	By applicantLink = By.xpath(".//*[@id='u10']/p/a");
+	By applicantLink = By.xpath(".//*[@id='content']/div/div/p[2]/a");
 	By oppList = By.xpath(".//a[@href='/opportunity/1']");
 	 
 	
