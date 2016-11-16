@@ -10,6 +10,7 @@ import uk.gov.bis.grants.utils.AppProperties;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
+import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
@@ -20,7 +21,7 @@ public class BasePage {
 
     private WebDriver driver;
     private String envurl = AppProperties.get("envurl");
-    private String appTitle = "Start Page";
+    private String appTitle = "Start";
    // private deleteElements = "//a[contains(@href,'delete')]";
     //private String appTitle = "Innovation Funding Service - Sign in";
 
@@ -61,16 +62,41 @@ public class BasePage {
     }
 
     
-    public void DeleteCostItems() throws Exception
+   
+	public void DeleteCostItems() throws Exception
     {
- 	   List<WebElement> items  = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
+    	
+    		
+    List<WebElement> items  = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
+ 	   do {
+ 		  Iterator<WebElement> iter = items.iterator();
+ 			
+ 				
+ 		 items = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));;
+ 				//System.out.println(items.size());
+ 				WebElement item = iter.next();
+ 				item.click();
+ 				items = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
+ 				
+ 	   }while(items.size()>=1);
+
+ 	   
+    }
+ 	     
+ 	
+    
+    public void EditCostItems() throws Exception
+    {
+ 	   
+    	List<WebElement> items  = driver.findElements(By.xpath("//a[contains(@href,'edit')]"));
  	   Iterator<WebElement> iter = items.iterator();
  		while (iter.hasNext()) {
  			WebElement item = iter.next();
  			item.click();
  		}
     }
- 		
+    
+    
  	   
 
     public void click(By locator) {

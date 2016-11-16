@@ -55,6 +55,7 @@ public class ApplicationCostEntry extends BasePage {
       }
   
 
+   
    public void AddItem(DataTable datatable)
    {
 	   click(addItem);
@@ -80,16 +81,22 @@ public class ApplicationCostEntry extends BasePage {
        click(itemSave);
 	   }
 	   
-	   
    }
-   
-
 
 	   
-	  
-   }
    
-
+   
+   
+   public void EditCostItem(String arg1)
+   
+   {
+   
+	   
+	   
+}
+   
+   
+}
 
 
 

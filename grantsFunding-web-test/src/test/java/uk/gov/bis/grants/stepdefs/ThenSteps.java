@@ -355,6 +355,14 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
        //nothing to do , above step would click on save;
     }
     
+    @Then("^I should be able to edit \"([^\"]*)\"$")
+    public void i_should_be_able_to_edit(String arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+       
+    }
+
+
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed
