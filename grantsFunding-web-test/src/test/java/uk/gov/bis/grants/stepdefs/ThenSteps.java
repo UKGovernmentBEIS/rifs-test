@@ -1,5 +1,6 @@
 package uk.gov.bis.grants.stepdefs;
 
+import cucumber.api.DataTable;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Then;
@@ -25,6 +26,8 @@ public class ThenSteps {
     OpportunityDetailPage oppdetailPage;
     ApplicationDateEntry dateEntry;
     ApplicationEventObjEntry eventEntry;
+    ApplicationCostEntry appCostPage;
+    
     private WebDriver driver;
     String platform = AppProperties.get("platform");
 
@@ -42,6 +45,7 @@ public class ThenSteps {
         oppdetailPage = PageFactory.initElements(driver, OpportunityDetailPage.class);
         dateEntry = PageFactory.initElements(driver, ApplicationDateEntry.class);
         eventEntry = PageFactory.initElements(driver, ApplicationEventObjEntry.class);
+        appCostPage = PageFactory.initElements(driver, ApplicationCostEntry.class);
 
 
     }
@@ -324,6 +328,31 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
     @Then("^I should be able to see \"([^\"]*)\"status as \"([^\"]*)\"$")
     public void i_should_be_able_to_see_status_as(String arg1, String arg2) throws Throwable {
         appformpage.verifyStatus(arg1, arg2);
+    }
+    
+    @Then("^I should be able to add cost items$")
+    public void i_should_be_able_to_add_cost_items(DataTable arg1) throws Throwable {
+    	
+    appCostPage.AddCostItem(arg1);
+    	  
+    }
+    
+    @Then("^I should be able to add one more cost item$")
+    public void i_should_be_able_to_add_one_more_cost_item(DataTable arg1) throws Throwable {
+    	
+    	appCostPage.AddItem(arg1);
+       
+    }
+    
+    @Then("^I should be able to add (\\d+) cost items$")
+    public void i_should_be_able_to_add_cost_items(int arg1, DataTable arg2) throws Throwable {
+    	appCostPage.AddMoreItem(arg1, arg2);
+        
+    }
+    
+    @Then("^I click on save$")
+    public void i_click_on_save() throws Throwable {
+       //nothing to do , above step would click on save;
     }
     
     @After()

@@ -116,7 +116,7 @@ public class AppFormPage extends BasePage {
                 click(evenAudience);
                 break;            
                 
-            case "costs":
+            case "Costs":
                 click(costs);
                 break;
         }
@@ -245,6 +245,11 @@ public class AppFormPage extends BasePage {
        	
     	case "EventAudience" :
     		Assert.assertEquals(exp, getText(EventAudStatus));
+    		
+       	break;
+       	
+    	case "Costs" :
+    		Assert.assertEquals(exp, getText(CostStatus));
     		
        	break;
         	

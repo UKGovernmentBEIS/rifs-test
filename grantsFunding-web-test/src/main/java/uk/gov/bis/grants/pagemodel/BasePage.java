@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import uk.gov.bis.grants.utils.AppProperties;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -20,6 +21,7 @@ public class BasePage {
     private WebDriver driver;
     private String envurl = AppProperties.get("envurl");
     private String appTitle = "Start Page";
+   // private deleteElements = "//a[contains(@href,'delete')]";
     //private String appTitle = "Innovation Funding Service - Sign in";
 
     public BasePage(WebDriver driver) {
@@ -58,6 +60,18 @@ public class BasePage {
         return driver.findElement(locator);
     }
 
+    
+    public void DeleteCostItems() throws Exception
+    {
+ 	   List<WebElement> items  = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
+ 	   Iterator<WebElement> iter = items.iterator();
+ 		while (iter.hasNext()) {
+ 			WebElement item = iter.next();
+ 			item.click();
+ 		}
+    }
+ 		
+ 	   
 
     public void click(By locator) {
         find(locator).click();
