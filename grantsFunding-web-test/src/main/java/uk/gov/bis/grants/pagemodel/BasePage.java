@@ -21,7 +21,7 @@ public class BasePage {
 
     private WebDriver driver;
     private String envurl = AppProperties.get("envurl");
-    private String appTitle = "Research and Innovation Funding Service";
+    private String appTitle = "Guidance on grants";
    // private deleteElements = "//a[contains(@href,'delete')]";
     //private String appTitle = "Innovation Funding Service - Sign in";
 
