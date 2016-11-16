@@ -25,6 +25,7 @@ public class WhenSteps {
     OpportunityDetailPage oppdetailPage;
     ApplicationDateEntry dateEntry;
     ApplicationEventObjEntry eventEntry;
+    ApplicationCostEntry appCostPage;
 
 
     String platform = AppProperties.get("platform");
@@ -42,6 +43,7 @@ public class WhenSteps {
         oppdetailPage = PageFactory.initElements(driver,OpportunityDetailPage.class);
        dateEntry = PageFactory.initElements(driver, ApplicationDateEntry.class);
        eventEntry = PageFactory.initElements(driver,ApplicationEventObjEntry.class);
+       appCostPage = PageFactory.initElements(driver, ApplicationCostEntry.class);
        
     }
 
@@ -272,6 +274,10 @@ public class WhenSteps {
       dateEntry.EditPage();
     }
     
+    @When("^I should be able to add cost item with invalid currency$")
+    public void i_should_be_able_to_add_cost_item_with_invalid_currency(DataTable arg1) throws Throwable {
+    	appCostPage.AddCostItem(arg1);
+    }
     
     @After()
     /**

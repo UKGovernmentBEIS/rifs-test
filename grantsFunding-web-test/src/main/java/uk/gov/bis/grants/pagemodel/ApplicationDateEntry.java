@@ -81,11 +81,14 @@ public class ApplicationDateEntry extends BasePage {
     }
 
     public void validateErrorMessage(String msg) {
-        assertTrue("Failed:Error message not displayed,", getText(errormsg).contains(msg));
+        //assertTrue("Failed:Error message not displayed,", getText(errormsg).contains(msg));
+        System.out.println(getText(errormsg));
+        Assert.assertEquals(msg, getText(errormsg));
     }
 
     public void ValidatedurationfieldError(String msg) {
         assertTrue("Failed:Error message not displayed,", getText(durationfieldError).contains(msg));
+        
     }
 
     
