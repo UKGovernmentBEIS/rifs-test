@@ -279,6 +279,13 @@ public class WhenSteps {
     	appCostPage.AddCostItem(arg1);
     }
     
+    @When("^I click on added Item$")
+    public void i_click_on_added_Item() throws Throwable {
+    	
+    	appCostPage.EditCostItems();
+       
+    }
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed

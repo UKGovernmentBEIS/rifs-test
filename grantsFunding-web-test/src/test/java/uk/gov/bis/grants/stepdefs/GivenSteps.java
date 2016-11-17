@@ -23,6 +23,7 @@ public class GivenSteps {
     loginPage loginpage;
     createOpportunityPage createOpp;
     AppFormPage appformPage;
+    ApplicationCostEntry appCostPage;
 
     public WebDriver driver;
 
@@ -35,6 +36,7 @@ public class GivenSteps {
         loginpage = PageFactory.initElements(driver, loginPage.class);
         createOpp = PageFactory.initElements(driver, createOpportunityPage.class);
         appformPage = PageFactory.initElements(driver, AppFormPage.class);
+        appCostPage = PageFactory.initElements(driver, ApplicationCostEntry.class);
 
     }
 
@@ -142,6 +144,12 @@ public class GivenSteps {
         appformPage.verifyPageTitle("Overview");
     }
 
+    
+    @Given("^I  add cost items$")
+    public void i_add_cost_items(DataTable arg1) throws Throwable {
+    	appCostPage.AddCostItem(arg1);
+    }
+    
 
     @After()
     /**

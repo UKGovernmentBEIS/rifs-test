@@ -36,6 +36,8 @@ public class ApplicationCostEntry extends BasePage {
    By itemSave = By.xpath("//input[contains(@name,'_save_item_button')]");
    By addItem = By.xpath("//a[contains(@href,'add-item')]");
    By EditthisPage = By.xpath("//input[contains(@value,'Edit this page')]");
+   By openItem = By.xpath("//a[contains(@href,'edit')]");
+   
    
    //Error message elements
    
@@ -73,6 +75,20 @@ public class ApplicationCostEntry extends BasePage {
 	   
 	   
    }
+   public void openItem(){
+	   
+	   click(openItem);
+	      
+   }
+   public void UpdateCostInfo(DataTable datatable)
+   {
+	   List<List<String>> data = datatable.raw();
+	   type(itemfield, data.get(0).get(0));
+       type(costfield, data.get(0).get(1));
+       type(justifyfield, data.get(0).get(2));
+       click(itemSave);
+	   
+   }
    
 
    public void AddMoreItem(int n,DataTable datatable) throws Exception
@@ -96,6 +112,10 @@ public class ApplicationCostEntry extends BasePage {
 	   
    }
 
+   public void verifyRemainingItems(int count)
+   {
+	   Assert.assertEquals(count, this.CountcostItems());
+   }
 	   
    
    public void ValidateErrorMsg(String expected_errmsg)

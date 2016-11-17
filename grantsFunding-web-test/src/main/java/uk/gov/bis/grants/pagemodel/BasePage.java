@@ -84,6 +84,34 @@ public class BasePage {
     }
  	     
  	
+	public void DeleterequiredItem(int n) throws Exception
+    {
+    	
+		
+    		
+    List<WebElement> items  = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
+ 	   
+ 		  Iterator<WebElement> iter = items.iterator();
+ 			items = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));;
+ 				//System.out.println(items.size());
+ 				WebElement item = iter.next();
+ 				item.click();
+ 				//items = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
+ 				
+ 	   
+
+		}
+    
+	
+	public int CountcostItems()
+	{
+		
+		List<WebElement> items  = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
+		
+	  return items.size();
+	}
+	
+	
     
     public void EditCostItems() throws Exception
     {

@@ -361,7 +361,27 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
        
     }
 
+    
+    @Then("^I should be able to edit cost Items$")
+    public void i_should_be_able_to_edit_cost_Items(DataTable arg1) throws Throwable {
+    	
+    	appCostPage.UpdateCostInfo(arg1);
+        
+    }
 
+    @Then("^I should be able to delete (\\d+) item$")
+    public void i_should_be_able_to_delete_item(int arg1) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        appCostPage.DeleterequiredItem(arg1);
+    }
+
+    @Then("^I should see for (\\d+) cost items remaining$")
+    public void i_should_see_for_cost_items_remaining(int arg1) throws Throwable {
+    	appCostPage.verifyRemainingItems(arg1);
+        
+    }
+    
+    
     
     @After()
     /**

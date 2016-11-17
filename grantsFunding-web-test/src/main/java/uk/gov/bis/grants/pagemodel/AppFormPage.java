@@ -36,7 +36,7 @@ public class AppFormPage extends BasePage {
     By wordcount_topicsnspeakers = By.id("topicAndSpeaker_hint_text");
     By wordcount_eventaudience = By.id("eventAudience_hint_text");
     By markAsComplete = By.id("complete-checkbox");
-    By dateTimestamp = By.xpath(".//*[@id='content']/div/div");
+    By dateTimestamp = By.xpath(".//*[@id='content']/div/div");  
     By previewPage = By.name("_preview_button");
     By previewContent = By.xpath(".//*[@id='content']/div/div/div[2]/p");
     By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
