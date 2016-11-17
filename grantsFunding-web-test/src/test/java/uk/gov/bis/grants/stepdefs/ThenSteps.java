@@ -146,7 +146,7 @@ public class ThenSteps {
 
     @Then("^I should be able to land on start page$")
     public void i_should_be_able_to_land_on_start_page() throws Throwable {
-        mainPage.verifyPageTitle("Start Page");
+        mainPage.verifyPageTitle("Guidance on grants");
     }
 
 
