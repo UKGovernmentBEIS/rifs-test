@@ -38,7 +38,7 @@ public class AppFormPage extends BasePage {
     By markAsComplete = By.id("complete-checkbox");
     By dateTimestamp = By.xpath(".//*[@id='content']/div[2]/div");  
     By previewPage = By.name("_preview_button");
-    By previewContent = By.xpath(".//*[@id='content']/div/div/div[2]/p");
+    By previewContent = By.xpath(".//*[@id='content']/div[2]/div/div[1]/p"); 
     By errormsg = By.xpath(".//*[@id='content']/div[2]/div[1]/form/fieldset/div[1]/p");
     By topicsnspeakerfield = By.id("topicAndSpeaker");
     By eventtitlefield = By.id("title");
