@@ -5,7 +5,7 @@ Background:
   And I click on Make an application
   And I open section "Costs"
 
-  @current
+  @Sprint4
 Scenario: User able to enter cost items and preview costs - happy path
   When I add cost items
     |Training-Autotest|500|Training required to deliver Seminar Innovations|

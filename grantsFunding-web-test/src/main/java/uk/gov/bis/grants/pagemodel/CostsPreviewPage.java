@@ -2,10 +2,8 @@ package uk.gov.bis.grants.pagemodel;
 
 import static org.junit.Assert.*;
 import org.openqa.selenium.By;
-import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.DoubleClickAction;
 
 import java.math.BigDecimal;
 import java.util.Iterator;

@@ -1,1 +1,8 @@
+**/classes/*
+bin/
+**/target/*
 .idea/
+.gradle/
+**/build/*
+project/target
+grantsFunding-web-test/build/**
