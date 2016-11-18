@@ -403,7 +403,17 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
     public void the_Total_Requested_is(String arg1) throws Throwable {
         costsPreviewPage.checkTotalDisplayed( new BigDecimal(arg1));
     }
-    
+
+    @Then("^I should be able to see the \"([^\"]*)\" link at costs preview$")
+    public void i_should_be_able_to_see_the_Return_to_application_overview_link(String arg1) throws Throwable {
+        costsPreviewPage.checkReturnToOverviewDisplayed(arg1);
+    }
+
+    @Then("^I should be able to see the \"([^\"]*)\" button at costs preview$")
+    public void i_should_be_able_to_see_the_button_at_costs_preview(String arg1) throws Throwable {
+        costsPreviewPage.checkCloseButtonDisplayed(arg1);
+    }
+
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed
