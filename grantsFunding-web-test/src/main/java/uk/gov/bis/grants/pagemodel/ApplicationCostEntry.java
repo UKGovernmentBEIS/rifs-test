@@ -37,6 +37,7 @@ public class ApplicationCostEntry extends BasePage {
    By addItem = By.xpath("//a[contains(@href,'add-item')]");
    By EditthisPage = By.xpath("//input[contains(@value,'Edit this page')]");
    By openItem = By.xpath("//a[contains(@href,'edit')]");
+   By previewPage = By.xpath("//input[contains(@name,'_preview_button')]");
    
    
    //Error message elements
@@ -45,18 +46,18 @@ public class ApplicationCostEntry extends BasePage {
    
    public void AddCostItem(DataTable datatable) throws Exception
    {
-	   if (IsElementPresent(addItem))
-	   {
-		this.DeleteCostItems();
-	   }
-	   else if(IsElementPresent(EditthisPage))
-	   {
-		   click(EditthisPage);
-		   this.DeleteCostItems();
-	   }
-	   
-	   List<List<String>> data = datatable.raw();
-	   type(itemfield, data.get(0).get(0));
+       if (IsElementPresent(addItem))
+       {
+        this.DeleteCostItems();
+       }
+       else if(IsElementPresent(EditthisPage))
+       {
+           click(EditthisPage);
+           this.DeleteCostItems();
+       }
+
+       List<List<String>> data = datatable.raw();
+       type(itemfield, data.get(0).get(0));
        type(costfield, data.get(0).get(1));
        type(justifyfield, data.get(0).get(2));
        click(itemSave);
@@ -66,70 +67,77 @@ public class ApplicationCostEntry extends BasePage {
    
    public void AddItem(DataTable datatable)
    {
-	   click(addItem);
-	   List<List<String>> data = datatable.raw();
-	   type(itemfield, data.get(0).get(0));
+       click(addItem);
+       List<List<String>> data = datatable.raw();
+       type(itemfield, data.get(0).get(0));
        type(costfield, data.get(0).get(1));
        type(justifyfield, data.get(0).get(2));
        click(itemSave);
-	   
-	   
+
+
    }
    public void openItem(){
-	   
-	   click(openItem);
-	      
+
+       click(openItem);
+
    }
    public void UpdateCostInfo(DataTable datatable)
    {
-	   List<List<String>> data = datatable.raw();
-	   type(itemfield, data.get(0).get(0));
+       List<List<String>> data = datatable.raw();
+       type(itemfield, data.get(0).get(0));
        type(costfield, data.get(0).get(1));
        type(justifyfield, data.get(0).get(2));
        click(itemSave);
-	   
+
    }
    
 
    public void AddMoreItem(int n,DataTable datatable) throws Exception
    {
-	   if(IsElementPresent(EditthisPage))
-	   {
-		   click(EditthisPage);
-		   //this.DeleteCostItems();
-	   }
-	   
-	   for(int i=0;i<=n;i++)
-	   {
-		click(addItem);
-	   List<List<String>> data = datatable.raw();
-	   type(itemfield, data.get(0).get(0));
+       if(IsElementPresent(EditthisPage))
+       {
+           click(EditthisPage);
+           //this.DeleteCostItems();
+       }
+
+       for(int i=0;i<=n;i++)
+       {
+        click(addItem);
+       List<List<String>> data = datatable.raw();
+       type(itemfield, data.get(0).get(0));
        type(costfield, data.get(0).get(1));
        type(justifyfield, data.get(0).get(2));
        click(itemSave);
        
-	   }
-	   
+       }
+
    }
 
    public void verifyRemainingItems(int count)
    {
-	   Assert.assertEquals(count, this.CountcostItems());
+       Assert.assertEquals(count, this.CountcostItems());
    }
-	   
+
    
    public void ValidateErrorMsg(String expected_errmsg)
    {
-	   Assert.assertEquals(expected_errmsg, getText(TotalexceedErr));
+       Assert.assertEquals(expected_errmsg, getText(TotalexceedErr));
    }
    
    public void EditCostItem(String arg1)
-   
    {
    
-	   
-	   
-}
+   }
+
+   public void canSeePreviewPageLink()
+   {
+       assertTrue( IsElementPresent(previewPage) );
+   }
+
+   public void previewThisPage()
+   {
+       click(previewPage);
+   }
    
    
 }

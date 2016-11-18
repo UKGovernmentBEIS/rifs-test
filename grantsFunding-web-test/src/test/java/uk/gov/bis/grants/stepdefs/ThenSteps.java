@@ -1,6 +1,7 @@
 package uk.gov.bis.grants.stepdefs;
 
 import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.en.Then;
@@ -12,6 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import uk.gov.bis.grants.pagemodel.*;
 import uk.gov.bis.grants.utils.AppProperties;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 //import junit.framework.Assert;
@@ -27,6 +29,7 @@ public class ThenSteps {
     ApplicationDateEntry dateEntry;
     ApplicationEventObjEntry eventEntry;
     ApplicationCostEntry appCostPage;
+    CostsPreviewPage costsPreviewPage;
     
     private WebDriver driver;
     String platform = AppProperties.get("platform");
@@ -46,7 +49,7 @@ public class ThenSteps {
         dateEntry = PageFactory.initElements(driver, ApplicationDateEntry.class);
         eventEntry = PageFactory.initElements(driver, ApplicationEventObjEntry.class);
         appCostPage = PageFactory.initElements(driver, ApplicationCostEntry.class);
-
+        costsPreviewPage= PageFactory.initElements(driver, CostsPreviewPage.class);
 
     }
 
@@ -330,8 +333,8 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
         appformpage.verifyStatus(arg1, arg2);
     }
     
-    @Then("^I should be able to add cost items$")
-    public void i_should_be_able_to_add_cost_items(DataTable arg1) throws Throwable {
+    @Then("^I (should be able to )?add cost items$")
+    public void i_should_be_able_to_add_cost_items(String ignored, DataTable arg1) throws Throwable {
     	
     appCostPage.AddCostItem(arg1);
     	  
@@ -380,9 +383,37 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
     	appCostPage.verifyRemainingItems(arg1);
         
     }
-    
-    
-    
+
+    @Then("^Costs page should display the \"Preview this page\" button$")
+    public void costs_page_should_have_preview_button() throws Throwable {
+        appCostPage.canSeePreviewPageLink();
+    }
+
+    @Then("I should see the \"Costs preview page\"")
+    public void i_should_see_costs_preview_page() {
+        costsPreviewPage.onDisplay();
+    }
+
+    @Then("^I should be able to see the cost item added$")
+    public void i_should_be_able_to_see_the_cost_item_added(DataTable arg1) throws Throwable {
+        costsPreviewPage.checkItemsDisplayed( arg1.asLists(String.class) );
+    }
+
+    @Then("^The Total Requested is '([^']+)'$")
+    public void the_Total_Requested_is(String arg1) throws Throwable {
+        costsPreviewPage.checkTotalDisplayed( new BigDecimal(arg1));
+    }
+
+    @Then("^I should be able to see the \"([^\"]*)\" link at costs preview$")
+    public void i_should_be_able_to_see_the_Return_to_application_overview_link(String arg1) throws Throwable {
+        costsPreviewPage.checkReturnToOverviewDisplayed(arg1);
+    }
+
+    @Then("^I should be able to see the \"([^\"]*)\" button at costs preview$")
+    public void i_should_be_able_to_see_the_button_at_costs_preview(String arg1) throws Throwable {
+        costsPreviewPage.checkCloseButtonDisplayed(arg1);
+    }
+
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed

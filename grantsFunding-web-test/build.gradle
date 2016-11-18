@@ -48,14 +48,14 @@ dependencies {
             'com.codeborne:phantomjsdriver:1.2.1'
 
 
-
     testCompile 'junit:junit:4.11',
             'info.cukes:cucumber-java:1.2.4',
             'info.cukes:cucumber-junit:1.2.4',
             'info.cukes:cucumber-picocontainer:1.2.4',
             'org.picocontainer:picocontainer:2.14.3',
             'info.cukes:cucumber-java:1.2.4-SNAPSHOT',
-            'com.codeborne:phantomjsdriver:1.2.1'
+            'com.codeborne:phantomjsdriver:1.2.1',
+            'org.apache.commons:commons-lang3:3.5'
 
     //  testCompile 'junit:junit:4.11'
     //testCompile 'info.cukes:cucumber-java:1.2.4'

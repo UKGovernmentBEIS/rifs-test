@@ -285,6 +285,12 @@ public class WhenSteps {
     	appCostPage.EditCostItems();
        
     }
+
+    @When("I click \"Preview this page\" at Costs page")
+    public void i_click_preview_page_at_costs_page()
+    {
+        appCostPage.previewThisPage();
+    }
     
     @After()
     /**
