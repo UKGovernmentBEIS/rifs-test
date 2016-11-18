@@ -62,6 +62,11 @@ public class BasePage {
     }
 
     
+    public List<WebElement> findelements(By locator)
+    {
+    	return driver.findElements(locator);
+    }
+    
    
 	public void DeleteCostItems() throws Exception
     {

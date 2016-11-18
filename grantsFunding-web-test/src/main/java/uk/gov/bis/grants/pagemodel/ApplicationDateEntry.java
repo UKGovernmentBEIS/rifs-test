@@ -5,7 +5,9 @@ import org.junit.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
+import java.util.Iterator;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
@@ -24,6 +26,8 @@ public class ApplicationDateEntry extends BasePage {
 
 
     By errormsg = By.xpath("//span[contains(@class,'error-message')]");
+    By costcurrencyErrmsg = By.xpath("//*[text()='Must be a valid currency value']");
+    By costjustifyerrmsg = By.xpath("");
     By durationfieldError = By.xpath("//span[contains(@class,'error-message')]");
     By dayfield = By.id("provisionalDate.date.day");
     By monthfield = By.id("provisionalDate.date.month");
@@ -81,11 +85,35 @@ public class ApplicationDateEntry extends BasePage {
     }
 
     public void validateErrorMessage(String msg) {
-        //assertTrue("Failed:Error message not displayed,", getText(errormsg).contains(msg));
-        System.out.println(getText(errormsg));
-        Assert.assertEquals(msg, getText(errormsg));
-    }
-
+    
+    	//need to re-visit the section later.
+    	
+//    	List<WebElement> errmsg =  findelements(errormsg);
+//    	if(errmsg.size()>1)
+//    	{
+//    		System.out.println(errmsg.size());
+//    		
+// 		           
+// 		        for (WebElement myElement : errmsg)
+// 		           
+// 		        	if(myElement.getText().equals(msg))
+//    				{
+//    					
+// 		        		System.out.println(myElement.getText());
+// 		        		//assertTrue("Failed:Error message not displayed,", getText(errormsg).contains(msg));
+//    					Assert.assertEquals(msg, getText(errormsg));
+//    				}
+// 		           
+//    				
+//    	
+//    	}
+//    	else{
+    		assertTrue("Failed:Error message not displayed,", getText(errormsg).contains(msg));
+    	}
+        
+        
+        
+    
     public void ValidatedurationfieldError(String msg) {
         assertTrue("Failed:Error message not displayed,", getText(durationfieldError).contains(msg));
         
