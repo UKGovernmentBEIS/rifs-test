@@ -1,9 +1,6 @@
 package uk.gov.bis.grants.pagemodel;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import uk.gov.bis.grants.utils.AppProperties;
 
@@ -24,6 +21,10 @@ public class BasePage {
     private String appTitle = "Guidance on grants";
    // private deleteElements = "//a[contains(@href,'delete')]";
     //private String appTitle = "Innovation Funding Service - Sign in";
+
+    protected SearchContext getSearchCtx() {
+        return driver;
+    }
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -61,8 +62,7 @@ public class BasePage {
         return driver.findElement(locator);
     }
 
-    
-   
+
 	public void DeleteCostItems() throws Exception
     {
     	
