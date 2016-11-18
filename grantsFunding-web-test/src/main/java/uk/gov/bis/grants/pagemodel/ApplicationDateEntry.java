@@ -32,10 +32,10 @@ public class ApplicationDateEntry extends BasePage {
     By markasComplete = By.id("complete-checkbox");
     By saveandContinue = By.name("_save_button");
     By openProvisionalDate = By.id("section-2-link");
-    By p_endDate = By.xpath(".//*[@id='content']/div/div/div[2]/div[3]/dl/dd");
-    By p_startDate = By.xpath(".//*[@id='content']/div/div/div[2]/div[1]/dl/dd");
-    By p_duration = By.xpath(".//*[@id='content']/div/div/div[2]/div[2]/dl/dd");
-    By p_close = By.xpath(".//*[@id='content']/div/div/div[3]/a[1]");
+    By p_endDate = By.xpath(".//*[@id='content']/div[2]/div/div[1]/div[3]/dl/dd");
+    By p_startDate = By.xpath(".//*[@id='content']/div[2]/div/div[1]/div[1]/dl/dd");
+    By p_duration = By.xpath(".//*[@id='content']/div[2]/div/div[1]/div[2]/dl/dd");
+    By p_close = By.xpath(".//*[@id='content']/div[2]/div/div[2]/a");
     By p_editPage = By.xpath(".//*[@id='content']/div/div/div[3]/a[2]");
     By EditthisPage = By.xpath("//input[contains(@class,'button--link-style')]");
    

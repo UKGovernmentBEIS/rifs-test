@@ -113,7 +113,12 @@ And I should be able to add cost item with invalid currency
 |Training-Autotest|20.00||
 Then I should see error message "'justification' cannot be empty"
 
-
-
-
+@Sprint4
+Scenario: user should get an error message when wordcount exceeds 200 words
+Given I am on the opportunity detail page
+And I click on Make an application
+When I open section "Costs"
+And I should be able to add cost items
+|Training-Autotest|500|T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T |
+Then I should see error message "Word limit exceeded"
 
