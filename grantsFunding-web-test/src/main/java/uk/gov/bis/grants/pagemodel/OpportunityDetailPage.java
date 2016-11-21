@@ -29,7 +29,7 @@ public class OpportunityDetailPage extends BasePage {
 	private  WebDriver driver;
    
 	By oppTitle = By.xpath(".//*[@id='content']/div[2]/h1");
-	private String pageTitle = "Opportunity 1";
+	private String pageTitle = "Opportunity: Exploring innovation seminars - RIFS";
 	
     By section2 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[1]/li[2]/a");
     By section1 = By.xpath(".//*[@id='content']/div/header/table/tbody/tr[1]/td[1]");

@@ -9,7 +9,7 @@ I should be able see opportuntiy oview page with questions
 Scenario: Overview page to show all questions
 Given I am on the opportunity detail page
 When I click on Make an application
-Then I should see application "Overview" page
+Then I should see application "Overview - RIFS" page
 And I should see all six questions displayed
 
  
