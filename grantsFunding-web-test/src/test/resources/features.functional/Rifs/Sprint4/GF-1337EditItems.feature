@@ -32,7 +32,7 @@ And I should be able to add one more cost item
 And I should be able save and Continue
 When I open section "Costs"
 Then I should be able to delete 1 item
-And I should see for 2 cost items remaining
+And I should see 2 cost items remaining
 
 
 

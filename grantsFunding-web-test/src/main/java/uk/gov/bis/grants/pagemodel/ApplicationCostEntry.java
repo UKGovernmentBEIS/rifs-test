@@ -10,11 +10,12 @@ import org.openqa.selenium.WebElement;
 
 import cucumber.api.DataTable;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 import java.util.Iterator;
-
+import java.util.stream.Collectors;
 
 
 public class ApplicationCostEntry extends BasePage {
@@ -38,7 +39,8 @@ public class ApplicationCostEntry extends BasePage {
    By EditthisPage = By.xpath("//input[contains(@value,'Edit this page')]");
    By openItem = By.xpath("//a[contains(@href,'edit')]");
    By previewPage = By.xpath("//input[contains(@name,'_preview_button')]");
-   
+   By costItems = By.xpath("//*[@id='content']/div[2]/div[1]/form/table/tbody/tr/td[position() mod 3 > 0]");
+
    
    //Error message elements
    
@@ -138,8 +140,18 @@ public class ApplicationCostEntry extends BasePage {
    {
        click(previewPage);
    }
-   
-   
+
+
+    public void checkCostItemsDisplayed(List<List<String>> rows) {
+
+        List<WebElement> cItems = getSearchCtx().findElements(costItems);
+        assertEquals(cItems.size(), 2 * rows.size());
+        Iterator<WebElement> elIt = cItems.iterator();
+        rows.stream().flatMap(List::stream).forEach(cell->{
+            WebElement element = elIt.next();
+            assertEquals(cell, element.getText());
+        });
+    }
 }
 
 

@@ -22,9 +22,6 @@ public class CostsPreviewPage extends BasePage {
 
     public CostsPreviewPage(WebDriver driver) {
         super(driver);
-
-        //totalsRow = costsTable.findElement(getSearchCtx().findElement(  ));
-        //total = totalsRow.findElement(  );
     }
 
     public void onDisplay() {
@@ -33,9 +30,8 @@ public class CostsPreviewPage extends BasePage {
         assertTrue(headingEl.getText().contains("Costs"));
     }
 
-    protected WebElement getCostsTable() {
-        WebElement costsTblEl = getSearchCtx().findElement(costsTable);
-        return costsTblEl;
+    private WebElement getCostsTable() {
+        return getSearchCtx().findElement(costsTable);
     }
 
     public void checkItemsDisplayed(List<List<String>> rows) {
@@ -65,8 +61,17 @@ public class CostsPreviewPage extends BasePage {
         assertEquals(contents, ret.getText());
     }
 
+    public void clickReturnToOverview() {
+        WebElement ret = getSearchCtx().findElement(returnToOverview);
+        ret.click();
+    }
+
     public void checkCloseButtonDisplayed(String arg1) {
         WebElement ret = getSearchCtx().findElement(closeButton);
         assertEquals(arg1, ret.getText());
+    }
+
+    public void clickCloseButton() {
+        getSearchCtx().findElement(closeButton).click();
     }
 }
