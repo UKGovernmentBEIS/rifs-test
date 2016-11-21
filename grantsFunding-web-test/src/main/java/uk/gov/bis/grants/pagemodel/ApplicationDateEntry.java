@@ -22,7 +22,7 @@ public class ApplicationDateEntry extends BasePage {
 
     private WebDriver driver;
     private String pageTitle = "Overview";
-    private String DateSectionPagetitle = "Provisional date";
+    private String DateSectionPagetitle = "Provisional date - RIFS";
 
 
     By errormsg = By.xpath("//span[contains(@class,'error-message')]");
