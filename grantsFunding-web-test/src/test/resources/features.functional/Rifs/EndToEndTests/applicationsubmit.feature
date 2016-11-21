@@ -20,7 +20,7 @@ And I should see all six questions displayed
 
 When I click on event title link on application overview page
 Then I should be able to enter title "Seminar on space Technologies AutoTest"
-Then I should be able select mark as complete checkbox
+And I should be able select mark as complete checkbox  "EventTitle" page
 And I should be able save and Continue
 
 When I open provisional date section
@@ -34,7 +34,7 @@ Then I should return back to overview page.
 
 When I open event objectives page
 Then I should be able to enter event objective "Seminar on space Technologies AutoTest"
-Then I should be able select mark as complete checkbox
+And I should be able select mark as complete checkbox  "EventObj" page
 And I should be able save and Continue
 And I should return back to overview page.
 

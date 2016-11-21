@@ -21,6 +21,7 @@ public class AppFormPage extends BasePage {
 
     By pageHeader = By.xpath(".//*[@id='content']/div[2]/div[1]/div[2]/h1");
     String expectedHeader = "Application overview";
+    String ApplicationSubmittedTitle = "Application submitted - RIFS";
 
 
     By eventTitle = By.xpath(".//*[@id='title']");
@@ -46,7 +47,8 @@ public class AppFormPage extends BasePage {
     By eventAudience = By.id("eventAudience");
     By EditthisPage = By.xpath("//input[contains(@class,'button--link-style')]");
 
-
+//Application overview Status objects
+    
 
     
     By EventTitleStatus = By.xpath("//form/div/table/tbody/tr[1]/td[2]/span");
@@ -56,8 +58,13 @@ public class AppFormPage extends BasePage {
     By EventAudStatus = By.xpath("//form/div/table/tbody/tr[5]/td[2]/span");
     By CostStatus = By.xpath("//form/div/table/tbody/tr[6]/td[2]/span");
     
-    		
-
+    	//Application submit button
+    By SubmitApplication = By.xpath(".//*[@id='content']/div[2]/div[1]/form/div/p/input");
+    By ApplicationSubmitsucess = By.xpath(".//*[@id='content']/div[2]/div[1]/h1");
+    
+//Application submit error message
+   By Applicationsubmiterror = By.xpath("//*[text()='All questions must be answered']");
+   By Applicationsectionerror = By.xpath(".//*/li");
 
 //	 @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
 //	    WebElement startButton;
@@ -296,9 +303,36 @@ public class AppFormPage extends BasePage {
 
     }
 
+    }
+    public void submitApplication()
+    {
     	
+    	click(SubmitApplication);
+    	
+    }
+    	
+    
+    public void verifyApplicationSubmit()
+    {
+    	
+    	assertTrue("Failed:Application not submitted,check manually", getText(ApplicationSubmitsucess).contains("Application submitted"));
+    	this.verifyPageTitle(ApplicationSubmittedTitle);
+    }
     	
         
+    public void verifyApplicationSubmiterror(String exp_error)
+    {
+    
+    	Assert.assertEquals(exp_error, getText(Applicationsectionerror));
+    	
+    }
+    
+    
+    public void verifyApplicationSubmitpageerror(String exp_error)
+    {
+    
+    	
+    	Assert.assertEquals(exp_error, getText(Applicationsubmiterror));
     }
 
 

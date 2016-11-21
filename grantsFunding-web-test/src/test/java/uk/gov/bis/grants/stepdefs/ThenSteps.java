@@ -285,7 +285,7 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
 
     @Then("^I should be able select mark as complete checkbox$")
     public void i_should_be_able_select_mark_as_complete_checkbox() throws Throwable {
-      //  appformpage.clickMarkcomplete();
+     // appformpage.clickMarkcomplete();
     }
 
     @Then("^I should see duration field error \"([^\"]*)\"$")
@@ -414,6 +414,22 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
         costsPreviewPage.checkCloseButtonDisplayed(arg1);
     }
 
+    @Then("^I should see application submitted page$")
+    public void i_should_see_application_submitted_page() throws Throwable {
+        appformpage.verifyApplicationSubmit();
+    }
+    
+    @Then("^I should see error \"([^\"]*)\"$")
+    public void i_should_see_error(String arg1) throws Throwable {
+       appformpage.verifyApplicationSubmiterror(arg1);
+       
+    }
+    @Then("^I should see page error \"([^\"]*)\"$")
+    public void i_should_see_page_error(String arg1) throws Throwable {
+    	appformpage.verifyApplicationSubmitpageerror(arg1);
+    }
+
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed

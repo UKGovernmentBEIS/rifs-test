@@ -10,7 +10,7 @@ When I click on Make an application
 Then I should see application "Overview - RIFS" page
 And I should see all six questions are clickable
 And I should be click event title
-And navigate to "Event title" page
+And navigate to "Event title - RIFS" page
 
 @Pending
 Scenario Outline: Verify all links take to respective page.

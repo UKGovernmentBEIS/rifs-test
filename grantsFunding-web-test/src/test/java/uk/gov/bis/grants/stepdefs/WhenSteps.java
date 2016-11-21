@@ -292,6 +292,12 @@ public class WhenSteps {
         appCostPage.previewThisPage();
     }
     
+    @When("^I click on submit Application button$")
+    public void i_click_on_submit_Application_button() throws Throwable {
+    	appform.submitApplication();
+       
+    }
+    
     @After()
     /**
      * Embed a screenshot in test report if test is marked as failed
