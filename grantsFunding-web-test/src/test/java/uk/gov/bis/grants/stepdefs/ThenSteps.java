@@ -378,7 +378,7 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
         appCostPage.DeleterequiredItem(arg1);
     }
 
-    @Then("^I should see for (\\d+) cost items remaining$")
+    @Then("^I should see (\\d+) cost items remaining$")
     public void i_should_see_for_cost_items_remaining(int arg1) throws Throwable {
     	appCostPage.verifyRemainingItems(arg1);
         
@@ -389,8 +389,8 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
         appCostPage.canSeePreviewPageLink();
     }
 
-    @Then("I should see the \"Costs preview page\"")
-    public void i_should_see_costs_preview_page() {
+    @Then("I (should )?see the \"Costs preview page\"")
+    public void i_should_see_costs_preview_page(String ignored) {
         costsPreviewPage.onDisplay();
     }
 
@@ -404,13 +404,13 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
         costsPreviewPage.checkTotalDisplayed( new BigDecimal(arg1));
     }
 
-    @Then("^I should be able to see the \"([^\"]*)\" link at costs preview$")
-    public void i_should_be_able_to_see_the_Return_to_application_overview_link(String arg1) throws Throwable {
+    @Then("^I (should be able to )?see the \"([^\"]*)\" link at costs preview$")
+    public void i_should_be_able_to_see_the_Return_to_application_overview_link(String ignored, String arg1) throws Throwable {
         costsPreviewPage.checkReturnToOverviewDisplayed(arg1);
     }
 
-    @Then("^I should be able to see the \"([^\"]*)\" button at costs preview$")
-    public void i_should_be_able_to_see_the_button_at_costs_preview(String arg1) throws Throwable {
+    @Then("^I (should be able to )?see the \"([^\"]*)\" button at costs preview$")
+    public void i_should_be_able_to_see_the_button_at_costs_preview(String ignored, String arg1) throws Throwable {
         costsPreviewPage.checkCloseButtonDisplayed(arg1);
     }
 
@@ -427,6 +427,11 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
     @Then("^I should see page error \"([^\"]*)\"$")
     public void i_should_see_page_error(String arg1) throws Throwable {
     	appformpage.verifyApplicationSubmitpageerror(arg1);
+    }
+
+    @Then("^Cost items should be$")
+    public void cost_items_should_be(DataTable arg1) throws Throwable {
+        appCostPage.checkCostItemsDisplayed(arg1.asLists(String.class));
     }
 
     
