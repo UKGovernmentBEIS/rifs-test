@@ -19,23 +19,20 @@ public class CostsPreviewPage extends BasePage {
     private By grandTotal = By.xpath("th[contains(@class,'currency')]");
     private By returnToOverview = By.xpath("//*[@id=\"global-header-status\"]/div[1]/a[@class='return-link']");
     private By closeButton = By.xpath("//*[@id=\"content\"]/div[2]/div/div/a[@class='button secondary']");
+    
 
     public CostsPreviewPage(WebDriver driver) {
         super(driver);
-
-        //totalsRow = costsTable.findElement(getSearchCtx().findElement(  ));
-        //total = totalsRow.findElement(  );
     }
 
     public void onDisplay() {
 
-        WebElement headingEl = getSearchCtx().findElement(heading);
-        assertTrue(headingEl.getText().contains("Costs"));
+     assertTrue(getText(heading).contains("Costs"));
+        
     }
 
-    protected WebElement getCostsTable() {
-        WebElement costsTblEl = getSearchCtx().findElement(costsTable);
-        return costsTblEl;
+    private WebElement getCostsTable() {
+        return getSearchCtx().findElement(costsTable);
     }
 
     public void checkItemsDisplayed(List<List<String>> rows) {
@@ -65,8 +62,17 @@ public class CostsPreviewPage extends BasePage {
         assertEquals(contents, ret.getText());
     }
 
+    public void clickReturnToOverview() {
+        WebElement ret = getSearchCtx().findElement(returnToOverview);
+        ret.click();
+    }
+
     public void checkCloseButtonDisplayed(String arg1) {
         WebElement ret = getSearchCtx().findElement(closeButton);
         assertEquals(arg1, ret.getText());
+    }
+
+    public void clickCloseButton() {
+        getSearchCtx().findElement(closeButton).click();
     }
 }
