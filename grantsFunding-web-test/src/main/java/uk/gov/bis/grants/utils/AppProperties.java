@@ -9,7 +9,7 @@ public class AppProperties {
 
     private static String env = System.getProperty("ENV");
 
-    public static String testclasspath = "target/test-classes/";
+    
 
     public static Properties getProperties() {
 
