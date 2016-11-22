@@ -19,6 +19,7 @@ public class CostsPreviewPage extends BasePage {
     private By grandTotal = By.xpath("th[contains(@class,'currency')]");
     private By returnToOverview = By.xpath("//*[@id=\"global-header-status\"]/div[1]/a[@class='return-link']");
     private By closeButton = By.xpath("//*[@id=\"content\"]/div[2]/div/div/a[@class='button secondary']");
+    
 
     public CostsPreviewPage(WebDriver driver) {
         super(driver);
@@ -26,8 +27,8 @@ public class CostsPreviewPage extends BasePage {
 
     public void onDisplay() {
 
-        WebElement headingEl = getSearchCtx().findElement(heading);
-        assertTrue(headingEl.getText().contains("Costs"));
+     assertTrue(getText(heading).contains("Costs"));
+        
     }
 
     private WebElement getCostsTable() {
