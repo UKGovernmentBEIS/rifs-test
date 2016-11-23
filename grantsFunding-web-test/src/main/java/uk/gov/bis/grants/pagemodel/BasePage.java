@@ -33,8 +33,7 @@ public class BasePage {
     public void launch_app() throws InterruptedException {
 
         driver.get(envurl);
-        // driver.get("https://ifs:Fund1ng@auth.dev.innovateuk.org");
-        Thread.sleep(3000);
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         assertTrue("Failed: Application Failed to launch", driver.getTitle().equals(appTitle));
 //gotoOpportunityPage();	 
     }
@@ -58,6 +57,7 @@ public class BasePage {
 
 
     public WebElement find(By locator) {
+    	
 
         return driver.findElement(locator);
     }

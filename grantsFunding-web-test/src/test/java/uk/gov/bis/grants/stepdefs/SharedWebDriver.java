@@ -15,6 +15,7 @@ import uk.gov.bis.grants.utils.AppProperties;
 import org.apache.commons.lang3.SystemUtils;
 
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class SharedWebDriver extends EventFiringWebDriver {
     //private static AndroidDriver driver1;
@@ -71,7 +72,7 @@ public class SharedWebDriver extends EventFiringWebDriver {
                 caps.setCapability("browserstack.debug", "true");
                 caps.setCapability("browserstack.local", "true");
 
-                driver = new RemoteWebDriver(new URL(URL), caps);
+               driver = new RemoteWebDriver(new URL(URL), caps);
 
             } else if (platform.equalsIgnoreCase("saucelabs")) {
                 String URL = "http://" + saucelabaccountname + ":" + saucelabaccesskey + "@ondemand.saucelabs.com:80/wd/hub";
@@ -116,20 +117,16 @@ public class SharedWebDriver extends EventFiringWebDriver {
                     System.err.println(err);
                     throw new RuntimeException(err);
                 }
-                // driver = new HtmlUnitDriver();
-                // driver.get("http://google.co.uk");
-                //System.out.println("htmlUnitdriver");
-
-                // Create instance of PhantomJS driver
-               
-                ;
+                
                
                 driver = new PhantomJSDriver(caps);
+               
                 System.out.println("#####Started test run on  " + envUrl + "  on " + platform + " browser #####");
             } else if (browser.equalsIgnoreCase("firefox")) {
                 System.out.println("shared webdriver");
                 FirefoxProfile prof = new FirefoxProfile();
                 driver = new FirefoxDriver(prof);
+               
                 System.out.println("#####Started test run on  " + envUrl + "  on " + browser + " browser #####");
                 driver.manage().window().maximize();
             } else if (browser.equalsIgnoreCase("chrome")) {
@@ -137,6 +134,7 @@ public class SharedWebDriver extends EventFiringWebDriver {
                         System.getProperty("user.dir")
                                 + "/src/test/resources/chromedriver.exe");
                 driver = new ChromeDriver();
+                
                 driver.manage().window().maximize();
                 System.out.println("#####Started test run on  " + envUrl + "  on " + browser + " browser #####");
             } else if (browser.equalsIgnoreCase("ie")) {
@@ -145,7 +143,7 @@ public class SharedWebDriver extends EventFiringWebDriver {
                                 + "/src/test/resources/IEDriverServer.exe");
                 driver = new InternetExplorerDriver();
                 System.out.println("#####Started test run on  " + envUrl + "  on " + browser + " browser #####");
-                Thread.sleep(3000);
+               
                 driver.manage().window().maximize();
             }
         } catch (Exception e) {

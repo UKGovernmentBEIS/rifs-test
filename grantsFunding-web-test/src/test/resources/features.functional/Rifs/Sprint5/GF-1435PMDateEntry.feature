@@ -4,7 +4,8 @@ As as Portfolio manager
 In order to create an opportunity
 I should be able to enter opening and closing date
 
-Scenario: Verify user able to edit the existing date to new date
+Scenario: Verify user able to edit the existing date to new date- happy path
+
 Scenario: Verify date field should always accept date format DD M YYYY
 Scenario: Verify user should not be able to save past date 
 Scenario: Verify user not able to save non numeric data in date fields
