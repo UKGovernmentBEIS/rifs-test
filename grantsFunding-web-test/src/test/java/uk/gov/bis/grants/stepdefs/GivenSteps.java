@@ -149,7 +149,7 @@ public class GivenSteps {
     public void i_add_cost_items(DataTable arg1) throws Throwable {
     	appCostPage.AddCostItem(arg1);
     }
-    
+
 
     @After()
     /**

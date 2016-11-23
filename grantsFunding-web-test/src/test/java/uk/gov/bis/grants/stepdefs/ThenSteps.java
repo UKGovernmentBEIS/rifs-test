@@ -434,6 +434,10 @@ public void i_should_see_word_count_on(String arg1, String arg2) throws Throwabl
         appCostPage.checkCostItemsDisplayed(arg1.asLists(String.class));
     }
 
+    @Then("^I should be able to see application details$")
+    public void i_should_be_able_to_see_application_details() throws Throwable {
+
+    }
     
     @After()
     /**

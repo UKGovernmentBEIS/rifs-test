@@ -27,7 +27,7 @@ public class WhenSteps {
     ApplicationEventObjEntry eventEntry;
     ApplicationCostEntry appCostPage;
     CostsPreviewPage costsPreviewPage;
-
+ApplicationPreviewPage appPreviewPage;
 
     String platform = AppProperties.get("platform");
 
@@ -309,6 +309,10 @@ public class WhenSteps {
         costsPreviewPage.clickCloseButton();
     }
 
+    @When("^I click on preview an application$")
+    public void i_click_on_preview_an_application() throws Throwable {
+        appPreviewPage.openPreviewPage();
+    }
         @After()
     /**
      * Embed a screenshot in test report if test is marked as failed
