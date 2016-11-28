@@ -32,6 +32,8 @@ public class startPage extends BasePage {
 	By applyButton = By.xpath(".//*[@id='content']/div[3]/div[2]/a");
 	By applicantLink = By.xpath(".//*[@id='content']/div/div/p[2]/a");
 	By oppList = By.xpath(".//a[@href='/opportunity/1']");
+	By portfoliomanagerlink = By.xpath(".//*[@id='content']/div[2]/div/p[3]/a");
+	
 
 	// @FindBy(xpath = ".//*[@id='content']/div/div/div/a")
 	// WebElement startButton;
@@ -51,6 +53,12 @@ public class startPage extends BasePage {
 		click(applicantLink);
 		Thread.sleep(2000);
 	}
+		
+			public void asaPortfolioManager() throws InterruptedException {
+				click(portfoliomanagerlink);
+				Thread.sleep(2000);
+		}
+	
 
 	public void validateapplicantLink() throws InterruptedException {
 		this.IsElementDisplayed(applicantLink);

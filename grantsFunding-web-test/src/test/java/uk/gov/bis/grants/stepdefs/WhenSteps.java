@@ -238,7 +238,16 @@ public class WhenSteps {
 	@When("^I click the \"([^\"]*)\" button at costs preview$")
 	public void i_click_the_button_at_costs_preview(String arg1) throws Throwable {
 		costsPreviewPage.clickCloseButton();
+		
 	}
+	
+// added new scenarios
+	
+//	@When("^I click on portfoliomanagerlink$")
+//	public void i_click_portfolionanager() throws Throwable {
+//		appform.();
+//	}
+	
 
 	@After()
 	/**
