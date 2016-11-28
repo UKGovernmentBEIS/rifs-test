@@ -47,3 +47,5 @@ Feature: Apply for an opportunity
     And I should be able select mark as complete checkbox  "costs" page
     And I should be able save and Continue
     And I should be able to see "Costs"status as "Completed"
+    When I click on submit Application button
+    Then I should see application submitted page
