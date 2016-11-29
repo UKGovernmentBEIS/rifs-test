@@ -7,7 +7,7 @@ public class AppProperties {
 
     private static Properties properties = null;
 
-    private static String env = System.getProperty("ENV");
+    private static String env = System.getenv("ENV");
 
     
 
