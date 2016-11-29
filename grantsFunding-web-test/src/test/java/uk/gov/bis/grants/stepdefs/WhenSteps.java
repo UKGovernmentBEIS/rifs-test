@@ -25,6 +25,7 @@ public class WhenSteps {
 	ApplicationEventObjEntry eventEntry;
 	ApplicationCostEntry appCostPage;
 	CostsPreviewPage costsPreviewPage;
+	CreateNewOpportunity createopp;
 
 	String platform = AppProperties.get("platform");
 
@@ -38,6 +39,8 @@ public class WhenSteps {
 		eventEntry = PageFactory.initElements(driver, ApplicationEventObjEntry.class);
 		appCostPage = PageFactory.initElements(driver, ApplicationCostEntry.class);
 		costsPreviewPage = PageFactory.initElements(driver, CostsPreviewPage.class);
+		createopp = PageFactory.initElements(driver,CreateNewOpportunity.class);
+		
 	}
 
 	@When("^I click on start$")
@@ -240,6 +243,18 @@ public class WhenSteps {
 		costsPreviewPage.clickCloseButton();
 		
 	}
+	
+	@When("^I choose existing opportunity on create oportunity page$")
+	public void i_choose_existing_opportunity_on_create_oportunity_page() throws Throwable {
+		createopp.ReusingExistingopp();
+	    
+	}
+	
+	@When("^I open opportunity from the list$")
+	public void i_open_opportunity_from_the_list() throws Throwable {
+	    
+	}
+
 	
 // added new scenarios
 	

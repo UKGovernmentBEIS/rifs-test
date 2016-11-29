@@ -40,12 +40,11 @@ public class GivenSteps {
 		Thread.sleep(2000);
 
 	}
-
-	@Given("^I am login page$")
-	public void i_am_login_page() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+	@Given("^I click portfoliomanagerlink$")
+	public void i_click_portfoliomanagerlink() throws Throwable {
+	   appStartPge.asaPortfolioManager();
 	}
+
 
 	@Given("^I am Opportunity details page$")
 	public void i_am_Opportunity_details_page() throws Throwable {

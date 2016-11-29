@@ -23,10 +23,17 @@ public class CreateNewOpportunity extends BasePage {
 	private String pageTitle = "CreateNewOpportunity";
 
 	By Homepage = By.xpath(".//*[@id='global-header-status']/div[1]/a");
-	By ReuseExistingOpportunity = By.xpath(".//*[@id='content']/div[2]/div[1]/div/form/div[1]/fieldset/label[1]");
+	By Reuseexistingoppor = By.id("opportunity-reuse");
 	By CreateNewOpportunity = By.xpath(".//*[@id='content']/div[2]/div[1]/div/form/div[1]/fieldset/label[2]");
-	By Continue = By.xpath(".//*[@id='content']/div[2]/div[1]/div/form/div[2]/input");
+	By Continue = By.xpath("//input[contains(@value,'Continue')]");
 	By Cancel = By.xpath (".//*[@id='content']/div[2]/div[1]/div/form/div[2]/a");
 	By PortfolioPeter = By.xpath (".//*[@id='global-header-status']/div[2]/span");
+	
+	
+	
+	public void ReusingExistingopp()
+	{
+	click(Reuseexistingoppor);	
+	click(Continue);
 	}
-
+	}
