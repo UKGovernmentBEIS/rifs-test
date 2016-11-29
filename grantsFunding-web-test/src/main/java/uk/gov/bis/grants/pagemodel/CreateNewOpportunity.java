@@ -26,8 +26,10 @@ public class CreateNewOpportunity extends BasePage {
 	By Reuseexistingoppor = By.id("opportunity-reuse");
 	By CreateNewOpportunity = By.xpath(".//*[@id='content']/div[2]/div[1]/div/form/div[1]/fieldset/label[2]");
 	By Continue = By.xpath("//input[contains(@value,'Continue')]");
+	By Selectopportunity = By.xpath(".//*[@id='content']/div[2]/table/tbody/tr/td[2]/a");
 	By Cancel = By.xpath (".//*[@id='content']/div[2]/div[1]/div/form/div[2]/a");
 	By PortfolioPeter = By.xpath (".//*[@id='global-header-status']/div[2]/span");
+	By ReturntoOpplib = By.xpath("//a[contains(@class,'return-link')]");
 	
 	
 	
@@ -36,4 +38,17 @@ public class CreateNewOpportunity extends BasePage {
 	click(Reuseexistingoppor);	
 	click(Continue);
 	}
+	
+	public void selectOpportunity()
+	{
+		
+		click(Selectopportunity);
+	}
+	
+	
+	public void returntoOpplist()
+	{
+		click(ReturntoOpplib);
+	}
+	
 	}

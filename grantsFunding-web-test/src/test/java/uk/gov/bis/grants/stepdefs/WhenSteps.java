@@ -252,7 +252,14 @@ public class WhenSteps {
 	
 	@When("^I open opportunity from the list$")
 	public void i_open_opportunity_from_the_list() throws Throwable {
+		
+		createopp.selectOpportunity();
 	    
+	}
+
+	@When("^I click on return to opportunity link$")
+	public void i_click_on_return_to_opportunity_link() throws Throwable {
+	    createopp.returntoOpplist();
 	}
 
 	

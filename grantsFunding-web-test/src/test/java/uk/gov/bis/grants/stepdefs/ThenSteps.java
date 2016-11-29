@@ -363,6 +363,12 @@ public class ThenSteps {
 		appCostPage.checkCostItemsDisplayed(arg1.asLists(String.class));
 	}
 
+	@Then("^I should return back to opportunity list page$")
+	public void i_should_return_back_to_opportunity_list_page() throws Throwable {
+	   appformpage.verifyPageTitle("Opportunity list - RIFS");
+	}
+
+	
 	@After()
 	/**
 	 * Embed a screenshot in test report if test is marked as failed

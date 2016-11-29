@@ -1,4 +1,4 @@
-package uk.gov.bis.grants.accceptanceTest;
+package uk.gov.bis.grants.acceptanceTest;
 
 import org.junit.runner.RunWith;
 
