@@ -29,6 +29,7 @@ public class ThenSteps {
 	ApplicationEventObjEntry eventEntry;
 	ApplicationCostEntry appCostPage;
 	CostsPreviewPage costsPreviewPage;
+	OpportunityTemplateView opptemplate;
 
 	private WebDriver driver;
 	String platform = AppProperties.get("platform");
@@ -46,6 +47,7 @@ public class ThenSteps {
 		eventEntry = PageFactory.initElements(driver, ApplicationEventObjEntry.class);
 		appCostPage = PageFactory.initElements(driver, ApplicationCostEntry.class);
 		costsPreviewPage = PageFactory.initElements(driver, CostsPreviewPage.class);
+		opptemplate = PageFactory.initElements(driver,OpportunityTemplateView.class);
 
 	}
 
@@ -368,6 +370,17 @@ public class ThenSteps {
 	   appformpage.verifyPageTitle("Opportunity list - RIFS");
 	}
 
+	
+	@Then("^I should see setup$")
+	public void i_should_see_setup() throws Throwable {
+	    
+	}
+
+	@Then("^I should see all the sections in SetupTab$")
+	public void i_should_see_all_the_sections_in_SetupTab() throws Throwable {
+		opptemplate.ValidateAllsectionsonSetupTab();
+	    
+	}
 	
 	@After()
 	/**

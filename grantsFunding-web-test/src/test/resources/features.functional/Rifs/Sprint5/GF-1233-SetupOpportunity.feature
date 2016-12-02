@@ -1,7 +1,18 @@
 #Author: Nasir Khan
 Feature: Preview opportunity sections
 
+  Background: 
+    Given I launch application
+    And I click portfoliomanagerlink
+    When I choose existing opportunity on create oportunity page
+    And I open opportunity from the list
+@Sprint5
   Scenario: Validate setup tab displays all six sections :
+   And I open opportunity template view
+   Then I should see setup 
+   And I should see all the sections in SetupTab 
+   
+   
 
   Scenario: All sections are clickable
 

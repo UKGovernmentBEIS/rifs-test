@@ -26,6 +26,7 @@ public class WhenSteps {
 	ApplicationCostEntry appCostPage;
 	CostsPreviewPage costsPreviewPage;
 	CreateNewOpportunity createopp;
+	OpportunityTemplateView opptemplate;
 
 	String platform = AppProperties.get("platform");
 
@@ -40,6 +41,7 @@ public class WhenSteps {
 		appCostPage = PageFactory.initElements(driver, ApplicationCostEntry.class);
 		costsPreviewPage = PageFactory.initElements(driver, CostsPreviewPage.class);
 		createopp = PageFactory.initElements(driver,CreateNewOpportunity.class);
+		opptemplate = PageFactory.initElements(driver,OpportunityTemplateView.class);
 		
 	}
 
@@ -261,6 +263,17 @@ public class WhenSteps {
 	public void i_click_on_return_to_opportunity_link() throws Throwable {
 	    createopp.returntoOpplist();
 	}
+
+	@When("^I open opportunity template view$")
+	public void i_open_opportunity_template_view() throws Throwable {
+	    opptemplate.OpenOpptemplate();
+	}
+
+	
+
+	
+	
+	
 
 	
 // added new scenarios
