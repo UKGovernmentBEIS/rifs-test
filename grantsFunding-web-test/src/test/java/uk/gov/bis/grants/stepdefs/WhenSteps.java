@@ -269,19 +269,18 @@ public class WhenSteps {
 	    opptemplate.OpenOpptemplate();
 	}
 
-	
+	@When("^I click on \"([^\"]*)\" link$")
+	public void i_click_on_link(String arg1) throws Throwable {
+	   opptemplate.OpenSetupsection(arg1);
+	}
+
+	@When("^I click on Questions tab$")
+	public void i_click_on_Questions_tab() throws Throwable {
+		opptemplate.OpenQuestionsTab();
+	    
+	}
 
 	
-	
-	
-
-	
-// added new scenarios
-	
-//	@When("^I click on portfoliomanagerlink$")
-//	public void i_click_portfolionanager() throws Throwable {
-//		appform.();
-//	}
 	
 
 	@After()

@@ -1,5 +1,5 @@
 #Author: Nasir Khan
-Feature: Preview opportunity sections
+Feature: GF-1233 Preview opportunity sections
 
   Background: 
     Given I launch application
@@ -13,11 +13,31 @@ Feature: Preview opportunity sections
    And I should see all the sections in SetupTab 
    
    
-
+@Sprint5
   Scenario: All sections are clickable
-
-  Scenario: Verify opportunity title link display opportunity title
-
-  Scenario: Verify on all preview pages, continue button returns back to set up tab
-
-  Scenario: Verify all preview pages show content as given in the wireframe.
+  And I open opportunity template view
+  When I click on "Setup-Titile" link
+  Then I should see "title" preview page
+  
+  When I click on "setupDeadline" link
+  Then I should see "Opportunity deadlines" preview page
+  
+  When I click on "setupDescription" link
+  Then I should see "Opportunity description" preview page
+  
+  When I click on "setupValue" link
+  Then I should see "Grant Value" preview page
+  
+   When I click on "setupAssessmentCriteria" link
+  Then I should see "Assessment criteria" preview page
+  
+   When I click on "setupAboutthisOpport" link
+  Then I should see "About this opportunity" preview page
+  
+   When I click on "setupWhatweaskyou" link
+  Then I should see "What we will ask you" preview page
+  
+  
+  
+  
+  

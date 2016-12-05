@@ -23,7 +23,7 @@ public class OpportunityTemplateView extends BasePage {
 	private String pageTitle = "CreateNewOpportunity";
 
 	//tabs on the template page
-	By oppTemplate =By.xpath(".//*[@id='content']/div[2]/div[1]/div[1]/p/a");
+	By oppTemplate =By.cssSelector(".rifs-heading-panel>p>a");
 	By setupTab = By.id("tab-opportunity-setup");
 	By questionsTab = By.id("tab-opportunity-questions");
 	By optionsTab = By.id("tab-opportunity-options");
@@ -36,7 +36,10 @@ public class OpportunityTemplateView extends BasePage {
 	By setupAssessmentCriteria = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[5]/td/a");
 	By setupAboutthisOpport = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[7]/td/a");
 	By setupWhatweaskyou = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[6]/td/a");
-	
+
+// setup sections header
+	By setupSectionHeader = By.xpath(".//*[@id='content']/div[2]/div/h1");
+	By returnlink = By.xpath("//a[contains(@class,'return-link')]");
 	
 	
 	public void ValidateAllsectionsonSetupTab() throws InterruptedException
@@ -59,4 +62,51 @@ public class OpportunityTemplateView extends BasePage {
 	}
 	
 	
+	public void OpenQuestionsTab()
+	{
+		click(questionsTab);
 	}
+	
+	public void OpenSetupsection(String section) {
+		
+		click(setupTab);
+		switch (section) {
+
+		case "Setup-Titile":
+			click(setupTitle);
+			break;
+
+		case "setupDeadline":
+			click(setupDeadline);
+			break;
+
+		case "setupDescription":
+			click(setupDescription);
+			break;
+
+		case "setupValue":
+			click(setupValue);
+			break;
+
+		case "setupAssessmentCriteria":
+			click(setupAssessmentCriteria);
+			break;
+
+		case "setupAboutthisOpport":
+			click(setupAboutthisOpport);
+			break;
+		
+		case "setupWhatweaskyou":
+			click(setupWhatweaskyou);
+			
+			break;
+			
+		}
+	
+		}
+
+public void ValidateSectionHeader(String arg1){
+	assertTrue("Failed:" + arg1 + "Section page not loaded properly",getText(setupSectionHeader).contains(arg1));
+click(returnlink);
+}
+}

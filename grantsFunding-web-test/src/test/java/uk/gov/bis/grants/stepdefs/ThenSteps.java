@@ -382,6 +382,13 @@ public class ThenSteps {
 	    
 	}
 	
+	@Then("^I should see \"([^\"]*)\" preview page$")
+	public void i_should_see_preview_page(String arg1) throws Throwable {
+		
+		opptemplate.ValidateSectionHeader(arg1);
+	   
+	}
+	
 	@After()
 	/**
 	 * Embed a screenshot in test report if test is marked as failed
