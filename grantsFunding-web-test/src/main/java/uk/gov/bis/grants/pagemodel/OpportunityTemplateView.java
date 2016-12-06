@@ -31,8 +31,7 @@ public class OpportunityTemplateView extends BasePage {
 	
 	By setupTitle= By.id("op-setup-link1");
 	By setupDeadline = By.id("op-setup-link2");
-	By setupDescription = By.id("op-setup-link3");
-	By setupValue = By.id("op-setup-link4");
+	By setupValue = By.id("op-setup-link3");
 	By setupAssessmentCriteria = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[5]/td/a");
 	By setupAboutthisOpport = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[7]/td/a");
 	By setupWhatweaskyou = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[6]/td/a");
@@ -48,7 +47,6 @@ public class OpportunityTemplateView extends BasePage {
 		click(setupTab);
 		assertTrue("Failed: Title section not displayed in setup tab ",this.IsElementDisplayed(setupTitle));
 		assertTrue("Failed: Deadline link not displayed in setup tab",this.IsElementDisplayed(setupDeadline));
-		assertTrue("Failed: Description link not displayed in setup tab",this.IsElementDisplayed(setupDescription));
 		assertTrue("Failed: Opportunity value link not displayed in setup tab",this.IsElementDisplayed(setupValue));
 		assertTrue("Failed: Assessment criteria link not displayed",this.IsElementDisplayed(setupAssessmentCriteria));
 		assertTrue("Failed:About this opportunity link not displayed",this.IsElementDisplayed(setupAboutthisOpport));
@@ -78,10 +76,6 @@ public class OpportunityTemplateView extends BasePage {
 
 		case "setupDeadline":
 			click(setupDeadline);
-			break;
-
-		case "setupDescription":
-			click(setupDescription);
 			break;
 
 		case "setupValue":
