@@ -21,10 +21,7 @@ Feature: GF-1233 Preview opportunity sections
   
   When I click on "setupDeadline" link
   Then I should see "Opportunity deadlines" preview page
-  
-  When I click on "setupDescription" link
-  Then I should see "Opportunity description" preview page
-  
+
   When I click on "setupValue" link
   Then I should see "Grant Value" preview page
   
