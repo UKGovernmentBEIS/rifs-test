@@ -1,17 +1,9 @@
 package uk.gov.bis.grants.pagemodel;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-import cucumber.api.DataTable;
-
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
-import java.util.List;
-import java.util.Iterator;
 
 public class OpportunityTemplateView extends BasePage {
 
@@ -32,9 +24,9 @@ public class OpportunityTemplateView extends BasePage {
 	By setupTitle= By.id("op-setup-link1");
 	By setupDeadline = By.id("op-setup-link2");
 	By setupValue = By.id("op-setup-link3");
-	By setupAssessmentCriteria = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[4]/td/a");
-	By setupAboutthisOpport = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[6]/td/a");
-	By setupWhatweaskyou = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[5]/td/a");
+	By setupAboutthisOpport = By.id("op-setup-link4");
+	By setupWhatweaskyou = By.id("op-setup-link5");
+	By setupAssessmentCriteria = By.id("op-setup-link6");
 
 // setup sections header
 	By setupSectionHeader = By.xpath(".//*[@id='content']/div[2]/div/h1");
