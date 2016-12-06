@@ -92,7 +92,7 @@ public class GivenSteps {
 		// appformPage.verifyLinkDisplayed();
 	}
 
-	@Given("^I am on the event tite page$")
+	@Given("^I am on the event title page$")
 	public void i_am_on_the_event_tite_page() throws Throwable {
 		appformPage.OpenTitilePage();
 	}

@@ -23,14 +23,10 @@ And I click on preview
 Then I should see error message "Field cannot be empty"
 
 @Sprint3
-Scenario Outline: Entered words >=500 should be previewable
-When I  enter "<text>" in "TopicsnSpeakers"
+Scenario: Entered words >=500 should be previewable
+When I  enter 501 words in "TopicsnSpeakers"
 Then I should be able to preview 
-And I should be able to view entered "<text>"
-Examples:
-|text|
-|t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t  t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t|
-
+And I should be able to view 501 entered words
 
 Scenario: Empty title cannot preview
 And I am on the event tite page

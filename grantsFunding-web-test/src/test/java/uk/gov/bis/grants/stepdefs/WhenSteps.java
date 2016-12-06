@@ -108,7 +108,20 @@ public class WhenSteps {
 	@When("^I  enter event objective \"([^\"]*)\"$")
 	public void i_enter_event_objective(String arg1) throws Throwable {
 		eventEntry.EnterObjectives(arg1);
+	}
 
+
+	private String makeNWords(int wordCount) {
+		String s = "";
+		for (int i = 0; i < wordCount; i++) {
+			s = s + "t ";
+		}
+		return s;
+	}
+
+	@When("^I enter event ([0-9]+) words in event objective$")
+	public void i_enter_event_objective_words(int wordCount) throws Throwable {
+		eventEntry.EnterObjectives(makeNWords(wordCount));
 	}
 
 	@When("^I  enter \"([^\"]*)\" in \"([^\"]*)\"$")
@@ -116,6 +129,12 @@ public class WhenSteps {
 		// Write code here that turns the phrase above into concrete actions
 		appform.Entertext(arg1, arg2);
 	}
+
+	@When("^I  enter ([0-9]+) words in \"([^\"]*)\"$")
+	public void i_enter_words_in(int wordCount, String fieldName) throws Throwable {
+		appform.Entertext(makeNWords(wordCount), fieldName);
+	}
+
 
 	@When("^I enter title \"([^\"]*)\"$")
 	public void i_enter_title(String arg1) throws Throwable {

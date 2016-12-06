@@ -10,7 +10,7 @@ And I click on Make an application
 
 @Sprint2
 Scenario Outline: Entered words <=20 should be previewable
-And I am on the event tite page
+And I am on the event title page
 When I enter title "<title>" within required word size limit
 Then I should be able to preview 
 And I should be able to view entered "<title>"
@@ -22,7 +22,7 @@ Examples:
 
 @Sprint2
 Scenario Outline: Entered words >=20 should be previewable
-And I am on the event tite page
+And I am on the event title page
 When I enter title "<title>" outside required word size limit
 Then I should be able to preview 
 And I should be able to view entered "<title>"
@@ -32,7 +32,7 @@ Examples:
 
 @Sprint2
 Scenario: Empty title cannot preview
-And I am on the event tite page
+And I am on the event title page
 When I keep title field empty
 And I click on preview
 Then I should see error message "Field cannot be empty"

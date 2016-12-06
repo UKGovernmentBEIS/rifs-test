@@ -208,6 +208,15 @@ public class ThenSteps {
 		appformpage.verifyonPreviewPage(arg1);
 	}
 
+    @Then("^I should be able to view ([0-9]+) entered words$")
+	public void i_should_be_able_to_view_number_entered(int wordCount) throws Throwable {
+		String s = "";
+		for (int i = 0; i < wordCount; i++) {
+			s = s + "t ";
+		}
+		appformpage.verifyonPreviewPage(s);
+	}
+
 	@Then("^I should see error message \"([^\"]*)\"$")
 	public void i_should_see_error_message(String arg1) throws Throwable {
 		dateEntry.validateErrorMessage(arg1);

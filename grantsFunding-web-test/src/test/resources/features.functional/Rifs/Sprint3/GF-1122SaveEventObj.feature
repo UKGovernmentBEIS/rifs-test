@@ -39,36 +39,31 @@ Examples:
 #Validate word count:
 @Sprint3
 Scenario Outline: Verify word count to show n words remaining when marked as complete
-And I  enter event objective "<text>"
+And I enter event <wordCount> words in event objective
 And I save and continue
 And I open event objectives page
-Then I should see word count "<count>" on event ObjectivePage
+Then I should see word count "<hint>" on event ObjectivePage
 Examples:
-|text|count|
-|Seminar on space Technologies AutoTest| Words remaining: 495 |
-|Seminar|Words remaining: 499 |
-|Seminar on space Technologies|Words remaining: 496 |
-|t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t  t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t|3 words over limit|
+|wordCount|hint|
+|5| Words remaining: 495 |
+|1|Words remaining: 499 |
+|4|Words remaining: 496 |
+|503|3 words over limit|
+
 @Sprint3
-Scenario Outline: Validate mark as complete for entered text >500
-And I  enter event objective "<text>"
+Scenario: Validate mark as complete for entered text >500
+And I enter event 501 words in event objective
 And I should be able select mark as complete checkbox  "EventObjs" page
 And I should be able save and Continue
 Then I should see error message "Word limit exceeded"
-Examples: 
-|text|
-|t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t  t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t|
+
 @Sprint3
-Scenario Outline: Validate user able to enter 500 words and mark as complete
-And I  enter event objective "<text>"
+Scenario: Validate user able to enter 500 words and mark as complete
+And I enter event 500 words in event objective
 And I should be able select mark as complete checkbox  "EventObjs" page
 And I save and continue
 And I open event objectives page
 Then I should be able to see date and time stamp on "EvenObjs" page
-Examples:
-|text|
-|t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t  t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t t|
-
 
 @wip
 Scenario: Verify word count to show n words remaining for <20 words when user clicks on save and continue and revisits event title page.
