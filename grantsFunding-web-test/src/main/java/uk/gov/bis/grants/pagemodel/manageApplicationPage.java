@@ -19,15 +19,11 @@ public class manageApplicationPage extends BasePage {
 
     private List<String> expectedlistvalues;
 
-    public void verifymanageapplicationpage()
-
-    {
+    public void verifymanageapplicationpage() {
         assertTrue("Failed:this is not manage applicat page", IsElementPresent(pageHeader));
     }
 
-
-    public void VerifyOppTemplatelist(List<String> list)
-    {
+    public void VerifyOppTemplatelist(List<String> list) {
         this.expectedlistvalues = list;
         assertTrue("Failed:Opptemplate list doesn't matched to expected list", validateListItems(listbox, expectedlistvalues));
     }

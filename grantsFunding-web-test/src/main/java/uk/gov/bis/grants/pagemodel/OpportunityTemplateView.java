@@ -32,9 +32,9 @@ public class OpportunityTemplateView extends BasePage {
 	By setupTitle= By.id("op-setup-link1");
 	By setupDeadline = By.id("op-setup-link2");
 	By setupValue = By.id("op-setup-link3");
-	By setupAssessmentCriteria = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[5]/td/a");
-	By setupAboutthisOpport = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[7]/td/a");
-	By setupWhatweaskyou = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[6]/td/a");
+	By setupAssessmentCriteria = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[4]/td/a");
+	By setupAboutthisOpport = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[6]/td/a");
+	By setupWhatweaskyou = By.xpath(".//*[@id='opportunity-setup-enhanced']/table/tbody/tr[5]/td/a");
 
 // setup sections header
 	By setupSectionHeader = By.xpath(".//*[@id='content']/div[2]/div/h1");
