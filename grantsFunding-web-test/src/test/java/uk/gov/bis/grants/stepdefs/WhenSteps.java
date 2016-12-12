@@ -274,7 +274,8 @@ public class WhenSteps {
 	@When("^I open opportunity from the list$")
 	public void i_open_opportunity_from_the_list() throws Throwable {
 		
-		createopp.selectOpportunity();
+		//createopp.selectOpportunity();
+		opptemplate.chooseDraftOppfromlist();
 	    
 	}
 
@@ -298,6 +299,25 @@ public class WhenSteps {
 		opptemplate.OpenQuestionsTab();
 	    
 	}
+	
+	@When("^I enter \"([^\"]*)\" in setup \"([^\"]*)\"$")
+	public void i_enter_in_setup(String arg1, String arg2) throws Throwable {
+	    opptemplate.Entertext(arg1, arg2);
+	}
+
+	@When("^I  enter (\\d+) in setup \"([^\"]*)\"$")
+	public void i_enter_in_setup(int words, String field) throws Throwable {
+		opptemplate.Entertext(makeNWords(words), field);
+	  
+	}
+
+	@When("^I  click save$")
+	public void i_click_save() throws Throwable {
+		
+		opptemplate.Savesection();
+	    
+	}
+
 
 	
 	

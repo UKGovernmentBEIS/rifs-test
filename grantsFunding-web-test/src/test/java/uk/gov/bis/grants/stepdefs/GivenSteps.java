@@ -20,6 +20,7 @@ public class GivenSteps {
 
 	AppFormPage appformPage;
 	ApplicationCostEntry appCostPage;
+	OpportunityTemplateView oppTemplate;
 
 	public WebDriver driver;
 
@@ -30,6 +31,7 @@ public class GivenSteps {
 
 		appformPage = PageFactory.initElements(driver, AppFormPage.class);
 		appCostPage = PageFactory.initElements(driver, ApplicationCostEntry.class);
+		oppTemplate = PageFactory.initElements(driver,OpportunityTemplateView.class);
 
 	}
 
@@ -106,6 +108,12 @@ public class GivenSteps {
 	@Given("^I  add cost items$")
 	public void i_add_cost_items(DataTable arg1) throws Throwable {
 		appCostPage.AddCostItem(arg1);
+	}
+	
+	@Given("^I click on duplicate this opportunity$")
+	public void i_click_on_duplicate_this_opportunity() throws Throwable {
+		oppTemplate.duplicateOpportunity();
+	   
 	}
 
 	@After()

@@ -162,7 +162,6 @@ public class ThenSteps {
 	@Then("^I should see word count \"([^\"]*)\" on \"([^\"]*)\"$")
 	public void i_should_see_word_count_on(String arg1, String arg2) throws Throwable {
 		appformpage.Validatewordcount(arg1, arg2);
-
 	}
 
 	@Then("^I should see all six questions are clickable$")
@@ -396,6 +395,22 @@ public class ThenSteps {
 		
 		opptemplate.ValidateSectionHeader(arg1);
 	   
+	}
+	
+	@Then("^I should be able save$")
+	public void i_should_be_able_save() throws Throwable {
+	    opptemplate.Savesection();
+	}
+	
+	@Then("^I should return back to set-up pages$")
+	public void i_should_return_back_to_set_up_pages() throws Throwable {
+	   opptemplate.verifyPageTitle("Opportunity template setup - RIFS");
+	}
+	
+	@Then("^I should see new opportunity created$")
+	public void i_should_see_new_opportunity_created() throws Throwable {
+//to verify new opportunity created,validate publish button exists
+		opptemplate.VerifyOpporutnityCreated();
 	}
 	
 	@After()
