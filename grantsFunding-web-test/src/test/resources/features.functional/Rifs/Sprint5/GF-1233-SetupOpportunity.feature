@@ -23,7 +23,7 @@ Feature: GF-1233 Preview opportunity sections
   Then I should see "Opportunity deadlines" preview page
 
   When I click on "setupValue" link
-  Then I should see "Grant Value" preview page
+  Then I should see "Grant value" preview page
   
    When I click on "setupAssessmentCriteria" link
   Then I should see "Assessment criteria" preview page
