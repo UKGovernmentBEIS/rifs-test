@@ -5,7 +5,7 @@ Feature: GF-1233 Preview opportunity sections
     Given I launch application
     And I click portfoliomanagerlink
     When I choose existing opportunity on create oportunity page
-    And I open opportunity from the list
+    And I open published opportunity from the list
 @Sprint5
   Scenario: Validate setup tab displays all six sections :
    And I open opportunity template view
