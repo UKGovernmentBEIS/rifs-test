@@ -40,9 +40,9 @@ public class OpportunityTemplateView extends BasePage {
 
 	By duplicateOppor = By.xpath("//input[contains(@class,'button--start')]");
 
-	By saveSection = By.xpath("//input[contains(@class,'button--start')]");
+	By saveSection = By.xpath("//input[contains(@value,'Save')]");
 
-	By publishButton = By.name("_save_button");
+	By publishButton = By.xpath("//input[contains(@value,'Publish opportunity')]");
 
 	// word count
 
@@ -117,7 +117,7 @@ public class OpportunityTemplateView extends BasePage {
 	public void Entertext(String text, String section) {
 		switch (section) {
 
-		case "Setup-Titile":
+		case "Setup-Title":
 			// click(setupTitle);
 			type(editTitle, text);
 			break;

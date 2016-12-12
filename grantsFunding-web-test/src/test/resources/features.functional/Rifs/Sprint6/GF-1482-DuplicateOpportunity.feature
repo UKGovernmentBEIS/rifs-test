@@ -11,10 +11,10 @@ Feature: GF-1482 Preview opportunity sections
     And I open opportunity template view
     When I click on duplicate this opportunity
     Then I should see new opportunity created
-@current
+
   Scenario Outline: Verify new opportunity appears in list page
-    Given I click on "Setup-title" link
-    And I enter "<text>" in setup "Setup-title"
+    Given I click on "Setup-Titile" link
+    And I enter "<text>" in setup "Setup-Title"
     And I  click save
     When I click on opportunity library link
     Then I should see my opportuinty "<text>" listed on the page
