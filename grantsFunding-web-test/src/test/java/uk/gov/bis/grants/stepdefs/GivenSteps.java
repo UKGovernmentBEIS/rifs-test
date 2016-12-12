@@ -21,6 +21,7 @@ public class GivenSteps {
 	AppFormPage appformPage;
 	ApplicationCostEntry appCostPage;
 	OpportunityTemplateView oppTemplate;
+	CreateNewOpportunity createopp;
 
 	public WebDriver driver;
 
@@ -32,6 +33,7 @@ public class GivenSteps {
 		appformPage = PageFactory.initElements(driver, AppFormPage.class);
 		appCostPage = PageFactory.initElements(driver, ApplicationCostEntry.class);
 		oppTemplate = PageFactory.initElements(driver,OpportunityTemplateView.class);
+		createopp = PageFactory.initElements(driver, CreateNewOpportunity.class);
 
 	}
 
@@ -116,6 +118,11 @@ public class GivenSteps {
 	   
 	}
 
+	@Given("^I open published opportunity from the list$")
+	public void i_open_published_opportunity_from_the_list() throws Throwable {
+		createopp.selectOpportunity();
+	    
+	}
 	@After()
 	/**
 	 * Embed a screenshot in test report if test is marked as failed
