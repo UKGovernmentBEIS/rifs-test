@@ -1,8 +1,8 @@
 #Author: Nasir Khan
-Feature: GF-1439 Amend Assessment criteria
+Feature: GF-1439 Amend about this opportunity
   As a Portfolio manager
   In order to setup an opportunity
-  I should be able to amend assessment criteria
+  I should be able to amend about this opportunity
 
   @Sprint6
   Scenario Outline: Verify user able topics and speakers info and save.
@@ -51,8 +51,8 @@ Feature: GF-1439 Amend Assessment criteria
       
  @Sprint6
   Scenario Outline: verify word count shows words over limit when >500 words entered
-    When I  enter <wordCount> in setup "setupAssessmentCriteria"
-    Then I should see word count "<count>" on "setupAssessmentCriteria"
+    When I  enter <wordCount> in setup "setupAboutthisOpport"
+    Then I should see word count "<count>" on "setupAboutthisOpport"
 
     Examples: 
       | wordCount | count                |

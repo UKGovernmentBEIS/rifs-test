@@ -303,6 +303,8 @@ public class WhenSteps {
 	@When("^I enter \"([^\"]*)\" in setup \"([^\"]*)\"$")
 	public void i_enter_in_setup(String arg1, String arg2) throws Throwable {
 	    opptemplate.Entertext(arg1, arg2);
+	    
+	    
 	}
 
 	@When("^I  enter (\\d+) in setup \"([^\"]*)\"$")
