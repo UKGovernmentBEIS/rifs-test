@@ -26,8 +26,9 @@ public class OpportunityDetailPage extends BasePage {
 
 	By oppTitle = By.xpath(".//*[@id='content']/div[2]/h1");
 	private String pageTitle = "Opportunity: Exploring innovation seminars - RIFS";
+	By showallpartsmobview = By.xpath(".//*[@id='content']/div[2]/div[1]/aside/a");
 
-	By section2 = By.xpath(".//*[@id='content']/div/div[1]/aside/div/nav/ol[1]/li[2]/a");
+	By section2 = By.xpath(".//*[@id='title-2']/a");
 	By section1 = By.xpath(".//*[@id='content']/div/header/table/tbody/tr[1]/td[1]");
 	By section3 = By.xpath(".//*[@id='title-3']/a");
 	By section4 = By.xpath(".//*[@id='content']/div/div[1]/aside/div/nav/ol[2]/li[1]/a");
@@ -58,6 +59,7 @@ public class OpportunityDetailPage extends BasePage {
 	}
 
 	public void validateOppPageSections() {
+		click(showallpartsmobview);
 		Assert.assertEquals("What we will ask you", getText(section2));
 		Assert.assertEquals("Assessment criteria", getText(section3));
 

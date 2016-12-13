@@ -5,7 +5,7 @@ Feature: GF-1439 Amend Assessment criteria
   I should be able to amend assessment criteria
 
   @Sprint6
-  Scenario Outline: Verify user able topics and speakers info and save.
+  Scenario Outline: Verify user able edit assessment criteria and save
     Given I launch application
     And I click portfoliomanagerlink
     And I choose existing opportunity on create oportunity page
@@ -26,9 +26,8 @@ Feature: GF-1439 Amend Assessment criteria
     And I  enter 501 in setup "setupAssessmentCriteria"
     And I  click save
     Then I should see error message "Word limit exceeded"
-
-  @Sprint6
-  Scenario: Vaidate user not able to save with empty field
+@Sprint6
+  Scenario: Validate user not able to save with empty field
     When I enter "" in setup "setupAssessmentCriteria"
     And I  click save
     Then I should see error message "Field cannot be empty"
