@@ -59,7 +59,6 @@ public class OpportunityDetailPage extends BasePage {
 	}
 
 	public void validateOppPageSections() {
-		click(showallpartsmobview);
 		Assert.assertEquals("What we will ask you", getText(section2));
 		Assert.assertEquals("Assessment criteria", getText(section3));
 
