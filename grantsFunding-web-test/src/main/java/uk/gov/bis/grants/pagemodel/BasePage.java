@@ -34,6 +34,7 @@ public class BasePage {
 
 		driver.get(envurl);
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().window().setSize(new Dimension(1400,1000));
 		assertTrue("Failed: Application Failed to launch", driver.getTitle().equals(appTitle));
 		// gotoOpportunityPage();
 	}
