@@ -185,7 +185,7 @@ public class OpportunityTemplateView extends BasePage {
 			if (opplib.get(i).getText().equals("Draft")) {
 				i = i + 1;
 				// System.out.println("Opp:"+opplib.get(i).getText());
-				By selectOpp = By.xpath(".//*[@id='content']/div[3]/section/table/tbody/tr[" + i + "]/td[2]");
+				By selectOpp = By.xpath(".//*[@id='content']/div[3]/section/table/tbody/tr[" + i + "]/td[2]/a");
 				click(selectOpp);
 				break;
 

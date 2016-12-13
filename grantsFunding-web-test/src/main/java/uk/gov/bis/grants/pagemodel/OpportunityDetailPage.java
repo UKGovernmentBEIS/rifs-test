@@ -27,12 +27,12 @@ public class OpportunityDetailPage extends BasePage {
 	By oppTitle = By.xpath(".//*[@id='content']/div[2]/h1");
 	private String pageTitle = "Opportunity: Exploring innovation seminars - RIFS";
 
-	By section2 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[1]/li[2]/a");
+	By section2 = By.xpath(".//*[@id='content']/div/div[1]/aside/div/nav/ol[1]/li[2]/a");
 	By section1 = By.xpath(".//*[@id='content']/div/header/table/tbody/tr[1]/td[1]");
 	By section3 = By.xpath(".//*[@id='title-3']/a");
-	By section4 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[2]/li[1]/a");
-	By section5 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[2]/li[2]/a");
-	By section6 = By.xpath(".//*[@id='content']/div/div[1]/aside/nav/ol[2]/li[3]/a");
+	By section4 = By.xpath(".//*[@id='content']/div/div[1]/aside/div/nav/ol[2]/li[1]/a");
+	By section5 = By.xpath(".//*[@id='content']/div/div[1]/aside/div/nav/ol[2]/li[2]/a");
+	By section6 = By.xpath(".//*[@id='content']/div/div[1]/aside/div/nav/ol[2]/li[3]/a");
 	// By firstnextbutton = By.xpath(".//*[@id='content']/div/footer/div/a");
 	By sectionHeading = By.xpath(".//*[@id='content']/div/div[1]/article/h2");
 	By nextbutton = By.xpath(".//*[@id='content']/div/div[1]/footer/nav/ul/li[2]/a");
