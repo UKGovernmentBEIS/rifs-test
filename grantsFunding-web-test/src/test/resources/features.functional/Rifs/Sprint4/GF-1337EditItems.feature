@@ -8,6 +8,7 @@ Feature: GF-1337
   Scenario: User able to enter cost items and edit entered by revisting same cost item
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     And I open section "Costs"
     And I  add cost items
       | Training-Autotest | 500 | Training required to deliver Seminar Innovations |
@@ -22,6 +23,7 @@ Feature: GF-1337
   Scenario: User able to add cost items and then delete one of the item if needed.
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     When I open section "Costs"
     Then I should be able to add cost items
       | Training-Autotest | 500 | Training required to deliver Seminar Innovations |

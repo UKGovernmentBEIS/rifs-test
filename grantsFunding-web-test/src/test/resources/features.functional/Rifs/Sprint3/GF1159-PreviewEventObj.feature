@@ -6,6 +6,7 @@ Feature: GF-1159 Preview Event Objectives
 Background:
 Given I am on the opportunity detail page
 And I click on Make an application
+And I enter application reference
 And I open section "EventObjs"
 @Sprint3	
 Scenario Outline: Entered words <500 should be previewable

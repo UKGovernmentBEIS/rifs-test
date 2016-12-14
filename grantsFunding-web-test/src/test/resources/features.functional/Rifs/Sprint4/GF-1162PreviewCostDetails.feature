@@ -3,6 +3,7 @@ Feature: GF-1162 Applicant previews cost details
   Background: 
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     And I open section "Costs"
     And I add cost items
       | Training-Autotest | 500 | Training required to deliver Seminar Innovations |

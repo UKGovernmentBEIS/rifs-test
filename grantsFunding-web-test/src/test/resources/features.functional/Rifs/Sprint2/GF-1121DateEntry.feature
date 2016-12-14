@@ -12,6 +12,7 @@ Given I launch application
 And I click on applicant link
 And I select an Opportunity from list
 And I click on Make an application
+And I enter application reference
 When I open provisional date section
 And I enter valid date
 |22|01|2017|

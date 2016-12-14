@@ -13,6 +13,7 @@ Feature: Apply for an opportunity
     When I select an Opportunity from list
     Then I should be able to see details of that opportunity
     When I click on Make an application
+    And I enter application reference
     Then I should see application "Overview - RIFS" page
     And I should see all six questions displayed
     When I click on event title link on application overview page

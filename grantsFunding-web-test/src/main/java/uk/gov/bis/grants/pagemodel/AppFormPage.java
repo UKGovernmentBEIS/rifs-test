@@ -60,6 +60,7 @@ public class AppFormPage extends BasePage {
 	By Applicationsubmiterror = By.xpath("//*[text()='All questions must be answered']");
 	By Applicationsectionerror = By.xpath(".//*/li");
 
+	By Applicationref = By.xpath(".//*[@id='application-ref']");
 	// @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
 	// WebElement startButton;
 
@@ -178,6 +179,15 @@ public class AppFormPage extends BasePage {
 
 	}
 
+	
+	public void EnterApplicationref() throws InterruptedException
+	{
+		if(IsElementPresent(Applicationref))
+		{
+		this.type(Applicationref, "application-AutoTest");
+		click(saveAndcontinue);
+		}
+	}
 	public void verifyDatetimestamp(String section) {
 		OpenSection(section);
 		assertTrue("Failed:timestamp not displayed", getText(dateTimestamp).contains("Completed"));

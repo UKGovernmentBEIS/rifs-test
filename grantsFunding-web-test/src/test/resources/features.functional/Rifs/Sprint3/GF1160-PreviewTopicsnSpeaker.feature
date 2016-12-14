@@ -6,6 +6,7 @@ Feature: GF-1160 Preview Topic and speakers
 Background:
 Given I am on the opportunity detail page
 And I click on Make an application
+And I enter application reference
 And I open section "TopicsnSpeakers"
 @Sprint3	
 Scenario Outline: Entered words <500 should be previewable

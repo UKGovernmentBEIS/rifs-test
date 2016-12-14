@@ -326,6 +326,10 @@ public class WhenSteps {
 	    
 	}
 
+	@When("^I enter application reference$")
+	public void i_enter_application_reference() throws Throwable {
+	    appform.EnterApplicationref();
+	}
 
 	
 	

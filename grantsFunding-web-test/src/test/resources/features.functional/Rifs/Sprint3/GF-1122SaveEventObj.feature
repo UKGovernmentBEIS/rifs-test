@@ -7,6 +7,7 @@ I should be able to enter event object and preview
 Background:
 Given I am on the opportunity detail page
 When I click on Make an application
+And I enter application reference
 And I open event objectives page
 
 @Sprint3

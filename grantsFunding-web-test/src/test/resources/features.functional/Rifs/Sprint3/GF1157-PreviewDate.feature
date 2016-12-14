@@ -6,6 +6,7 @@ Feature: GF-1157 Preview Event Date entered
   Background: 
     Given I am on the opportunity detail page
     When I click on Make an application
+    And I enter application reference
     And I open section "provisionalDate"
 
   @Sprint3

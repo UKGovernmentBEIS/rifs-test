@@ -6,6 +6,7 @@ Feature: GF-1161 Preview Event Audience
 Background:
 Given I am on the opportunity detail page
 And I click on Make an application
+And I enter application reference
 And I open section "EventAudience"
 
 @Sprint3

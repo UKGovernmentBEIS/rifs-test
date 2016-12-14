@@ -9,6 +9,7 @@ Feature: GF-1120 Event title
     And I click on applicant link
     And I select an Opportunity from list
     When I click on Make an application
+    And I enter application reference
     And I click on event title link on application overview page
 
   @Smoke

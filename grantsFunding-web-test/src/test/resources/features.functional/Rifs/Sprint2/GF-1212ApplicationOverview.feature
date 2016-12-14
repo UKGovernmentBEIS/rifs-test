@@ -7,6 +7,7 @@ I should be able to fill in application details through application overview pag
 Scenario: verify all questions are clickable on application overview. 
 Given I am on the opportunity detail page
 When I click on Make an application
+And I enter application reference
 Then I should see application "Overview - RIFS" page
 And I should see all six questions are clickable
 And I should be click event title

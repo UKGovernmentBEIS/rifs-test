@@ -9,6 +9,7 @@ Feature: GF-1127, GF-1166 Application submitted successfully
   Scenario: Verify user able to submit application after completing all sections
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     When I click on event title link on application overview page
     Then I should be able to enter title "Seminar on space Technologies AutoTest"
     And I should be able select mark as complete checkbox  "EventTitle" page
@@ -49,6 +50,7 @@ Feature: GF-1127, GF-1166 Application submitted successfully
   Scenario: Verify user should not be be able to submit when any of the sections in progress
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     When I click on event title link on application overview page
     Then I should be able to enter title "Seminar on space Technologies AutoTest"
     And I should be able save and Continue

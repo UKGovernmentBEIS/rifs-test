@@ -7,6 +7,7 @@ Feature: GF-1124 Enter EventAudience
   Background: 
     Given I am on the opportunity detail page
     When I click on Make an application
+    And I enter application reference
     And I open section "EventAudience"
 
   @Sprint3

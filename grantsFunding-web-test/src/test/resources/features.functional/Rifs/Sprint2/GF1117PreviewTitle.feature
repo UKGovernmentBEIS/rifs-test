@@ -6,6 +6,7 @@ Feature: GF-1117 Preview title
 Background:
 Given I am on the opportunity detail page
 And I click on Make an application
+And I enter application reference
 	
 
 @Sprint2

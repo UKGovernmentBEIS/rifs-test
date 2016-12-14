@@ -4,6 +4,7 @@ Feature: Application status flow.
   Background: 
     Given I am on the opportunity detail page
     When I click on Make an application
+    And I enter application reference
 
   @Sprint4
   Scenario: Verify status when user marks as complete for event title

@@ -10,6 +10,7 @@ Feature: GF-1125 Cost Entry
   Scenario: User able to enter cost items and save - happy path
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     When I open section "Costs"
     Then I should be able to add cost items
       | Training-Autotest | 500 | Training required to deliver Seminar Innovations |
@@ -21,6 +22,7 @@ Feature: GF-1125 Cost Entry
   Scenario: User able to enter cost items and mark as complete - happy path
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     When I open section "Costs"
     Then I should be able to add cost items
       | Training-Autotest | 500 | Training required to deliver Seminar Innovations |
@@ -33,6 +35,7 @@ Feature: GF-1125 Cost Entry
   Scenario: User able to add more than one items and save - happy path
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     When I open section "Costs"
     Then I should be able to add cost items
       | Training-Autotest | 500 | Training required to deliver Seminar Innovations |
@@ -47,6 +50,7 @@ Feature: GF-1125 Cost Entry
   Scenario: User able to add 10 or above items and save - happy path
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     When I open section "Costs"
     Then I should be able to add 10 cost items
       | Training-Autotest | 500 | Training required to deliver Seminar Innovations |
@@ -57,6 +61,7 @@ Feature: GF-1125 Cost Entry
   Scenario: User able to mark as complete when total items costs is <=2000
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     When I open section "Costs"
     Then I should be able to add cost items
       | Training-Autotest | 500 | Training required to deliver Seminar Innovations |
@@ -73,6 +78,7 @@ Feature: GF-1125 Cost Entry
   Scenario: user should not be able to mark as complete if the total cost exceeds 2000
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     When I open section "Costs"
     And I should be able to add 5 cost items
       | Training-Autotest | 500 | Training required to deliver Seminar Innovations |
@@ -84,6 +90,7 @@ Feature: GF-1125 Cost Entry
   Scenario: user should not be able to save cost item with invalid cost entry
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     And I open section "Costs"
     And I should be able to add cost item with invalid currency
       | Training-Autotest | xxx.xx | Training required to deliver Seminar Innovations |
@@ -93,6 +100,7 @@ Feature: GF-1125 Cost Entry
   Scenario: user should not be able to save cost item with empty item name field
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     And I open section "Costs"
     And I should be able to add cost item with invalid currency
       |  | 20 | Training required to deliver Seminar Innovations |
@@ -102,6 +110,7 @@ Feature: GF-1125 Cost Entry
   Scenario: user should not be able to save cost item with empty justification field
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     And I open section "Costs"
     And I should be able to add cost item with invalid currency
       | Training-Autotest | 20.00 |  |
@@ -111,6 +120,7 @@ Feature: GF-1125 Cost Entry
   Scenario: user should get an error message when wordcount exceeds 200 words
     Given I am on the opportunity detail page
     And I click on Make an application
+    And I enter application reference
     When I open section "Costs"
     And I should be able to add cost items
       | Training-Autotest | 500 | T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T T |
