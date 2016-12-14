@@ -306,7 +306,13 @@ public class WhenSteps {
 	    
 	    
 	}
-
+	
+	@When("^I enter (\\d+) in PM setup \"([^\"]*)\"$")
+	public void i_enter_in_PM_setup(int words, String field) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		opptemplate.Entertext(makeNWords(words), field);
+	}
+	
 	@When("^I  enter (\\d+) in setup \"([^\"]*)\"$")
 	public void i_enter_in_setup(int words, String field) throws Throwable {
 		opptemplate.Entertext(makeNWords(words), field);

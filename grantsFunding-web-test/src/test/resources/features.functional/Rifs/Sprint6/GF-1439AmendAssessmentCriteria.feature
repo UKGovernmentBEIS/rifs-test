@@ -34,7 +34,7 @@ Feature: GF-1439 Amend Assessment criteria
 
   #Validate word count:
   @Sprint6
-  Scenario Outline: Verify word count to show n words remaining when marked as complete
+  Scenario Outline: Verify word count to show n words remaining 
     When I  enter <wordCount> in setup "setupAssessmentCriteria"
     And I  click save
     And I click on "setupAssessmentCriteria" link

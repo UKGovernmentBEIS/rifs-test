@@ -5,7 +5,7 @@ Feature: GF-1439 Amend about this opportunity
   I should be able to amend about this opportunity
 
   @Sprint6
-  Scenario Outline: Verify user able topics and speakers info and save.
+  Scenario Outline: Verify user able to edit about this opportunity info and save.
     Given I launch application
     And I click portfoliomanagerlink
     And I choose existing opportunity on create oportunity page
@@ -21,7 +21,7 @@ Feature: GF-1439 Amend about this opportunity
       | Seminar on space technologies-autoTest |
 
   @Sprint6
-  Scenario: Vaidate assessment criteria field not to save >500 words
+  Scenario: Vaidate about this opportunity field not to save >500 words
     When I click on "setupAboutthisOpport" link
     And I  enter 501 in setup "setupAboutthisOpport"
     And I  click save
@@ -35,7 +35,7 @@ Feature: GF-1439 Amend about this opportunity
 
   #Validate word count:
   @Sprint6
-  Scenario Outline: Verify word count to show n words remaining when marked as complete
+  Scenario Outline: Verify word count to show n words remaining
     When I  enter <wordCount> in setup "setupAboutthisOpport"
     And I  click save
     And I click on "setupAboutthisOpport" link
