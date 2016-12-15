@@ -56,7 +56,6 @@ public class BasePage {
 	}
 
 	public WebElement find(By locator) {
-
 		return driver.findElement(locator);
 	}
 
@@ -132,7 +131,6 @@ public class BasePage {
 
 	public boolean isTextPresent(By locator, String exp) {
 		if (getText(locator).equals(exp)) {
-
 			return true;
 		} else {
 			return false;
@@ -206,19 +204,8 @@ public class BasePage {
 	}
 
 	public boolean IsElementPresent(By locator) {
-
-		try {
-			find(locator);
-
-			return true;
-		} catch (Exception e) {
-
-			// System.out.println("Logo not found");
-			// captureScreen(this.getClass().getSimpleName(),
-			// this.testName.getMethodName());
-			// System.out.println("Element not found on the page");
-			return false;
-		}
+			List<WebElement> elements = driver.findElements(locator);
+			return elements.size() > 0;
 	}
 
 	public boolean IsElementDisplayed(By locator) throws InterruptedException {
@@ -227,10 +214,8 @@ public class BasePage {
 		boolean flag;
 
 		if (find(locator).isDisplayed()) {
-
 			WebElement element = find(locator);
 			js.executeScript("arguments[0].style.border='3px solid red'", element);
-			Thread.sleep(2000);
 			flag = true;
 		} else {
 			flag = false;
@@ -242,7 +227,6 @@ public class BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		WebElement element = find(locator);
 		js.executeScript("arguments[0].style.border='3px solid red'", element);
-		Thread.sleep(3000);
 	}
 
 }

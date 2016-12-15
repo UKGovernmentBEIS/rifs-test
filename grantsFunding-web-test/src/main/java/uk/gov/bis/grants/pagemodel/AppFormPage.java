@@ -60,7 +60,7 @@ public class AppFormPage extends BasePage {
 	By Applicationsubmiterror = By.xpath("//*[text()='All questions must be answered']");
 	By Applicationsectionerror = By.xpath(".//*/li");
 
-	By Applicationref = By.xpath(".//*[@id='application-ref']");
+	By Applicationref = By.id("application-ref");
 	// @FindBy(xpath = ".//*[@id='content']/div/div/div/a"
 	// WebElement startButton;
 

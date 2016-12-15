@@ -43,14 +43,11 @@ public class startPage extends BasePage {
 
 	public void clickApply() throws InterruptedException {
 		click(applyButton);
-		Thread.sleep(3000);
-		// WaitForElementPresent("")
 
 	}
 
 	public void asanApplicant() throws InterruptedException {
 		click(applicantLink);
-		Thread.sleep(2000);
 	}
 
 	public void asaPortfolioManager() {

@@ -46,7 +46,6 @@ public class ApplicationDateEntry extends BasePage {
 			type(dayfield, data.get(0).get(0));
 			type(monthfield, data.get(0).get(1));
 			type(yearfield, data.get(0).get(2));
-			Thread.sleep(2000);
 
 		}
 
@@ -55,8 +54,6 @@ public class ApplicationDateEntry extends BasePage {
 			type(dayfield, data.get(0).get(0));
 			type(monthfield, data.get(0).get(1));
 			type(yearfield, data.get(0).get(2));
-			Thread.sleep(2000);
-
 		}
 	}
 

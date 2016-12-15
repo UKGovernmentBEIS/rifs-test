@@ -70,7 +70,6 @@ public class GivenSteps {
 	public void i_am_on_application_start_page() throws Throwable {
 
 		appformPage.gotoOpportunityPage();
-		Thread.sleep(2000);
 	}
 
 	@Given("^I click on start application$")
