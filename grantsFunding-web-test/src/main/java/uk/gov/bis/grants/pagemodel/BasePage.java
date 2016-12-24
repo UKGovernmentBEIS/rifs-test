@@ -1,3 +1,20 @@
+/*
+ * Copyright (C) 2016  Department for Business, Energy and Industrial Strategy
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package uk.gov.bis.grants.pagemodel;
 
 import org.openqa.selenium.*;
@@ -31,7 +48,6 @@ public class BasePage {
     }
 
     public void launch_app() throws InterruptedException {
-
         driver.get(envurl);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.manage().window().setSize(new Dimension(1400, 1000));
@@ -64,7 +80,6 @@ public class BasePage {
     }
 
     public void DeleteCostItems() throws Exception {
-
         List<WebElement> items = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
         do {
             Iterator<WebElement> iter = items.iterator();
@@ -77,11 +92,9 @@ public class BasePage {
             items = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
 
         } while (items.size() >= 1);
-
     }
 
     public void DeleterequiredItem(int n) throws Exception {
-
         List<WebElement> items = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
 
         Iterator<WebElement> iter = items.iterator();
@@ -92,11 +105,9 @@ public class BasePage {
         item.click();
         // items =
         // driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
-
     }
 
     public int CountcostItems() {
-
         List<WebElement> items = driver.findElements(By.xpath("//a[contains(@href,'delete')]"));
 
         return items.size();
